@@ -22,7 +22,7 @@
                     <?php $logo = get_field('logo'); ?>
                     <?php $logo = get_field('logo', 'option'); ?>
                     <?php if ($logo) { ?>
-                        <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
                     <?php } ?>
                 </div>
                 <div class="p-2">
@@ -42,3 +42,8 @@
             </div>
         </div>
     </nav>
+
+
+    <div class="tabs-nav">
+        <?php wp_nav_menu(array('theme_location' => 'side_menu')); ?>
+    </div>

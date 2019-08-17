@@ -374,11 +374,14 @@ nav {
     color: #333333;
     padding: 22px 15px;
     border-radius: 4px 4px 0px 0px; }
-  .tabs-nav .active {
+    .tabs-nav li a {
+      color: #333333; }
+  .tabs-nav .current-menu-item {
     background: #4d23c1;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
-    border-radius: 8px 8px 0px 0px;
-    color: #ffffff; }
+    border-radius: 8px 8px 0px 0px; }
+    .tabs-nav .current-menu-item a {
+      color: #ffffff; }
 
 .overlay-item {
   position: fixed;
@@ -654,5 +657,31 @@ nav {
     opacity: 1; }
   100% {
     opacity: 0; } }
+#vacancy-overview {
+  background: #333333;
+  padding-top: 80px;
+  margin-bottom: -150px;
+  padding-bottom: calc(80px + 150px); }
+  #vacancy-overview .vacancy-intro h2,
+  #vacancy-overview .vacancy-intro p {
+    color: #ffffff; }
+  #vacancy-overview .vacancy-intro h2 {
+    font-weight: bold; }
+  #vacancy-overview .vacancy-intro p {
+    opacity: 0.8; }
+  #vacancy-overview .vacansie-item {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
+    border-radius: 10px; }
+    #vacancy-overview .vacansie-item h4 {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: #333333; }
+      #vacancy-overview .vacansie-item h4 a {
+        color: #333333; }
 
 /*# sourceMappingURL=style.css.map */

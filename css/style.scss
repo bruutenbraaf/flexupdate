@@ -467,12 +467,17 @@ nav {
     color: $gray;
     padding: 22px 15px;
     border-radius: 4px 4px 0px 0px;
+    a {
+      color: $gray;
+    }
   }
-  .active {
+  .current-menu-item {
     background: #4d23c1;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px;
-    color: #ffffff;
+    a {
+      color: #ffffff;
+    }
   }
 }
 
@@ -754,7 +759,7 @@ nav {
 
 .text {
   margin-left: 0;
-  width:100%;
+  width: 100%;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -777,7 +782,7 @@ nav {
 
 .the--post[data-emergence="visible"] .post-inner {
   @extend .animated-in;
-  display:block;
+  display: block;
 }
 
 .the--post[data-emergence="visible"] .wrapper-cell {
@@ -815,5 +820,41 @@ nav {
   }
   100% {
     opacity: 0;
+  }
+}
+
+#vacancy-overview {
+  background: #333333;
+  padding-top: 80px;
+  margin-bottom: -150px;
+  padding-bottom: calc(80px + 150px);
+  .vacancy-intro {
+    h2,
+    p {
+      color: #ffffff;
+    }
+    h2 {
+      font-weight: bold;
+    }
+    p {
+      opacity: 0.8;
+    }
+  }
+  .vacansie-item {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
+    border-radius: 10px;
+    h4 {
+      font-family: $roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: #333333;
+      a {
+        color: #333333;
+      }
+    }
   }
 }

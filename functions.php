@@ -75,6 +75,7 @@ function register_my_menus()
 		array(
 			'main_menu' => __('Hoofd Menu'),
 			'mobile_menu' => __('Mobiele Menu'),
+			'side_menu' => __('Zijkant Menu'),
 			'socket_menu' => __('Socket Menu')
 		)
 	);

@@ -38,8 +38,6 @@ get_header(); ?>
         </div>
     </section>
     <?php endif; ?>
-
-
     <?php
     $currentdate = date('m / d');
     $paged = (get_query_var('page')) ? get_query_var('page') : 1;
@@ -60,10 +58,10 @@ get_header(); ?>
                     <div class="col-md-1">
                         <?php $postdate = get_the_time('m / d'); ?>
                         <?php if ($currentdate == $postdate) { ?>
-                        <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
+                            <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
                         <?php } else { ?>
-                        <span class="post--date"><?php the_time('m / d'); ?></span>
-                        <span class="post--date"> <?php the_time('l'); ?></span>
+                            <span class="post--date"><?php the_time('m / d'); ?></span>
+                            <span class="post--date"> <?php the_time('l'); ?></span>
                         <?php } ?>
                     </div>
                     <div class="col-md-10 the--post" data-emergence="hidden">
