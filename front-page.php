@@ -96,10 +96,10 @@ get_header(); ?>
                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
                                     <?php } ?>
                                 </div>
-                                <div class="post--image">
+                                <div class="post--image ml-auto">
                                     <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
                                     <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
-                                    <div class="the-post--image ml-auto" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                                    <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
                                     </div>
                                 </div>
                             </div>
