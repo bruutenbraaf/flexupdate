@@ -990,7 +990,7 @@ p.description[data-readmore] {
     display: block !important; }
 
   .adv .the--adv .the-post--image {
-    min-height: 365px;
+    min-height: 268px;
     width: calc(100% + 40px);
     left: -20px;
     margin: 0px;
@@ -1004,6 +1004,9 @@ p.description[data-readmore] {
 
   .adv .the--adv .the-post--ad {
     width: 100%;
-    padding: 30px 0px; } }
+    padding: 30px 0px; }
+
+  .adv .the--adv .adv--info {
+    display: flex !important; } }
 
 /*# sourceMappingURL=style.css.map */
