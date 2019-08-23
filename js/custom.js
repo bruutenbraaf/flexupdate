@@ -1,7 +1,7 @@
-// emergence.init({
-//     offsetBottom: 20,
-//     reset: false
-// });
+emergence.init({
+    offsetBottom: 20,
+    reset: false
+});
 
 jQuery( "body" ).on('click', '.hamburger', function() {
     jQuery('.mobile-nav').animate({'height': 'toggle'}, 200);
