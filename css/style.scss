@@ -1068,7 +1068,7 @@ p.description[data-readmore] {
     }
   }
   #posts article .post--image .the-post--image {
-    width: 180px;
+    width: 120px;
     height: 130px;
     border-radius: 4px;
     background-size: cover;
@@ -1194,5 +1194,8 @@ p.description[data-readmore] {
     transform: rotate(-45deg);
     transform-origin: left;
     margin-top: 1px;
+  }
+  #posts article .post--info h2 {
+    font-size: 18px;
   }
 }
