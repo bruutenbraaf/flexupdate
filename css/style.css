@@ -1007,6 +1007,10 @@ p.description[data-readmore] {
     padding: 30px 0px; }
 
   .adv .the--adv .adv--info {
-    display: flex !important; } }
+    display: flex !important; }
+
+  .image {
+    min-width: 119px;
+    height: 130px; } }
 
 /*# sourceMappingURL=style.css.map */
