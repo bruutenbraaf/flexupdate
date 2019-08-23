@@ -54,9 +54,8 @@ else :
         if (($usp_options['usp_name'] == 'show' || $usp_options['usp_name'] == 'optn') && ($usp_display_name)) { ?>
 
 		<fieldset class="usp-name">
-			<label for="user-submitted-name"><?php esc_html_e('Your Name', 'usp'); ?></label>
+			<label for="user-submitted-name"><?php esc_html_e('Uw naam', 'usp'); ?></label>
 			<input id="user-submitted-name" name="user-submitted-name" type="text" value=""
-				placeholder="<?php esc_attr_e('Your Name', 'usp'); ?>"
 				<?php if (usp_check_required('usp_name')) {
             echo $usp_required;
         } ?>
@@ -65,9 +64,8 @@ else :
 		<?php } if ($usp_options['usp_email'] == 'show' || $usp_options['usp_email'] == 'optn') { ?>
 
 		<fieldset class="usp-email">
-			<label for="user-submitted-email"><?php esc_html_e('Your Email', 'usp'); ?></label>
+			<label for="user-submitted-email"><?php esc_html_e('E-mailadres', 'usp'); ?></label>
 			<input id="user-submitted-email" name="user-submitted-email" type="text" value=""
-				placeholder="<?php esc_attr_e('Your Email', 'usp'); ?>"
 				<?php if (usp_check_required('usp_email')) {
             echo $usp_required;
         } ?>
@@ -76,9 +74,8 @@ else :
 		<?php } if ($usp_options['usp_title'] == 'show' || $usp_options['usp_title'] == 'optn') { ?>
 
 		<fieldset class="usp-title">
-			<label for="user-submitted-title"><?php esc_html_e('Post Title', 'usp'); ?></label>
+			<label for="user-submitted-title"><?php esc_html_e('Bericht titel', 'usp'); ?></label>
 			<input id="user-submitted-title" name="user-submitted-title" type="text" value=""
-				placeholder="<?php esc_attr_e('Post Title', 'usp'); ?>"
 				<?php if (usp_check_required('usp_title')) {
             echo $usp_required;
         } ?>
@@ -89,7 +86,6 @@ else :
 		<fieldset class="usp-tags">
 			<label for="user-submitted-tags"><?php esc_html_e('Post Tags', 'usp'); ?></label>
 			<input id="user-submitted-tags" name="user-submitted-tags" type="text" value=""
-				placeholder="<?php esc_attr_e('Post Tags', 'usp'); ?>"
 				<?php if (usp_check_required('usp_tags')) {
             echo $usp_required;
         } ?>
@@ -102,7 +98,6 @@ else :
 			<input id="user-submitted-custom"
 				name="<?php echo esc_attr($usp_custom_name); ?>"
 				type="text" value=""
-				placeholder="<?php echo esc_attr($usp_custom_label); ?>"
 				<?php if (usp_check_required('custom_field')) {
             echo $usp_required;
         } ?>
@@ -112,9 +107,8 @@ else :
 		<?php } if (($usp_options['usp_url'] == 'show' || $usp_options['usp_url'] == 'optn') && ($usp_display_url)) { ?>
 
 		<fieldset class="usp-url">
-			<label for="user-submitted-url"><?php esc_html_e('Your URL', 'usp'); ?></label>
+			<label for="user-submitted-url"><?php esc_html_e('URL van het bericht', 'usp'); ?></label>
 			<input id="user-submitted-url" name="user-submitted-url" type="text" value=""
-				placeholder="<?php esc_attr_e('Your URL', 'usp'); ?>"
 				<?php if (usp_check_required('usp_url')) {
             echo $usp_required;
         } ?>
@@ -173,9 +167,8 @@ else :
 			</div>
 			<?php } else { ?>
 
-			<label for="user-submitted-content"><?php esc_html_e('Post Content', 'usp'); ?></label>
+			<label for="user-submitted-content"><?php esc_html_e('Bericht', 'usp'); ?></label>
 			<textarea id="user-submitted-content" name="user-submitted-content" rows="5"
-				placeholder="<?php esc_attr_e('Post Content', 'usp'); ?>"
 				<?php if (usp_check_required('usp_content')) {
                     echo $usp_required;
                 } ?> class="usp-textarea"></textarea>
@@ -194,8 +187,6 @@ else :
 
 		<fieldset class="usp-images">
 			<label for="user-submitted-image"><?php esc_html_e('Upload an Image', 'usp'); ?></label>
-			<div id="usp-upload-message"><?php esc_html_e($usp_options['upload-message'], 'usp'); ?>
-			</div>
 			<div id="user-submitted-image">
 				<?php // upload files
                 
@@ -230,7 +221,6 @@ else :
 		<fieldset class="usp-captcha">
 			<label for="user-submitted-captcha"><?php echo $usp_options['usp_question']; ?></label>
 			<input id="user-submitted-captcha" name="user-submitted-captcha" type="text" value=""
-				placeholder="<?php esc_attr_e('Antispam Question', 'usp'); ?>"
 				<?php echo $usp_required; ?> class="usp-input<?php echo $usp_captcha; ?>" data-parsley-excluded="true">
 		</fieldset>
 		<?php } ?>
@@ -266,7 +256,7 @@ else :
 			<?php } ?>
 
 			<input type="submit" class="usp-submit" id="user-submitted-post" name="user-submitted-post"
-				value="<?php esc_attr_e('Submit Post', 'usp'); ?>">
+				value="<?php esc_attr_e('Plaats bericht', 'usp'); ?>">
 			<?php wp_nonce_field('usp-nonce', 'usp-nonce', false); ?>
 
 		</div>

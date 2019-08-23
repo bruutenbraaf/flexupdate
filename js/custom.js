@@ -3,6 +3,15 @@ emergence.init({
     reset: false
 });
 
+jQuery( "body" ).on('click', '.hamburger', function() {
+    jQuery('.mobile-nav').animate({'height': 'toggle'}, 200);
+    jQuery('main').toggleClass('blurred');
+    jQuery('.mt-btns').toggleClass('displayed');
+    jQuery('.hamburger div:nth-child(1)').toggleClass('first');
+    jQuery('.hamburger div:nth-child(2)').toggleClass('middle');
+    jQuery('.hamburger div:nth-child(3)').toggleClass('last');
+  });
+
 jQuery(window).scroll(function() {    
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 100) {

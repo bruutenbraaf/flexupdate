@@ -89,18 +89,19 @@ get_header(); ?>
                                     <p><?php echo excerpt(40); ?>
                                     </p>
                                     <?php
-                                            $terms = get_the_terms($post->ID, 'soort_item');
-        if ($terms) {
-            foreach ($terms as $term) {
-                $term_id = $term->term_id;
-            }
-        } ?>
+                                        $terms = get_the_terms($post->ID, 'soort_item');
+                                        if ($terms) {
+                                            foreach ($terms as $term) {
+                                                $term_id = $term->term_id;
+                                            }
+                                        } ?>
                                     <?php
                                             $term_id_prefixed = '_' . $term_id;
-        $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
+                                    $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
                                     <?php if ($bedrijfsicon) { ?>
                                     <img src="<?php echo $bedrijfsicon['url']; ?>"
                                         alt="<?php echo $bedrijfsicon['alt']; ?>" />
+                                    <?php } else {?>
                                     <?php } ?>
                                 </div>
                                 <div class="post--image ml-auto">
