@@ -42,7 +42,7 @@ get_header(); ?>
     $currentdate = date('m / d');
     $paged = (get_query_var('page')) ? get_query_var('page') : 1;
     $args = array(
-        'post_type' => 'items',
+        'post_type' => array('items', 'post'),
         'order' => 'DESC',
         'paged' => $paged
     );
@@ -51,17 +51,17 @@ get_header(); ?>
     <section id="posts">
         <?php $count = 0; ?>
         <?php while ($loop->have_posts()) {
-                $loop->the_post(); ?>
+        $loop->the_post(); ?>
         <article>
             <div class="container">
                 <div class="row">
                     <div class="col-md-1">
                         <?php $postdate = get_the_time('m / d'); ?>
                         <?php if ($currentdate == $postdate) { ?>
-                            <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
+                        <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
                         <?php } else { ?>
-                            <span class="post--date"><?php the_time('m / d'); ?></span>
-                            <span class="post--date"> <?php the_time('l'); ?></span>
+                        <span class="post--date"><?php the_time('m / d'); ?></span>
+                        <span class="post--date"> <?php the_time('l'); ?></span>
                         <?php } ?>
                     </div>
                     <div class="col-md-10 the--post" data-emergence="hidden">
@@ -75,29 +75,39 @@ get_header(); ?>
                             <div class="image"></div>
                         </div>
                         <div class="post-inner">
+                            <?php if ('post' == get_post_type()) {?>
+                                <div class="submitted--info d-flex justify-content-center">
+                                    <span>
+                                        <?php _e('Ingezonden bericht', 'flexupdate'); ?>
+                                    </span>
+                                </div>
+                            <?php } ?>
                             <div class="d-flex">
                                 <div class="post--info">
-                                    <h2><?php the_title(); ?></h2>
-                                    <p><?php echo excerpt(40); ?></p>
+                                    <h2><?php the_title(); ?>
+                                    </h2>
+                                    <p><?php echo excerpt(40); ?>
+                                    </p>
                                     <?php
                                             $terms = get_the_terms($post->ID, 'soort_item');
-                                            if ($terms) {
-                                                foreach ($terms as $term) {
-                                                    $term_id = $term->term_id;
-                                                }
-                                            }
-                                            ?>
+        if ($terms) {
+            foreach ($terms as $term) {
+                $term_id = $term->term_id;
+            }
+        } ?>
                                     <?php
                                             $term_id_prefixed = '_' . $term_id;
-                                            $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
+        $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
                                     <?php if ($bedrijfsicon) { ?>
-                                    <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
+                                    <img src="<?php echo $bedrijfsicon['url']; ?>"
+                                        alt="<?php echo $bedrijfsicon['alt']; ?>" />
                                     <?php } ?>
                                 </div>
                                 <div class="post--image ml-auto">
                                     <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
                                     <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
-                                    <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                                    <div class="the-post--image"
+                                        style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +126,8 @@ get_header(); ?>
         <?php if ($count == 8) { ?>
         <?php echo do_shortcode("[uitzendplaats_latest_vacancies per_page='1']"); ?>
         <?php } ?>
-        <?php } ?>
+        <?php
+    } ?>
     </section>
     <section id="pagination">
         <div class="d-flex justify-content-center">
@@ -148,4 +159,4 @@ get_header(); ?>
     <?php } ?>
 
 </main>
-<?php get_footer(); ?>
+<?php get_footer();

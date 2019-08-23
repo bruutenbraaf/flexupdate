@@ -630,6 +630,16 @@ nav {
   opacity: 0;
   display: none; }
 
+.submitted--info {
+  color: #4f4f4f;
+  border-bottom: 1px solid #4f4f4f;
+  opacity: 0.25;
+  margin-left: -30px;
+  width: calc(100% + 60px);
+  margin-top: -15px;
+  padding-bottom: 15px;
+  margin-bottom: 30px; }
+
 .the--post[data-emergence="visible"] .post-inner {
   display: block; }
 
@@ -659,7 +669,7 @@ nav {
     opacity: 0; } }
 #vacancy-overview {
   background: #333333;
-  padding-top: 80px;
+  padding-top: 140px;
   margin-bottom: -150px;
   padding-bottom: calc(80px + 150px); }
   #vacancy-overview .vacancy-intro h2,
@@ -671,6 +681,7 @@ nav {
     opacity: 0.8; }
   #vacancy-overview .vacansie-item {
     padding: 20px;
+    height: 100%;
     background: #ffffff;
     box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
     border-radius: 10px; }
@@ -683,5 +694,149 @@ nav {
       color: #333333; }
       #vacancy-overview .vacansie-item h4 a {
         color: #333333; }
+
+#vacancy-detail {
+  padding-top: 140px;
+  margin-bottom: -150px;
+  padding-bottom: calc(80px + 150px); }
+  #vacancy-detail h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: #333333; }
+  #vacancy-detail .description-vacansie p {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #545a63; }
+  #vacancy-detail #profile {
+    padding: 80px 0px; }
+  #vacancy-detail .description-vacansie {
+    padding-bottom: 60px; }
+  #vacancy-detail .btn {
+    background: #4ab716;
+    box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
+    border-radius: 10px;
+    -webkit-appearance: none;
+    border: 0px;
+    font-family: "Nunito", sans-serif;
+    padding: 15px 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-top: 15px; }
+    #vacancy-detail .btn:hover {
+      background: #41a013;
+      cursor: pointer; }
+  #vacancy-detail .vacancy-profile .inner {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05); }
+  #vacancy-detail .vacancy-contact .inner {
+    background: #4d23c0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05); }
+    #vacancy-detail .vacancy-contact .inner p,
+    #vacancy-detail .vacancy-contact .inner a,
+    #vacancy-detail .vacancy-contact .inner h2,
+    #vacancy-detail .vacancy-contact .inner span {
+      color: #ffffff; }
+    #vacancy-detail .vacancy-contact .inner p,
+    #vacancy-detail .vacancy-contact .inner span,
+    #vacancy-detail .vacancy-contact .inner h2 {
+      display: block; }
+
+p.description + [data-readmore-toggle],
+p.description[data-readmore] {
+  color: #4ab716; }
+
+.vacansie_form label {
+  padding-left: 0px;
+  width: 100%;
+  display: block;
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: #545a63; }
+.vacansie_form input,
+.vacansie_form textarea {
+  overflow: visible;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 12px; }
+  .vacansie_form input :focus,
+  .vacansie_form textarea :focus {
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+    outline: 0 !important; }
+
+#place-post {
+  padding-bottom: 80px;
+  padding-top: 140px; }
+  #place-post p {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #545a63; }
+  #place-post h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: #333333; }
+  #place-post form {
+    padding: 0px; }
+    #place-post form label {
+      padding-left: 0px !important;
+      width: 100% !important;
+      display: block !important;
+      font-family: "Muli", sans-serif !important;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px !important;
+      line-height: 32px;
+      color: #545a63; }
+    #place-post form input,
+    #place-post form textarea {
+      overflow: visible;
+      width: 100% !important;
+      border: 1px solid #eaeaea;
+      border-radius: 10px;
+      padding: 12px; }
+      #place-post form input :focus,
+      #place-post form textarea :focus {
+        box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+        outline: 0 !important; }
+    #place-post form .usp-submit {
+      background: #4ab716;
+      box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
+      border-radius: 10px;
+      -webkit-appearance: none;
+      border: 0px;
+      font-family: "Nunito", sans-serif;
+      padding: 15px 20px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #ffffff;
+      margin-top: 15px;
+      width: inherit !important; }
+      #place-post form .usp-submit:hover {
+        background: #41a013;
+        cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

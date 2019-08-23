@@ -21,6 +21,7 @@ body {
 $gray: #333333;
 $graytwo: #4f4f4f;
 $lightgray: #a9acbe;
+$darkgray: #545a63;
 $paragraph: #828282;
 $brandcolor: #4d23c1;
 $cta: #4ab716;
@@ -780,6 +781,17 @@ nav {
   display: none;
 }
 
+.submitted--info {
+  color: $graytwo;
+  border-bottom: 1px solid $graytwo;
+  opacity: 0.25;
+  margin-left: -30px;
+  width: calc(100% + 60px);
+  margin-top: -15px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
 .the--post[data-emergence="visible"] .post-inner {
   @extend .animated-in;
   display: block;
@@ -825,7 +837,7 @@ nav {
 
 #vacancy-overview {
   background: #333333;
-  padding-top: 80px;
+  padding-top: 140px;
   margin-bottom: -150px;
   padding-bottom: calc(80px + 150px);
   .vacancy-intro {
@@ -842,6 +854,7 @@ nav {
   }
   .vacansie-item {
     padding: 20px;
+    height: 100%;
     background: #ffffff;
     box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
     border-radius: 10px;
@@ -854,6 +867,176 @@ nav {
       color: #333333;
       a {
         color: #333333;
+      }
+    }
+  }
+}
+
+#vacancy-detail {
+  padding-top: 140px;
+  margin-bottom: -150px;
+  padding-bottom: calc(80px + 150px);
+  h2 {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: $gray;
+  }
+  .description-vacansie {
+    p {
+      font-family: $muli;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px;
+      color: $darkgray;
+    }
+  }
+  #profile {
+    padding: 80px 0px;
+  }
+  .description-vacansie {
+    padding-bottom: 60px;
+  }
+  .btn {
+    background: #4ab716;
+    box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
+    border-radius: 10px;
+    -webkit-appearance: none;
+    border: 0px;
+    font-family: $nunito;
+    padding: 15px 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-top: 15px;
+    &:hover {
+      background: darken(#4ab716, 5%);
+      cursor: pointer;
+    }
+  }
+  .vacancy-profile .inner {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+  }
+  .vacancy-contact .inner {
+    background: #4d23c0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+    p,
+    a,
+    h2,
+    span {
+      color: #ffffff;
+    }
+    p,
+    span,
+    h2 {
+      display: block;
+    }
+  }
+}
+
+p.description + [data-readmore-toggle],
+p.description[data-readmore] {
+  color: $cta;
+}
+
+.vacansie_form {
+  label {
+    padding-left: 0px;
+    width: 100%;
+    display: block;
+    font-family: $muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: $darkgray;
+  }
+  input,
+  textarea {
+    overflow: visible;
+    width: 100%;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 12px;
+    :focus {
+      box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+      outline: 0 !important;
+    }
+  }
+}
+
+#place-post {
+  padding-bottom: 80px;
+  padding-top: 140px;
+  p {
+    font-family: $muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: $darkgray;
+  }
+  h2 {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: $gray;
+  }
+  form {
+    padding: 0px;
+    label {
+      padding-left: 0px !important;
+      width: 100% !important;
+      display: block !important;
+      font-family: $muli !important;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px !important;
+      line-height: 32px;
+      color: $darkgray;
+    }
+    input,
+    textarea {
+      overflow: visible;
+      width: 100% !important;
+      border: 1px solid #eaeaea;
+      border-radius: 10px;
+      padding: 12px;
+      :focus {
+        box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+        outline: 0 !important;
+      }
+    }
+    .usp-submit {
+      background: #4ab716;
+      box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
+      border-radius: 10px;
+      -webkit-appearance: none;
+      border: 0px;
+      font-family: $nunito;
+      padding: 15px 20px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #ffffff;
+      margin-top: 15px;
+      width: inherit !important;
+      &:hover {
+        background: darken(#4ab716, 5%);
+        cursor: pointer;
       }
     }
   }

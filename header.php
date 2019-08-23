@@ -22,7 +22,9 @@
                     <?php $logo = get_field('logo'); ?>
                     <?php $logo = get_field('logo', 'option'); ?>
                     <?php if ($logo) { ?>
-                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                    <a href="<?php echo get_home_url(); ?>">
+                        <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                    </a>
                     <?php } ?>
                 </div>
                 <div class="p-2">
