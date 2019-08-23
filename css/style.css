@@ -973,6 +973,12 @@ p.description[data-readmore] {
     margin-top: 1px; }
 
   #posts article .post--info h2 {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .vac-col {
+    margin-bottom: 30px; }
+
+  #newsletter .news-block {
+    padding: 30px 15px; } }
 
 /*# sourceMappingURL=style.css.map */

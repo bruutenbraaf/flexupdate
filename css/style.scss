@@ -1186,7 +1186,7 @@ p.description[data-readmore] {
     transform-origin: left;
   }
   .middle {
-    width:0px !important;
+    width: 0px !important;
     transform: rotate(-45deg);
     margin-left: 50px;
   }
@@ -1197,5 +1197,11 @@ p.description[data-readmore] {
   }
   #posts article .post--info h2 {
     font-size: 18px;
+  }
+  .vac-col {
+    margin-bottom: 30px;
+  }
+  #newsletter .news-block {
+    padding: 30px 15px;
   }
 }
