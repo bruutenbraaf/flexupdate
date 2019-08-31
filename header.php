@@ -33,7 +33,7 @@
                 <div class="p-2 mx">
                     <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
                 </div>
-                <div class="p-2 search ml-auto ma">
+                <div class="p-2 search ma">
                     <div class="search-button">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="13.5" cy="8.5" r="7.5" stroke="#333333" stroke-width="2" />

@@ -64,56 +64,59 @@ get_header(); ?>
                         <span class="post--date"> <?php the_time('l'); ?></span>
                         <?php } ?>
                     </div>
-                    <div class="col-md-10 the--post" data-emergence="hidden">
-                        <div class="wrapper-cell">
-                            <div class="text">
-                                <div class="text-line"> </div>
-                                <div class="text-line"></div>
-                                <div class="text-line"></div>
-                                <div class="text-line"></div>
+                    <?php $postlink = get_field( 'item_link' ); ?>
+                        <div class="col-md-10 the--post" data-emergence="hidden">
+                        <a href="<?php if ($postlink){?><?php echo ($postlink);?><?php } else {?><?php the_permalink();?><?php } ?>" <?php if ($postlink){?>target="_blank"<?php } ?>>
+                            <div class="wrapper-cell">
+                                <div class="text">
+                                    <div class="text-line"> </div>
+                                    <div class="text-line"></div>
+                                    <div class="text-line"></div>
+                                    <div class="text-line"></div>
+                                </div>
+                                <div class="image"></div>
                             </div>
-                            <div class="image"></div>
-                        </div>
-                        <div class="post-inner">
-                            <?php if ('post' == get_post_type()) {?>
-                                <div class="submitted--info d-flex justify-content-center">
-                                    <span>
-                                        <?php _e('Ingezonden bericht', 'flexupdate'); ?>
-                                    </span>
-                                </div>
-                            <?php } ?>
-                            <div class="d-flex">
-                                <div class="post--info">
-                                    <h2><?php the_title(); ?>
-                                    </h2>
-                                    <p><?php echo excerpt(40); ?>
-                                    </p>
-                                    <?php
-                                        $terms = get_the_terms($post->ID, 'soort_item');
-                                        if ($terms) {
-                                            foreach ($terms as $term) {
-                                                $term_id = $term->term_id;
-                                            }
-                                        } ?>
-                                    <?php
-                                            $term_id_prefixed = '_' . $term_id;
-                                    $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
-                                    <?php if ($bedrijfsicon) { ?>
-                                    <img src="<?php echo $bedrijfsicon['url']; ?>"
-                                        alt="<?php echo $bedrijfsicon['alt']; ?>" />
-                                    <?php } else {?>
-                                    <?php } ?>
-                                </div>
-                                <div class="post--image ml-auto">
-                                    <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
-                                    <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
-                                    <div class="the-post--image"
-                                        style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                            <div class="post-inner">
+                                <?php if ('post' == get_post_type()) {?>
+                                    <div class="submitted--info d-flex justify-content-center">
+                                        <span>
+                                            <?php _e('Ingezonden bericht', 'flexupdate'); ?>
+                                        </span>
+                                    </div>
+                                <?php } ?>
+                                <div class="d-flex">
+                                    <div class="post--info">
+                                        <h2><?php the_title(); ?>
+                                        </h2>
+                                        <p><?php echo excerpt(40); ?>
+                                        </p>
+                                        <?php
+                                            $terms = get_the_terms($post->ID, 'soort_item');
+                                            if ($terms) {
+                                                foreach ($terms as $term) {
+                                                    $term_id = $term->term_id;
+                                                }
+                                            } ?>
+                                        <?php
+                                                $term_id_prefixed = '_' . $term_id;
+                                        $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
+                                        <?php if ($bedrijfsicon) { ?>
+                                        <img src="<?php echo $bedrijfsicon['url']; ?>"
+                                            alt="<?php echo $bedrijfsicon['alt']; ?>" />
+                                        <?php } else {?>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="post--image ml-auto">
+                                        <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
+                                        <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
+                                        <div class="the-post--image"
+                                            style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </div>
-                    </div>
                 </div>
             </div>
         </article>

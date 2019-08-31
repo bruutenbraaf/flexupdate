@@ -160,7 +160,7 @@ nav {
   .count {
     .counters {
       text-align: center;
-      padding: 22px 54px;
+      padding: 16px 54px;
       margin: 1px;
       flex: 33.3333%;
       border-right: 1px solid rgba(169, 172, 190, 0.25);
@@ -171,7 +171,7 @@ nav {
         font-family: $roboto;
         font-style: normal;
         font-weight: 700;
-        font-size: 2em;
+        font-size: 1.2em;
         color: $gray;
         &:after {
           content: "+";
@@ -179,7 +179,7 @@ nav {
       }
       span {
         display: block;
-        font-size: 1.1em;
+        font-size: 0.8em;
       }
     }
   }
@@ -212,7 +212,7 @@ nav {
         font-weight: bold;
         font-size: 24px;
         line-height: 32px;
-        color: $gray;
+        color: $brandcolor;
       }
       p {
         font-family: $muli;
