@@ -18,7 +18,7 @@ get_header(); ?>
             <div class="container">
                 <div class="row">
                     <div class="offset-md-2 col-md-8">
-                        <?php the_field('volledige_tekst'); ?>
+                        <?php the_content();?>
                     </div>
                 </div>
             </div>

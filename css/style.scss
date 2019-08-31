@@ -975,6 +975,24 @@ nav {
   }
 }
 
+blockquote {
+  p {
+    font-weight: 600 !important;
+  }
+  :before {
+    content: "“";
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 109px;
+    color: #4d23c1;
+    position: absolute;
+    left: -35px;
+    margin-top: -13px;
+  }
+}
+
 @keyframes in {
   0% {
     opacity: 0;

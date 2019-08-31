@@ -88,13 +88,9 @@ get_header(); ?>
                                             <div class="post--info">
                                                 <h2><?php the_title(); ?>
                                                 </h2>
-                                                <?php if ('post' == get_post_type()) { ?>
-                                                    <?php echo mb_strimwidth(get_field('intro_text'), 0, 160, '...');?>
-                                                <?php } else { ?>
                                                     <p>
                                                         <?php echo excerpt(40); ?>
                                                     </p>
-                                                <?php } ?>
                                                 <?php
                                                         $terms = get_the_terms($post->ID, 'soort_item');
                                                         if ($terms) {
