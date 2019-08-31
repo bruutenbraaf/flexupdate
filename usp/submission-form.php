@@ -93,16 +93,12 @@ else :
 		</fieldset>
 		<?php } if ($usp_options['custom_field'] == 'show' || $usp_options['custom_field'] == 'optn') { ?>
 
-		<fieldset class="usp-custom">
+			<fieldset class="usp-custom">
 			<label for="user-submitted-custom"><?php echo esc_html($usp_custom_label); ?></label>
-			<input id="user-submitted-custom"
-				name="<?php echo esc_attr($usp_custom_name); ?>"
-				type="text" value=""
-				<?php if (usp_check_required('custom_field')) {
-            echo $usp_required;
-        } ?>
-			class="usp-input">
-		</fieldset>
+			<textarea id="user-submitted-custom" name="<?php echo esc_attr($usp_custom_name); ?>" rows="5"
+				<?php if (usp_check_required('usp_content')) {
+                    echo $usp_required;
+                } ?> class="usp-textarea"></textarea>
 		<?php } if ($usp_options['usp_captcha'] == 'show') { ?>
 		<?php } if (($usp_options['usp_url'] == 'show' || $usp_options['usp_url'] == 'optn') && ($usp_display_url)) { ?>
 
