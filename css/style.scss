@@ -203,6 +203,9 @@ nav {
       border-radius: 7px;
       padding: 30px;
       min-height: 264px;
+      &:hover {
+        box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.099);
+      }
     }
     .post--info {
       padding-right: 15px;
@@ -778,6 +781,18 @@ nav {
   display: none;
 }
 
+.the--post a {
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.the--post a {
+  &:hover h2 {
+    text-decoration: underline;
+  }
+}
+
 .submitted--info {
   color: $graytwo;
   border-bottom: 1px solid $graytwo;
@@ -812,6 +827,152 @@ nav {
   animation-iteration-count: forwards;
   animation-name: out;
   animation-timing-function: linear;
+}
+
+.search--form {
+  background: $brandcolor;
+  width: 100vw;
+  height: 60px;
+  top: 80px;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(69, 93, 199, 0.18);
+  display: none;
+  .inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    input {
+      background: none;
+      border: none;
+      border-radius: 2px;
+      height: 60px;
+      color: #ffffff;
+      font-size: 20px;
+      flex-grow: 1;
+      font-family: $nunito;
+      font-weight: 700;
+      &::placeholder {
+        color: #ffffff;
+        font-size: 20px;
+        font-family: $nunito;
+        font-weight: 700;
+      }
+    }
+    input[type="submit"] {
+      margin-left: auto;
+      display: flex;
+      flex-grow: 0;
+      background: $cta;
+      font-family: $nunito;
+      height: auto;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      &:hover {
+        background: darken(#4ab716, 5%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.search--post {
+  margin-top: 60px;
+  h2 {
+    font-family: $nunito;
+    color: $brandcolor;
+    font-weight: bold;
+  }
+}
+
+.no--post {
+  font-family: $muli;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: $darkgray;
+}
+
+.search--formpage {
+  display: flex;
+  input {
+    height: 46px;
+    background: #fff;
+    border: 1px solid #f5f4f7;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 20px;
+    flex-grow: 1;
+    margin-right: -20px;
+  }
+  input[type="submit"] {
+    background: #4ab716;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+    padding: 0 48px;
+    border: none;
+    flex-grow: 0;
+    display: flex;
+    width: auto;
+    margin-right: initial;
+  }
+}
+
+#static {
+  padding: 140px 0px;
+  .intro p {
+    font-family: $muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #545a63;
+  }
+  h1 {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: $gray;
+  }
+  h2 {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: $gray;
+  }
+  p {
+    font-family: $muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: #545a63;
+  }
+  .post--image {
+    width: 100%;
+    height: 379px;
+    margin: 60px 0px;
+    max-width: 80vw;
+    border-radius: 0px 20px 20px 0px;
+  }
 }
 
 @keyframes in {
@@ -855,15 +1016,66 @@ nav {
     background: #ffffff;
     box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
     border-radius: 10px;
-    h4 {
-      font-family: $roboto;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
-      color: #333333;
+    overflow: hidden;
+    .vac--btn {
+      position: absolute;
+      right: 15px;
+      bottom: 0;
+      width: 35px;
+      height: 35px;
+      background: $cta;
+      border-radius: 99px 0 30px 0;
+      svg {
+        stroke: #fff;
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        height: 12px;
+      }
+    }
+    &:hover {
+      .vac--btn svg {
+        left: 14px;
+      }
       a {
-        color: #333333;
+        text-decoration: none;
+      }
+      a h4 {
+        text-decoration: underline;
+      }
+    }
+    .vac--heading {
+      display: flex;
+      align-items: center;
+      h4 {
+        color: $brandcolor;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        float: left;
+        a {
+          color: #333333;
+        }
+      }
+      .location {
+        float: right;
+        font-size: 12px;
+        color: #a2a2a2;
+      }
+    }
+    .branche {
+      padding-bottom: 10px;
+      display: block;
+      color: #000000b0;
+      font-size: 14px;
+      svg {
+        fill: #000000b0;
+        margin-right: 5px;
+        position: relative;
+        top: -2px;
       }
     }
   }
@@ -1039,6 +1251,66 @@ p.description[data-readmore] {
   }
 }
 
+.btp {
+  width: 52px;
+  height: 130px;
+  background-color: $brandcolor;
+  border-radius: 99px 99px 0px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  position: fixed;
+  right: 4vw;
+  bottom: -130px;
+  z-index: 999;
+  transform-origin: top;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  &:before {
+    content: "";
+    position: absolute;
+    background: $brandcolor;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    top: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    min-height: 50px;
+    z-index: -2;
+    left: -50px;
+    bottom: -50px;
+    border-radius: 100%;
+    background: darken($brandcolor, 5%);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  &:hover {
+    color: #fff;
+  }
+  &:hover:after {
+    transform: scale(18);
+  }
+  svg {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.is--visible {
+  border-radius: 10px;
+  bottom: 30px;
+  height: 52px;
+}
+
 .xl {
   display: none;
 }
@@ -1102,8 +1374,8 @@ p.description[data-readmore] {
   }
   nav {
     .container {
-        max-width: 100vw;
-        padding: 0px 5px 0px 15px;
+      max-width: 100vw;
+      padding: 0px 5px 0px 15px;
     }
   }
   .vac .the--vac,
@@ -1230,7 +1502,7 @@ p.description[data-readmore] {
     padding: 30px 0px;
   }
   .adv .the--adv .adv--info {
-    display:flex !important;
+    display: flex !important;
   }
   .image {
     min-width: 119px;

@@ -152,6 +152,8 @@ nav {
     border-radius: 7px;
     padding: 30px;
     min-height: 264px; }
+    #posts article .the--post:hover {
+      box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.099); }
   #posts article .post--info {
     padding-right: 15px; }
     #posts article .post--info h2 {
@@ -628,6 +630,12 @@ nav {
   opacity: 0;
   display: none; }
 
+.the--post a:hover {
+  text-decoration: none !important; }
+
+.the--post a:hover h2 {
+  text-decoration: underline; }
+
 .submitted--info {
   color: #4f4f4f;
   border-bottom: 1px solid #4f4f4f;
@@ -654,6 +662,133 @@ nav {
   animation-iteration-count: forwards;
   animation-name: out;
   animation-timing-function: linear; }
+
+.search--form {
+  background: #4d23c1;
+  width: 100vw;
+  height: 60px;
+  top: 80px;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(69, 93, 199, 0.18);
+  display: none; }
+  .search--form .inner {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .search--form form {
+    display: flex;
+    align-items: center; }
+    .search--form form input {
+      background: none;
+      border: none;
+      border-radius: 2px;
+      height: 60px;
+      color: #ffffff;
+      font-size: 20px;
+      flex-grow: 1;
+      font-family: "Nunito", sans-serif;
+      font-weight: 700; }
+      .search--form form input::placeholder {
+        color: #ffffff;
+        font-size: 20px;
+        font-family: "Nunito", sans-serif;
+        font-weight: 700; }
+    .search--form form input[type="submit"] {
+      margin-left: auto;
+      display: flex;
+      flex-grow: 0;
+      background: #4ab716;
+      font-family: "Nunito", sans-serif;
+      height: auto;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700; }
+      .search--form form input[type="submit"]:hover {
+        background: #41a013;
+        cursor: pointer; }
+
+.search--post {
+  margin-top: 60px; }
+  .search--post h2 {
+    font-family: "Nunito", sans-serif;
+    color: #4d23c1;
+    font-weight: bold; }
+
+.no--post {
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: #545a63; }
+
+.search--formpage {
+  display: flex; }
+  .search--formpage input {
+    height: 46px;
+    background: #fff;
+    border: 1px solid #f5f4f7;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 20px;
+    flex-grow: 1;
+    margin-right: -20px; }
+  .search--formpage input[type="submit"] {
+    background: #4ab716;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+    padding: 0 48px;
+    border: none;
+    flex-grow: 0;
+    display: flex;
+    width: auto;
+    margin-right: initial; }
+
+#static {
+  padding: 140px 0px; }
+  #static .intro p {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #545a63; }
+  #static h1 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: #333333; }
+  #static h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333; }
+  #static p {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: #545a63; }
+  #static .post--image {
+    width: 100%;
+    height: 379px;
+    margin: 60px 0px;
+    max-width: 80vw;
+    border-radius: 0px 20px 20px 0px; }
 
 @keyframes in {
   0% {
@@ -682,16 +817,56 @@ nav {
     height: 100%;
     background: #ffffff;
     box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
-    border-radius: 10px; }
-    #vacancy-overview .vacansie-item h4 {
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
-      color: #333333; }
-      #vacancy-overview .vacansie-item h4 a {
-        color: #333333; }
+    border-radius: 10px;
+    overflow: hidden; }
+    #vacancy-overview .vacansie-item .vac--btn {
+      position: absolute;
+      right: 15px;
+      bottom: 0;
+      width: 35px;
+      height: 35px;
+      background: #4ab716;
+      border-radius: 99px 0 30px 0; }
+      #vacancy-overview .vacansie-item .vac--btn svg {
+        stroke: #fff;
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        height: 12px; }
+    #vacancy-overview .vacansie-item:hover .vac--btn svg {
+      left: 14px; }
+    #vacancy-overview .vacansie-item:hover a {
+      text-decoration: none; }
+    #vacancy-overview .vacansie-item:hover a h4 {
+      text-decoration: underline; }
+    #vacancy-overview .vacansie-item .vac--heading {
+      display: flex;
+      align-items: center; }
+      #vacancy-overview .vacansie-item .vac--heading h4 {
+        color: #4d23c1;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        float: left; }
+        #vacancy-overview .vacansie-item .vac--heading h4 a {
+          color: #333333; }
+      #vacancy-overview .vacansie-item .vac--heading .location {
+        float: right;
+        font-size: 12px;
+        color: #a2a2a2; }
+    #vacancy-overview .vacansie-item .branche {
+      padding-bottom: 10px;
+      display: block;
+      color: #000000b0;
+      font-size: 14px; }
+      #vacancy-overview .vacansie-item .branche svg {
+        fill: #000000b0;
+        margin-right: 5px;
+        position: relative;
+        top: -2px; }
 
 #vacancy-detail {
   padding-top: 140px;
@@ -836,6 +1011,59 @@ p.description[data-readmore] {
       #place-post form .usp-submit:hover {
         background: #41a013;
         cursor: pointer; }
+
+.btp {
+  width: 52px;
+  height: 130px;
+  background-color: #4d23c1;
+  border-radius: 99px 99px 0px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  position: fixed;
+  right: 4vw;
+  bottom: -130px;
+  z-index: 999;
+  transform-origin: top;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .btp:before {
+    content: "";
+    position: absolute;
+    background: #4d23c1;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    top: 0; }
+  .btp:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    min-height: 50px;
+    z-index: -2;
+    left: -50px;
+    bottom: -50px;
+    border-radius: 100%;
+    background: #441fab;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  .btp:hover {
+    color: #fff; }
+  .btp:hover:after {
+    transform: scale(18); }
+  .btp svg {
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+
+.is--visible {
+  border-radius: 10px;
+  bottom: 30px;
+  height: 52px; }
 
 .xl {
   display: none; }

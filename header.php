@@ -22,9 +22,9 @@
                     <?php $logo = get_field('logo'); ?>
                     <?php $logo = get_field('logo', 'option'); ?>
                     <?php if ($logo) { ?>
-                    <a href="<?php echo get_home_url(); ?>">
-                        <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
-                    </a>
+                        <a href="<?php echo get_home_url(); ?>">
+                            <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                        </a>
                     <?php } ?>
                 </div>
                 <div class="p-2 mx">
@@ -51,18 +51,29 @@
             </div>
         </div>
     </nav>
-
-
     <div class="tabs-nav">
         <?php wp_nav_menu(array('theme_location' => 'side_menu')); ?>
     </div>
-
-
     <div class="mobile-nav">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <?php wp_nav_menu(array('theme_location' => 'mobile_menu')); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search--form">
+        <div class="inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="<?php echo home_url('/'); ?>" method="get">
+                            <input type="text" name="s" id="search" placeholder="Geef een zoekterm op" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Geef een zoekterm op'" value="<?php the_search_query(); ?>" />
+                            <input type="submit" id="searchsubmit" value="Zoeken" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
