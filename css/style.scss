@@ -1071,8 +1071,18 @@ blockquote {
     color: #828282;
   }
   #accept-cookie {
-    color: #ffffff;
     background: $cta;
+    box-shadow: 0 0 20px rgba(85,217,187,.25);
+    border-radius: 10px;
+    -webkit-appearance: none;
+    border: 0;
+    font-family: $nunito;
+    padding: 15px 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
   }
 }
 
