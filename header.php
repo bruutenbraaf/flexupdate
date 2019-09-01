@@ -78,3 +78,17 @@
             </div>
         </div>
     </div>
+
+    <div class="newsletter--bar">
+        <div class="inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="mc_embed_signup" class="d-flex">
+                            <?php echo do_shortcode('[mailchimp]'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

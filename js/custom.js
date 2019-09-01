@@ -30,6 +30,10 @@ jQuery( "body" ).on('click', '.hamburger', function() {
     jQuery('.search--form').animate({'height': 'toggle'}, 200);
   });
 
+  jQuery( "body" ).on('click', '#newsletterbtn', function() {
+    jQuery('.newsletter--bar').animate({'height': 'toggle'}, 200);
+  });
+
 jQuery(window).scroll(function() {    
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 100) {

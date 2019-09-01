@@ -993,6 +993,70 @@ blockquote {
   }
 }
 
+.newsletter--bar {
+  background: $cta;
+  width: 100vw;
+  height: 60px;
+  top: 80px;
+  position: fixed;
+  z-index: 10;
+  display: none;
+  box-shadow: 0 0 25px rgba(69, 93, 199, 0.18);
+  .inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    #mc_embed_signup_scroll {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .mc-field-group {
+      flex-grow: 1;
+    }
+    input {
+      width: 100%;
+      background: none;
+      border: none;
+      border-radius: 2px;
+      height: 60px;
+      color: #ffffff;
+      font-size: 20px;
+      flex-grow: 1;
+      font-family: $nunito;
+      font-weight: 700;
+      &::placeholder {
+        color: #ffffff;
+        font-size: 20px;
+        font-family: $nunito;
+        font-weight: 700;
+      }
+    }
+    input[type="submit"] {
+      margin-left: auto;
+      display: flex;
+      flex-grow: 0;
+      background: $brandcolor;
+      font-family: $nunito;
+      height: auto;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      &:hover {
+        background: darken(#4ab716, 5%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 @keyframes in {
   0% {
     opacity: 0;

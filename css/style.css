@@ -805,6 +805,61 @@ blockquote :before {
   left: -35px;
   margin-top: -13px; }
 
+.newsletter--bar {
+  background: #4ab716;
+  width: 100vw;
+  height: 60px;
+  top: 80px;
+  position: fixed;
+  z-index: 10;
+  display: none;
+  box-shadow: 0 0 25px rgba(69, 93, 199, 0.18); }
+  .newsletter--bar .inner {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .newsletter--bar form {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+    .newsletter--bar form #mc_embed_signup_scroll {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+    .newsletter--bar form .mc-field-group {
+      flex-grow: 1; }
+    .newsletter--bar form input {
+      width: 100%;
+      background: none;
+      border: none;
+      border-radius: 2px;
+      height: 60px;
+      color: #ffffff;
+      font-size: 20px;
+      flex-grow: 1;
+      font-family: "Nunito", sans-serif;
+      font-weight: 700; }
+      .newsletter--bar form input::placeholder {
+        color: #ffffff;
+        font-size: 20px;
+        font-family: "Nunito", sans-serif;
+        font-weight: 700; }
+    .newsletter--bar form input[type="submit"] {
+      margin-left: auto;
+      display: flex;
+      flex-grow: 0;
+      background: #4d23c1;
+      font-family: "Nunito", sans-serif;
+      height: auto;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700; }
+      .newsletter--bar form input[type="submit"]:hover {
+        background: #41a013;
+        cursor: pointer; }
+
 @keyframes in {
   0% {
     opacity: 0; }

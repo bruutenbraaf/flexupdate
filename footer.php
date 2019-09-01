@@ -15,7 +15,9 @@
                                                     <h2><?php the_sub_field('titel'); ?></h2>
                                                 </div>
                                                 <div class="col-md-8 signup--form">
-                                                    <?php echo do_shortcode('[mailchimp]'); ?>
+                                                    <div id="mc_embed_signup" class="justify-content-center d-flex">
+                                                        <?php echo do_shortcode('[mailchimp]'); ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -38,10 +40,10 @@
                             <div class="offset-md-1 col-md-10">
                                 <div class="the--promotors">
                                     <?php $loop = new WP_Query(array(
-                                        'post_type' => 'initiatiefnemers',
-                                        'posts_per_page' => -1,
-                                        'order' => 'RAND'
-                                    )); ?>
+                                                    'post_type' => 'initiatiefnemers',
+                                                    'posts_per_page' => -1,
+                                                    'order' => 'RAND'
+                                                )); ?>
                                     <?php if ($loop->have_posts()) : ?>
                                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                             <div class="item">
@@ -177,9 +179,9 @@
     </section>
 </footer>
 <div class="btp">
-	<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M8.06307 14L4.94019 14C4.50754 14 4.15947 13.6657 4.15947 13.2501L4.15947 7.00078L0.782856 7.00078C0.0867142 7.00078 -0.261357 6.19462 0.229846 5.71967L5.94862 0.220287C6.2544 -0.0734302 6.74885 -0.0734302 7.05464 0.220287L12.7702 5.71967C13.2614 6.1915 12.9133 7.00078 12.2171 7.00078L8.84378 7.00078L8.84379 13.2501C8.84379 13.6657 8.49571 14 8.06307 14Z" fill="white" />
-	</svg>
+    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.06307 14L4.94019 14C4.50754 14 4.15947 13.6657 4.15947 13.2501L4.15947 7.00078L0.782856 7.00078C0.0867142 7.00078 -0.261357 6.19462 0.229846 5.71967L5.94862 0.220287C6.2544 -0.0734302 6.74885 -0.0734302 7.05464 0.220287L12.7702 5.71967C13.2614 6.1915 12.9133 7.00078 12.2171 7.00078L8.84378 7.00078L8.84379 13.2501C8.84379 13.6657 8.49571 14 8.06307 14Z" fill="white" />
+    </svg>
 </div>
 <?php wp_footer(); ?>
 </body>
