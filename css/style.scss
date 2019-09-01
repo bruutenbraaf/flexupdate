@@ -1070,6 +1070,17 @@ blockquote {
     line-height: 32px;
     color: #828282;
   }
+  a {
+    padding: 0 5px;
+    margin: 0 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $nunito;
+    color: $gray;
+    position: relative;
+  }
   #accept-cookie {
     background: $cta;
     box-shadow: 0 0 20px rgba(85,217,187,.25);

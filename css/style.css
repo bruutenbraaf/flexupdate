@@ -871,6 +871,16 @@ blockquote :before {
     font-size: 16px;
     line-height: 32px;
     color: #828282; }
+  .cookie-notice a {
+    padding: 0 5px;
+    margin: 0 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "Nunito", sans-serif;
+    color: #333333;
+    position: relative; }
   .cookie-notice #accept-cookie {
     background: #4ab716;
     box-shadow: 0 0 20px rgba(85, 217, 187, 0.25);
