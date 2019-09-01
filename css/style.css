@@ -860,6 +860,21 @@ blockquote :before {
         background: #41a013;
         cursor: pointer; }
 
+.cookie-notice {
+  max-width: 500px; }
+  .cookie-notice h2 {
+    font-weight: bold; }
+  .cookie-notice p {
+    font-family: "Muli", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #828282; }
+  .cookie-notice #accept-cookie {
+    color: #ffffff;
+    background: #4ab716; }
+
 @keyframes in {
   0% {
     opacity: 0; }

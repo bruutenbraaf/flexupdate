@@ -1057,6 +1057,25 @@ blockquote {
   }
 }
 
+.cookie-notice {
+  max-width: 500px;
+  h2 {
+    font-weight: bold;
+  }
+  p {
+    font-family: $muli;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #828282;
+  }
+  #accept-cookie {
+    color: #ffffff;
+    background: $cta;
+  }
+}
+
 @keyframes in {
   0% {
     opacity: 0;
