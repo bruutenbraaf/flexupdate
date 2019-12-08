@@ -453,7 +453,7 @@ nav {
   right: 32px;
   margin: 0px;
   padding: 0px;
-  top: 70px;
+  top: 80px;
   z-index: 6;
   transform: rotate(-90deg);
   transform-origin: right;
@@ -466,18 +466,38 @@ nav {
     font-size: 15px;
     text-transform: uppercase;
     color: $gray;
-    padding: 22px 15px;
-    border-radius: 4px 4px 0px 0px;
+    margin: 0px 5px;
     a {
+      padding: 22px 15px;
       color: $gray;
+      border-radius: 4px 4px 0px 0px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background: $cta;
+        box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
+        border-radius: 8px 8px 0px 0px;
+        color: #ffffff;
+        text-decoration: none;
+      }
     }
   }
   .current-menu-item {
-    background: #4d23c1;
+    background: $brandcolor;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px;
     a {
       color: #ffffff;
+    }
+  }
+  .vac {
+    a {
+      color: #ffffff;
+      background: $brandcolor;
+      box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
+      border-radius: 8px 8px 0px 0px;
     }
   }
 }
@@ -1083,7 +1103,7 @@ blockquote {
   }
   #accept-cookie {
     background: $cta;
-    box-shadow: 0 0 20px rgba(85,217,187,.25);
+    box-shadow: 0 0 20px rgba(85, 217, 187, 0.25);
     border-radius: 10px;
     -webkit-appearance: none;
     border: 0;
