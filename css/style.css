@@ -423,7 +423,7 @@ nav {
   overflow: hidden; }
   .adv .the--adv .adv--info {
     color: #4f4f4f;
-    opacity: 0.25;
+    opacity: 0.6;
     padding-bottom: 15px;
     border-bottom: 1px solid #4f4f4f;
     width: calc(100% + 40px);
@@ -725,6 +725,19 @@ nav {
       .search--form form input[type="submit"]:hover {
         background: #41a013;
         cursor: pointer; }
+  .search--form #search {
+    border-bottom: 2px solid white !important;
+    border-radius: 0px !important;
+    width: 80% !important;
+    height: 45px !important;
+    max-width: 50%; }
+
+input#mce-EMAIL {
+  border-bottom: 2px solid white !important;
+  border-radius: 0px !important;
+  width: 80% !important;
+  height: 45px !important;
+  max-width: 50%; }
 
 .search--post {
   margin-top: 60px; }
@@ -1094,9 +1107,9 @@ p.description[data-readmore] {
   #place-post form {
     padding: 0px; }
     #place-post form label {
-      padding-left: 0px !important;
-      width: 100% !important;
-      display: block !important;
+      padding-left: 0px;
+      width: 100%;
+      display: block;
       font-family: "Muli", sans-serif !important;
       font-style: normal;
       font-weight: 600;
@@ -1132,6 +1145,13 @@ p.description[data-readmore] {
       #place-post form .usp-submit:hover {
         background: #41a013;
         cursor: pointer; }
+
+#user-submitted-checkbox {
+  max-width: 20px; }
+
+.usp-checkbox label {
+  width: auto !important;
+  display: inline !important; }
 
 .btp {
   width: 52px;

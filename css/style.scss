@@ -528,7 +528,7 @@ nav {
     overflow: hidden;
     .adv--info {
       color: $graytwo;
-      opacity: 0.25;
+      opacity: 0.6;
       padding-bottom: 15px;
       border-bottom: 1px solid $graytwo;
       width: calc(100% + 40px);
@@ -900,6 +900,20 @@ nav {
       }
     }
   }
+  #search {
+    border-bottom: 2px solid white !important;
+    border-radius: 0px !important;
+    width: 80% !important;
+    height: 45px !important;
+    max-width: 50%;
+  }
+}
+input#mce-EMAIL {
+  border-bottom: 2px solid white !important;
+  border-radius: 0px !important;
+  width: 80% !important;
+  height: 45px !important;
+  max-width: 50%;
 }
 
 .search--post {
@@ -1348,9 +1362,9 @@ p.description[data-readmore] {
   form {
     padding: 0px;
     label {
-      padding-left: 0px !important;
-      width: 100% !important;
-      display: block !important;
+      padding-left: 0px;
+      width: 100%;
+      display: block;
       font-family: $muli !important;
       font-style: normal;
       font-weight: 600;
@@ -1391,6 +1405,15 @@ p.description[data-readmore] {
       }
     }
   }
+}
+
+#user-submitted-checkbox {
+  max-width: 20px;
+}
+
+.usp-checkbox label {
+  width: auto !important;
+  display: inline !important;
 }
 
 .btp {
