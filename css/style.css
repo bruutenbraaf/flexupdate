@@ -943,13 +943,15 @@ blockquote :before {
   padding-bottom: calc(80px + 150px); }
   #vacancy-overview .vac-col {
     margin-bottom: 30px; }
-  #vacancy-overview .vacancy-intro h2,
-  #vacancy-overview .vacancy-intro p {
-    color: #ffffff; }
-  #vacancy-overview .vacancy-intro h2 {
-    font-weight: bold; }
-  #vacancy-overview .vacancy-intro p {
-    opacity: 0.8; }
+  #vacancy-overview .vacancy-intro {
+    margin-bottom: 30px; }
+    #vacancy-overview .vacancy-intro h2,
+    #vacancy-overview .vacancy-intro p {
+      color: #ffffff; }
+    #vacancy-overview .vacancy-intro h2 {
+      font-weight: bold; }
+    #vacancy-overview .vacancy-intro p {
+      opacity: 0.8; }
   #vacancy-overview .vacansie-item {
     padding: 20px;
     height: 100%;
