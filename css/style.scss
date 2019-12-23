@@ -1158,6 +1158,9 @@ blockquote {
   padding-top: 140px;
   margin-bottom: -150px;
   padding-bottom: calc(80px + 150px);
+  .vac-col {
+    margin-bottom: 30px;
+  }
   .vacancy-intro {
     h2,
     p {

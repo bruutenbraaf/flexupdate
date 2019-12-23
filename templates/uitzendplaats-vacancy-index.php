@@ -38,7 +38,7 @@ if ($_POST && array_key_exists('uzp_vacancy_search', $_POST) && (!empty($search_
 <?php } else { ?>
 	<?php if (isset($view_data) && isset($view_data->data)) { ?>
 		<?php foreach ($view_data->data as $key => $item) { ?>
-			<div class="col-md-4 vac-col">
+			<div class="col-md-10 offset-md-1 vac-col">
 				<article class="vacansie-item" data-scroll>
 					<a class="the-link" href="<?php echo get_site_url(null, get_option('uitzendplaats-options')['uzp-vacancy-index-page'] . '/' . sanitize_title($item->title) . '/' . $item->id . '/') ?>" title="<?php _e('More information', 'uitzendplaats'); ?>">
 						<div class="inner">

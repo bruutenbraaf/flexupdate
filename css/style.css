@@ -941,6 +941,8 @@ blockquote :before {
   padding-top: 140px;
   margin-bottom: -150px;
   padding-bottom: calc(80px + 150px); }
+  #vacancy-overview .vac-col {
+    margin-bottom: 30px; }
   #vacancy-overview .vacancy-intro h2,
   #vacancy-overview .vacancy-intro p {
     color: #ffffff; }
