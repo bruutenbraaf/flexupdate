@@ -90,7 +90,7 @@ nav {
           -o-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out; }
         nav .menu li a:hover {
-          color: #4d23c1;
+          color: #403F92;
           text-decoration: none; }
         nav .menu li a:hover:after {
           height: 4px; }
@@ -107,9 +107,9 @@ nav {
     nav .search .search-button:hover {
       background: #efefef; }
       nav .search .search-button:hover svg circle {
-        stroke: #4d23c1; }
+        stroke: #403F92; }
       nav .search .search-button:hover svg line {
-        stroke: #4d23c1; }
+        stroke: #403F92; }
 
 #hp {
   padding: 80px 0px; }
@@ -162,7 +162,7 @@ nav {
       font-weight: bold;
       font-size: 24px;
       line-height: 32px;
-      color: #4d23c1; }
+      color: #403F92; }
     #posts article .post--info p {
       font-family: "Muli", sans-serif;
       font-style: normal;
@@ -300,7 +300,7 @@ nav {
     #promoters .the--promotors .slick-dots .slick-active {
       border: none; }
     #promoters .the--promotors .slick-dots .slick-active button {
-      background: #4d23c1; }
+      background: #403F92; }
   #promoters .the--promotors .slick-dots li {
     float: left;
     list-style: none;
@@ -388,14 +388,14 @@ nav {
         color: #ffffff;
         text-decoration: none; }
   .tabs-nav .current-menu-item {
-    background: #4d23c1;
+    background: #403F92;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px; }
     .tabs-nav .current-menu-item a {
       color: #ffffff; }
   .tabs-nav .vac a {
     color: #ffffff;
-    background: #4d23c1;
+    background: #403F92;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px; }
 
@@ -680,7 +680,7 @@ nav {
   animation-timing-function: linear; }
 
 .search--form {
-  background: #4d23c1;
+  background: #403F92;
   width: 100vw;
   height: 60px;
   top: 80px;
@@ -742,7 +742,7 @@ input#mce-EMAIL {
   margin-top: 60px; }
   .search--post h2 {
     font-family: "Nunito", sans-serif;
-    color: #4d23c1;
+    color: #403F92;
     font-weight: bold; }
 
 .no--post {
@@ -831,7 +831,7 @@ blockquote :before {
   font-weight: 700;
   font-size: 80px;
   line-height: 109px;
-  color: #4d23c1;
+  color: #403F92;
   position: absolute;
   left: -35px;
   margin-top: -13px; }
@@ -880,7 +880,7 @@ blockquote :before {
       margin-left: auto;
       display: flex;
       flex-grow: 0;
-      background: #4d23c1;
+      background: #403F92;
       font-family: "Nunito", sans-serif;
       height: auto;
       padding: 10px 20px;
@@ -979,7 +979,7 @@ blockquote :before {
       display: flex;
       align-items: center; }
       #vacancy-overview .vacansie-item .vac--heading h4 {
-        color: #4d23c1;
+        color: #403F92;
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -1158,7 +1158,7 @@ p.description[data-readmore] {
 .btp {
   width: 52px;
   height: 130px;
-  background-color: #4d23c1;
+  background-color: #403F92;
   border-radius: 99px 99px 0px 0px;
   cursor: pointer;
   overflow: hidden;
@@ -1174,7 +1174,7 @@ p.description[data-readmore] {
   .btp:before {
     content: "";
     position: absolute;
-    background: #4d23c1;
+    background: #403F92;
     width: 100%;
     height: 100%;
     z-index: -2;
@@ -1189,7 +1189,7 @@ p.description[data-readmore] {
     left: -50px;
     bottom: -50px;
     border-radius: 100%;
-    background: #441fab;
+    background: #383780;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
