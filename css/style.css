@@ -45,7 +45,7 @@ nav {
   nav .branding a img {
     max-width: 180px; }
   nav #newsletterbtn {
-    background: #4ab716;
+    background: #33AB38;
     box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
     border-radius: 10px;
     -webkit-appearance: none;
@@ -58,7 +58,7 @@ nav {
     line-height: 22px;
     color: #ffffff; }
     nav #newsletterbtn:hover {
-      background: #41a013;
+      background: #2d9732;
       cursor: pointer; }
   nav .menu {
     margin: 0;
@@ -722,7 +722,7 @@ nav {
       font-size: 16px;
       font-weight: 700; }
       .search--form form input[type="submit"]:hover {
-        background: #41a013;
+        background: #2d9732;
         cursor: pointer; }
   .search--form #search {
     border-bottom: 2px solid white !important;
@@ -767,7 +767,7 @@ input#mce-EMAIL {
     flex-grow: 1;
     margin-right: -20px; }
   .search--formpage input[type="submit"] {
-    background: #4ab716;
+    background: #33AB38;
     font-family: Nunito, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -888,7 +888,7 @@ blockquote :before {
       font-size: 16px;
       font-weight: 700; }
       .newsletter--bar form input[type="submit"]:hover {
-        background: #41a013;
+        background: #2d9732;
         cursor: pointer; }
 
 .cookie-notice {
@@ -1027,7 +1027,7 @@ blockquote :before {
   #vacancy-detail .description-vacansie {
     padding-bottom: 60px; }
   #vacancy-detail .btn {
-    background: #4ab716;
+    background: #33AB38;
     box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
     border-radius: 10px;
     -webkit-appearance: none;
@@ -1041,7 +1041,7 @@ blockquote :before {
     color: #ffffff;
     margin-top: 15px; }
     #vacancy-detail .btn:hover {
-      background: #41a013;
+      background: #2d9732;
       cursor: pointer; }
   #vacancy-detail .vacancy-profile .inner {
     background: #ffffff;
@@ -1130,7 +1130,7 @@ p.description[data-readmore] {
         box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
         outline: 0 !important; }
     #place-post form .usp-submit {
-      background: #4ab716;
+      background: #33AB38;
       box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
       border-radius: 10px;
       -webkit-appearance: none;
@@ -1145,7 +1145,7 @@ p.description[data-readmore] {
       margin-top: 15px;
       width: inherit !important; }
       #place-post form .usp-submit:hover {
-        background: #41a013;
+        background: #2d9732;
         cursor: pointer; }
 
 #user-submitted-checkbox {
