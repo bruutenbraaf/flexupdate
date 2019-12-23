@@ -371,8 +371,8 @@ nav {
     .slick-slide img {
       display: block;
       margin: 0 auto;
-      height: 100%;
-      width: auto;
+      max-height: 100%;
+      max-width: 100%;
     }
     .slick-dots {
       display: inline-block;
