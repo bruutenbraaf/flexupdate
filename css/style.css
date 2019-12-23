@@ -263,7 +263,7 @@ nav {
         width: 100%;
         padding: 0px 20px; }
       #newsletter .news-block .signup--form form input[type="submit"] {
-        background: #4ab716;
+        background: #33AB38;
         font-family: "Nunito", sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -382,7 +382,7 @@ nav {
       -o-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
       .tabs-nav li a:hover {
-        background: #4ab716;
+        background: #33AB38;
         box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
         border-radius: 8px 8px 0px 0px;
         color: #ffffff;
@@ -459,7 +459,7 @@ nav {
       line-height: 32px;
       color: #828282; }
     .adv .the--adv .the-post--ad .btn {
-      background: #4ab716;
+      background: #33AB38;
       box-shadow: 0 0 20px rgba(85, 217, 187, 0.25);
       border-radius: 10px;
       -webkit-appearance: none;
@@ -507,7 +507,7 @@ nav {
       line-height: 32px;
       color: #828282; }
   .vac .the--vac .btn {
-    border: 1px solid #4ab716;
+    border: 1px solid #33AB38;
     border-radius: 10px;
     -webkit-appearance: none;
     font-family: "Nunito", sans-serif;
@@ -516,9 +516,9 @@ nav {
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    color: #4ab716; }
+    color: #33AB38; }
     .vac .the--vac .btn:hover {
-      background: #4ab716;
+      background: #33AB38;
       color: #ffffff; }
   .vac .the--vac .logo {
     background: #fff;
@@ -565,7 +565,7 @@ nav {
       line-height: 32px;
       color: #828282; }
   .edu .the--edu .btn {
-    border: 1px solid #4ab716;
+    border: 1px solid #33AB38;
     border-radius: 10px;
     -webkit-appearance: none;
     font-family: "Nunito", sans-serif;
@@ -574,9 +574,9 @@ nav {
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    color: #4ab716; }
+    color: #33AB38; }
     .edu .the--edu .btn:hover {
-      background: #4ab716;
+      background: #33AB38;
       color: #ffffff; }
   .edu .the--edu .logo {
     background: #fff;
@@ -714,7 +714,7 @@ nav {
       margin-left: auto;
       display: flex;
       flex-grow: 0;
-      background: #4ab716;
+      background: #33AB38;
       font-family: "Nunito", sans-serif;
       height: auto;
       padding: 10px 20px;
@@ -837,7 +837,7 @@ blockquote :before {
   margin-top: -13px; }
 
 .newsletter--bar {
-  background: #4ab716;
+  background: #33AB38;
   width: 100vw;
   height: 60px;
   top: 80px;
@@ -913,7 +913,7 @@ blockquote :before {
     color: #333333;
     position: relative; }
   .cookie-notice #accept-cookie {
-    background: #4ab716;
+    background: #33AB38;
     box-shadow: 0 0 20px rgba(85, 217, 187, 0.25);
     border-radius: 10px;
     -webkit-appearance: none;
@@ -961,7 +961,7 @@ blockquote :before {
       bottom: 0;
       width: 35px;
       height: 35px;
-      background: #4ab716;
+      background: #33AB38;
       border-radius: 99px 0 30px 0; }
       #vacancy-overview .vacansie-item .vac--btn svg {
         stroke: #fff;
@@ -1065,7 +1065,7 @@ blockquote :before {
 
 p.description + [data-readmore-toggle],
 p.description[data-readmore] {
-  color: #4ab716; }
+  color: #33AB38; }
 
 .vacansie_form label {
   padding-left: 0px;
