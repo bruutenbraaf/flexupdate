@@ -1622,6 +1622,9 @@ p.description[data-readmore] {
   }
   .branding {
     padding: 0px !important;
+    img {
+      max-width: 180px;
+    }
   }
   .first {
     transform: rotate(45deg);
