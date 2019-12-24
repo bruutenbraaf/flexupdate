@@ -26,15 +26,31 @@ jQuery("body").on('click', '.hamburger', function () {
   jQuery('.hamburger div:nth-child(3)').toggleClass('last');
 });
 
-jQuery("body").on('click', '.search-button', function () {
-  jQuery('.search--form').animate({ 'height': 'toggle' }, 200);
+jQuery("body").on('click', '.src-toggle', function () {
+  jQuery('.mx').fadeToggle();
+  jQuery(this).toggleClass('src-toggle');
+  jQuery('.hamb').toggleClass('hmb-toggle');
+  jQuery('.search form').animate({
+    width: "toggle"
+  });
+  jQuery('.hmd').toggleClass('search-active');
+});
+
+jQuery("body").on('click', '.search-active', function () {
+  jQuery('.mx').fadeToggle();
+  jQuery('.search-button').toggleClass('src-toggle');
+  jQuery('.hamb').toggleClass('hmb-toggle');
+  jQuery('.search form').animate({
+    width: "toggle"
+  });
+  jQuery('.hmd').toggleClass('search-active');
 });
 
 jQuery("body").on('click', '#newsletterbtn', function () {
   jQuery('.newsletter--bar').animate({ 'height': 'toggle' }, 200);
 });
 
-jQuery("body").on('click', '.hamb', function () {
+jQuery("body").on('click', '.hmb-toggle', function () {
   jQuery('.sd--menu').animate({
     width: "toggle"
   });

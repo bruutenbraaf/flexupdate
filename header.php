@@ -34,15 +34,18 @@
                     <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
                 </div>
                 <div class="p-2 search ma">
-                    <div class="search-button">
+                    <div class="search-button src-toggle">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="13.5" cy="8.5" r="7.5" stroke="#333333" stroke-width="2" />
                             <line x1="7.70711" y1="14.7071" x2="0.707107" y2="21.7071" stroke="#333333" stroke-width="2" />
                         </svg>
                     </div>
+                    <form action="<?php echo home_url('/'); ?>" method="get">
+                        <input type="text" name="s" id="search" placeholder="Geef een zoekterm op" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Geef een zoekterm op'" value="<?php the_search_query(); ?>" />
+                    </form>
                 </div>
                 <div class="p-2 hmd">
-                    <div class="hamb">
+                    <div class="hamb hmb-toggle">
                         <div></div>
                         <div></div>
                         <div></div>

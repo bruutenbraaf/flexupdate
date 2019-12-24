@@ -32,6 +32,16 @@ nav {
   width: 100vw;
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.18); }
+  nav .search {
+    display: flex;
+    align-items: center; }
+    nav .search form {
+      width: 400px;
+      display: flex;
+      display: none; }
+      nav .search form input {
+        border: none;
+        width: 100%; }
   nav .hmd {
     display: flex;
     justify-content: center; }
@@ -169,12 +179,15 @@ nav {
       .sd--menu .socials li a path {
         fill: #ffffff; }
 
-.is--active div:first-child {
+.is--active div:first-child,
+.search-active .hamb div:first-child {
   transform: rotate(45deg);
   transform-origin: left; }
-.is--active div:nth-child(2) {
+.is--active div:nth-child(2),
+.search-active .hamb div:nth-child(2) {
   opacity: 0; }
-.is--active div:last-child {
+.is--active div:last-child,
+.search-active .hamb div:last-child {
   transform: rotate(-45deg);
   transform-origin: left; }
 
