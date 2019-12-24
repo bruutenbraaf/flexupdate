@@ -19,8 +19,8 @@ $graytwo: #4f4f4f;
 $lightgray: #a9acbe;
 $darkgray: #545a63;
 $paragraph: #828282;
-$brandcolor: #403F92;
-$cta: #33AB38;
+$brandcolor: #403f92;
+$cta: #33ab38;
 
 $roboto: "Roboto", sans-serif;
 $nunito: "Nunito", sans-serif;
@@ -43,10 +43,30 @@ nav {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 9;
+  z-index: 12;
   width: 100vw;
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.18);
+  .hmd {
+    display: flex;
+    justify-content: center;
+    .hamb {
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+      margin-top: -12px;
+      div {
+        background: #333333;
+        width: 100%;
+        height: 2px;
+        margin: 6px 0px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
   .reading-progress {
     top: 0;
     left: 0;
@@ -146,6 +166,75 @@ nav {
           }
         }
       }
+    }
+  }
+}
+
+.sd--menu {
+  height: 100vh;
+  background: $brandcolor;
+  position: fixed;
+  right: 0;
+  display: none;
+  z-index: 11;
+  box-shadow: -20px 0px 25px rgba(69, 93, 199, 0.18);
+  overflow: hidden;
+  .sd--menu-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 80px;
+    height: 100vh;
+    width: 350px;
+  }
+  div {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        padding: 10px 0px;
+        margin: 0;
+        a {
+          color: #ffffff;
+          font-family: $nunito;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .socials {
+    margin: 20px -12px;
+    li {
+      float: left;
+      margin: 0px 12px;
+      a {
+        path {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}
+.is--active {
+  div {
+    &:first-child {
+      transform: rotate(45deg);
+      transform-origin: left;
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+      transform-origin: left;
     }
   }
 }
@@ -1024,7 +1113,7 @@ blockquote {
     font-weight: 700;
     font-size: 80px;
     line-height: 109px;
-    color: #403F92;
+    color: #403f92;
     position: absolute;
     left: -35px;
     margin-top: -13px;
@@ -1434,7 +1523,7 @@ p.description[data-readmore] {
   position: fixed;
   right: 4vw;
   bottom: -130px;
-  z-index: 999;
+  z-index: 10;
   transform-origin: top;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;

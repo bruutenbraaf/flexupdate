@@ -28,10 +28,27 @@ nav {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 9;
+  z-index: 12;
   width: 100vw;
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.18); }
+  nav .hmd {
+    display: flex;
+    justify-content: center; }
+    nav .hmd .hamb {
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+      margin-top: -12px; }
+      nav .hmd .hamb div {
+        background: #333333;
+        width: 100%;
+        height: 2px;
+        margin: 6px 0px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
   nav .reading-progress {
     top: 0;
     left: 0;
@@ -45,7 +62,7 @@ nav {
   nav .branding a img {
     max-width: 180px; }
   nav #newsletterbtn {
-    background: #33AB38;
+    background: #33ab38;
     box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
     border-radius: 10px;
     -webkit-appearance: none;
@@ -90,7 +107,7 @@ nav {
           -o-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out; }
         nav .menu li a:hover {
-          color: #403F92;
+          color: #403f92;
           text-decoration: none; }
         nav .menu li a:hover:after {
           height: 4px; }
@@ -107,9 +124,59 @@ nav {
     nav .search .search-button:hover {
       background: #efefef; }
       nav .search .search-button:hover svg circle {
-        stroke: #403F92; }
+        stroke: #403f92; }
       nav .search .search-button:hover svg line {
-        stroke: #403F92; }
+        stroke: #403f92; }
+
+.sd--menu {
+  height: 100vh;
+  background: #403f92;
+  position: fixed;
+  right: 0;
+  display: none;
+  z-index: 11;
+  box-shadow: -20px 0px 25px rgba(69, 93, 199, 0.18);
+  overflow: hidden; }
+  .sd--menu .sd--menu-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 80px;
+    height: 100vh;
+    width: 350px; }
+  .sd--menu div ul {
+    margin: 0;
+    padding: 0; }
+    .sd--menu div ul li {
+      list-style: none;
+      padding: 10px 0px;
+      margin: 0; }
+      .sd--menu div ul li a {
+        color: #ffffff;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px; }
+        .sd--menu div ul li a:hover {
+          text-decoration: none; }
+  .sd--menu .socials {
+    margin: 20px -12px; }
+    .sd--menu .socials li {
+      float: left;
+      margin: 0px 12px; }
+      .sd--menu .socials li a path {
+        fill: #ffffff; }
+
+.is--active div:first-child {
+  transform: rotate(45deg);
+  transform-origin: left; }
+.is--active div:nth-child(2) {
+  opacity: 0; }
+.is--active div:last-child {
+  transform: rotate(-45deg);
+  transform-origin: left; }
 
 #hp {
   padding: 80px 0px; }
@@ -162,7 +229,7 @@ nav {
       font-weight: bold;
       font-size: 24px;
       line-height: 32px;
-      color: #403F92; }
+      color: #403f92; }
     #posts article .post--info p {
       font-family: "Muli", sans-serif;
       font-style: normal;
@@ -263,7 +330,7 @@ nav {
         width: 100%;
         padding: 0px 20px; }
       #newsletter .news-block .signup--form form input[type="submit"] {
-        background: #33AB38;
+        background: #33ab38;
         font-family: "Nunito", sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -300,7 +367,7 @@ nav {
     #promoters .the--promotors .slick-dots .slick-active {
       border: none; }
     #promoters .the--promotors .slick-dots .slick-active button {
-      background: #403F92; }
+      background: #403f92; }
   #promoters .the--promotors .slick-dots li {
     float: left;
     list-style: none;
@@ -382,20 +449,20 @@ nav {
       -o-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
       .tabs-nav li a:hover {
-        background: #33AB38;
+        background: #33ab38;
         box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
         border-radius: 8px 8px 0px 0px;
         color: #ffffff;
         text-decoration: none; }
   .tabs-nav .current-menu-item {
-    background: #403F92;
+    background: #403f92;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px; }
     .tabs-nav .current-menu-item a {
       color: #ffffff; }
   .tabs-nav .vac a {
     color: #ffffff;
-    background: #403F92;
+    background: #403f92;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px; }
 
@@ -459,7 +526,7 @@ nav {
       line-height: 32px;
       color: #828282; }
     .adv .the--adv .the-post--ad .btn {
-      background: #33AB38;
+      background: #33ab38;
       box-shadow: 0 0 20px rgba(85, 217, 187, 0.25);
       border-radius: 10px;
       -webkit-appearance: none;
@@ -507,7 +574,7 @@ nav {
       line-height: 32px;
       color: #828282; }
   .vac .the--vac .btn {
-    border: 1px solid #33AB38;
+    border: 1px solid #33ab38;
     border-radius: 10px;
     -webkit-appearance: none;
     font-family: "Nunito", sans-serif;
@@ -516,9 +583,9 @@ nav {
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    color: #33AB38; }
+    color: #33ab38; }
     .vac .the--vac .btn:hover {
-      background: #33AB38;
+      background: #33ab38;
       color: #ffffff; }
   .vac .the--vac .logo {
     background: #fff;
@@ -565,7 +632,7 @@ nav {
       line-height: 32px;
       color: #828282; }
   .edu .the--edu .btn {
-    border: 1px solid #33AB38;
+    border: 1px solid #33ab38;
     border-radius: 10px;
     -webkit-appearance: none;
     font-family: "Nunito", sans-serif;
@@ -574,9 +641,9 @@ nav {
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    color: #33AB38; }
+    color: #33ab38; }
     .edu .the--edu .btn:hover {
-      background: #33AB38;
+      background: #33ab38;
       color: #ffffff; }
   .edu .the--edu .logo {
     background: #fff;
@@ -680,7 +747,7 @@ nav {
   animation-timing-function: linear; }
 
 .search--form {
-  background: #403F92;
+  background: #403f92;
   width: 100vw;
   height: 60px;
   top: 80px;
@@ -714,7 +781,7 @@ nav {
       margin-left: auto;
       display: flex;
       flex-grow: 0;
-      background: #33AB38;
+      background: #33ab38;
       font-family: "Nunito", sans-serif;
       height: auto;
       padding: 10px 20px;
@@ -742,7 +809,7 @@ input#mce-EMAIL {
   margin-top: 60px; }
   .search--post h2 {
     font-family: "Nunito", sans-serif;
-    color: #403F92;
+    color: #403f92;
     font-weight: bold; }
 
 .no--post {
@@ -767,7 +834,7 @@ input#mce-EMAIL {
     flex-grow: 1;
     margin-right: -20px; }
   .search--formpage input[type="submit"] {
-    background: #33AB38;
+    background: #33ab38;
     font-family: Nunito, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -831,13 +898,13 @@ blockquote :before {
   font-weight: 700;
   font-size: 80px;
   line-height: 109px;
-  color: #403F92;
+  color: #403f92;
   position: absolute;
   left: -35px;
   margin-top: -13px; }
 
 .newsletter--bar {
-  background: #33AB38;
+  background: #33ab38;
   width: 100vw;
   height: 60px;
   top: 80px;
@@ -880,7 +947,7 @@ blockquote :before {
       margin-left: auto;
       display: flex;
       flex-grow: 0;
-      background: #403F92;
+      background: #403f92;
       font-family: "Nunito", sans-serif;
       height: auto;
       padding: 10px 20px;
@@ -913,7 +980,7 @@ blockquote :before {
     color: #333333;
     position: relative; }
   .cookie-notice #accept-cookie {
-    background: #33AB38;
+    background: #33ab38;
     box-shadow: 0 0 20px rgba(85, 217, 187, 0.25);
     border-radius: 10px;
     -webkit-appearance: none;
@@ -965,7 +1032,7 @@ blockquote :before {
       bottom: 0;
       width: 35px;
       height: 35px;
-      background: #33AB38;
+      background: #33ab38;
       border-radius: 99px 0 30px 0; }
       #vacancy-overview .vacansie-item .vac--btn svg {
         stroke: #fff;
@@ -983,7 +1050,7 @@ blockquote :before {
       display: flex;
       align-items: center; }
       #vacancy-overview .vacansie-item .vac--heading h4 {
-        color: #403F92;
+        color: #403f92;
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -1031,7 +1098,7 @@ blockquote :before {
   #vacancy-detail .description-vacansie {
     padding-bottom: 60px; }
   #vacancy-detail .btn {
-    background: #33AB38;
+    background: #33ab38;
     box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
     border-radius: 10px;
     -webkit-appearance: none;
@@ -1069,7 +1136,7 @@ blockquote :before {
 
 p.description + [data-readmore-toggle],
 p.description[data-readmore] {
-  color: #33AB38; }
+  color: #33ab38; }
 
 .vacansie_form label {
   padding-left: 0px;
@@ -1134,7 +1201,7 @@ p.description[data-readmore] {
         box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
         outline: 0 !important; }
     #place-post form .usp-submit {
-      background: #33AB38;
+      background: #33ab38;
       box-shadow: 0px 0px 20px rgba(85, 217, 187, 0.25);
       border-radius: 10px;
       -webkit-appearance: none;
@@ -1162,14 +1229,14 @@ p.description[data-readmore] {
 .btp {
   width: 52px;
   height: 130px;
-  background-color: #403F92;
+  background-color: #403f92;
   border-radius: 99px 99px 0px 0px;
   cursor: pointer;
   overflow: hidden;
   position: fixed;
   right: 4vw;
   bottom: -130px;
-  z-index: 999;
+  z-index: 10;
   transform-origin: top;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -1178,7 +1245,7 @@ p.description[data-readmore] {
   .btp:before {
     content: "";
     position: absolute;
-    background: #403F92;
+    background: #403f92;
     width: 100%;
     height: 100%;
     z-index: -2;
