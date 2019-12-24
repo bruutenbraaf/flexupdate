@@ -59,9 +59,10 @@ get_header(); ?>
                                 <?php $postdate = get_the_time('m / d'); ?>
                                 <?php if ($currentdate == $postdate) { ?>
                                     <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
+                                    <span class="post--date"><?php the_time('d / m'); ?></span>
                                 <?php } else { ?>
-                                    <span class="post--date"><?php the_time('m / d'); ?></span>
                                     <span class="post--date"> <?php the_time('l'); ?></span>
+                                    <span class="post--date"><?php the_time('d / m'); ?></span>
                                 <?php } ?>
                             </div>
                             <?php $postlink = get_field('item_link'); ?>
