@@ -1,6 +1,6 @@
 <?php
 get_header(); ?>
-<section id="opleiding">
+<section id="initiatiefnemers">
 
     <div class="container">
         <div class="row">
@@ -14,16 +14,16 @@ get_header(); ?>
             )); ?>
             <?php if ($loop->have_posts()) : ?>
                 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                    <div class="col-md-4 offset-md-1 opl-col">
+                    <div class="col-md-4 offset-md-1 pr-col">
                         <a href="<?php the_permalink(); ?>">
-                            <article class="opl-item">
-                                <div class="opl--heading pr-img">
+                            <article class="pr-item">
+                                <div class="pr--heading pr-img">
                                     <?php $promotor = get_the_post_thumbnail_url('', 'medium'); ?>
                                     <?php if ($promotor) { ?>
                                         <img src="<?php echo $promotor; ?>">
                                     <?php } ?>
                                 </div>
-                                <div class="opl--btn">
+                                <div class="pr--btn">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>

@@ -1172,6 +1172,72 @@ blockquote :before {
         position: relative;
         top: -2px; }
 
+#initiatiefnemers {
+  background: #333333;
+  padding-top: 140px;
+  margin-bottom: -150px;
+  padding-bottom: calc(80px + 150px); }
+  #initiatiefnemers .pr-col {
+    margin-bottom: 30px; }
+  #initiatiefnemers .int {
+    margin-bottom: 30px; }
+    #initiatiefnemers .int h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      font-family: "Muli", sans-serif;
+      font-weight: bold; }
+  #initiatiefnemers .pr-item {
+    padding: 20px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex; }
+    #initiatiefnemers .pr-item .inf {
+      margin-top: 10px;
+      max-width: 90%; }
+      #initiatiefnemers .pr-item .inf p {
+        color: #6c757d; }
+    #initiatiefnemers .pr-item .pr--btn {
+      position: absolute;
+      right: 15px;
+      bottom: 0;
+      width: 35px;
+      height: 35px;
+      background: #33ab38;
+      border-radius: 99px 0 30px 0; }
+      #initiatiefnemers .pr-item .pr--btn svg {
+        stroke: #fff;
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        height: 12px; }
+    #initiatiefnemers .pr-item:hover .vac--btn svg {
+      left: 14px; }
+    #initiatiefnemers .pr-item:hover a {
+      text-decoration: none; }
+    #initiatiefnemers .pr-item:hover a h4 {
+      text-decoration: underline; }
+    #initiatiefnemers .pr-item .pr--heading {
+      display: flex;
+      align-items: center; }
+      #initiatiefnemers .pr-item .pr--heading h4 {
+        color: #403f92;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        float: left; }
+        #initiatiefnemers .pr-item .pr--heading h4 a {
+          color: #333333; }
+      #initiatiefnemers .pr-item .pr--heading .location {
+        float: right;
+        font-size: 12px;
+        color: #a2a2a2; }
+
 #vacancy-overview {
   background: #333333;
   padding-top: 140px;
