@@ -47,9 +47,8 @@ nav {
     justify-content: center; }
     nav .hmd .hamb {
       width: 24px;
-      height: 18px;
-      cursor: pointer;
-      margin-top: -12px; }
+      height: 30px;
+      cursor: pointer; }
       nav .hmd .hamb div {
         background: #333333;
         width: 100%;
