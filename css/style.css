@@ -488,12 +488,11 @@ nav {
         border-radius: 8px 8px 0px 0px;
         color: #ffffff;
         text-decoration: none; }
-  .tabs-nav .current-menu-item {
+  .tabs-nav .current-menu-item a {
+    color: #ffffff;
     background: #403f92;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px; }
-    .tabs-nav .current-menu-item a {
-      color: #ffffff; }
   .tabs-nav .vac a {
     color: #ffffff;
     background: #403f92;
