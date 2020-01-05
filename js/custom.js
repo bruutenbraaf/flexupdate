@@ -30,7 +30,7 @@ jQuery("body").on('click', '.src-toggle', function () {
   jQuery('.mx').fadeToggle();
   jQuery(this).toggleClass('src-toggle');
   jQuery('.hamb').toggleClass('hmb-toggle');
-  jQuery('.search form').animate({
+  jQuery('nav .search form').animate({
     width: "toggle"
   });
   jQuery('.hmd').toggleClass('search-active');
@@ -40,7 +40,7 @@ jQuery("body").on('click', '.search-active', function () {
   jQuery('.mx').fadeToggle();
   jQuery('.search-button').toggleClass('src-toggle');
   jQuery('.hamb').toggleClass('hmb-toggle');
-  jQuery('.search form').animate({
+  jQuery('nav .search form').animate({
     width: "toggle"
   });
   jQuery('.hmd').toggleClass('search-active');
