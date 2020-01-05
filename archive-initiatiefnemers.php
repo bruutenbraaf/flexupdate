@@ -17,10 +17,10 @@ get_header(); ?>
                     <div class="col-md-4 offset-md-1 opl-col">
                         <a href="<?php the_permalink(); ?>">
                             <article class="opl-item">
-                                <div class="opl--heading">
+                                <div class="opl--heading pr-img">
                                     <?php $promotor = get_the_post_thumbnail_url('', 'medium'); ?>
                                     <?php if ($promotor) { ?>
-                                        <a href="<?php the_permalink(); ?>"><img src="<?php echo $promotor; ?>"></a>
+                                        <img src="<?php echo $promotor; ?>">
                                     <?php } ?>
                                 </div>
                                 <div class="opl--btn">
