@@ -12,7 +12,7 @@ get_header(); ?>
                 'posts_per_page' => 3,
                 'order' => 'DESC'
             )); ?>
-            <?php if ($loop->have_posts()) : ?>
+            <?php if ($loop->have_posts()) { ?>
                 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php if (have_rows('gegevens_opleiding')) : ?>
                         <?php while (have_rows('gegevens_opleiding')) : the_row(); ?>
@@ -37,7 +37,11 @@ get_header(); ?>
                     <?php endif; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+            <?php } else { ?>
+                <div class="col-md-10 offset-md-1 np-col">
+                    <p><?php _e('Er zijn nog geen opleidingen','flexupdate');?></p>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </section>
