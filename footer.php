@@ -49,7 +49,7 @@
                                             <div class="item">
                                                 <?php $promotor = get_the_post_thumbnail_url('', 'medium'); ?>
                                                 <?php if ($promotor) { ?>
-                                                    <img src="<?php echo $promotor; ?>">
+                                                    <a href="<?php the_permalink();?>"><img src="<?php echo $promotor; ?>"></a>
                                                 <?php } ?>
                                             </div>
                                         <?php endwhile; ?>

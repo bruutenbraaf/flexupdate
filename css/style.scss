@@ -476,6 +476,18 @@ nav {
       margin: 0 auto;
       max-height: 100%;
       max-width: 100%;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      opacity: 0.6;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+        opacity: 1;
+      }
     }
     .slick-dots {
       display: inline-block;
@@ -511,6 +523,12 @@ nav {
       outline: none;
     }
   }
+}
+
+.av {
+  max-width: 100%;
+  padding-bottom: 40px;
+  display: block;
 }
 
 #menu-socket {
@@ -840,6 +858,23 @@ nav {
   flex-direction: column;
 }
 
+.btn {
+  border: 1px solid $cta;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  font-family: $nunito;
+  padding: 15px 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $cta;
+  &:hover {
+    background: $cta;
+    color: #ffffff;
+  }
+}
+
 .wrapper-cell {
   display: flex;
   margin-bottom: 30px;
@@ -1104,6 +1139,9 @@ input#mce-EMAIL {
     line-height: 32px;
     color: #545a63;
   }
+}
+
+#static {
   .post--image {
     width: 100%;
     height: 379px;
@@ -1113,7 +1151,62 @@ input#mce-EMAIL {
     border-radius: 0 20px 20px 0;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
   }
+}
+
+.carrousel-item,
+.carousel-img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  margin: 0px 20px;
+  border-radius: 20px;
+}
+
+.dots {
+  ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    margin: 40px 0px;
+    li {
+      width: 100%;
+      margin: 0px 5px;
+      button {
+        text-indent: -99999px;
+        min-width: 100%;
+        min-height: 2px;
+        max-width: 6px !important;
+        max-height: 2px;
+        border: none;
+        background: #a9acbe;
+        border-radius: 999px;
+        margin: 0px;
+        padding: 0px;
+        margin: 0px 5px;
+        cursor: pointer;
+      }
+    }
+    li.slick-active {
+      button {
+        background: $brandcolor;
+      }
+    }
+  }
+}
+
+.sub {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: $nunito;
+  color: $brandcolor;
+}
+
+.wb {
+  background-color: #ffffff;
+  padding: 60px 0px;
 }
 
 blockquote {
@@ -1256,6 +1349,101 @@ blockquote {
   }
 }
 
+#opleiding {
+  background: #333333;
+  padding-top: 140px;
+  margin-bottom: -150px;
+  padding-bottom: calc(80px + 150px);
+  .opl-col {
+    margin-bottom: 30px;
+  }
+  .int {
+    margin-bottom: 30px;
+    h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      font-family: $muli;
+      font-weight: bold;
+    }
+  }
+  .opl-item {
+    padding: 20px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    .inf {
+      margin-top: 10px;
+      max-width: 90%;
+      p {
+        color: #6c757d;
+      }
+    }
+    .opl--btn {
+      position: absolute;
+      right: 15px;
+      bottom: 0;
+      width: 35px;
+      height: 35px;
+      background: $cta;
+      border-radius: 99px 0 30px 0;
+      svg {
+        stroke: #fff;
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        height: 12px;
+      }
+    }
+    &:hover {
+      .vac--btn svg {
+        left: 14px;
+      }
+      a {
+        text-decoration: none;
+      }
+      a h4 {
+        text-decoration: underline;
+      }
+    }
+    .opl--heading {
+      display: flex;
+      align-items: center;
+      h4 {
+        color: $brandcolor;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        float: left;
+        a {
+          color: #333333;
+        }
+      }
+      .location {
+        float: right;
+        font-size: 12px;
+        color: #a2a2a2;
+      }
+    }
+    .branche {
+      padding-bottom: 10px;
+      display: block;
+      color: #000000b0;
+      font-size: 14px;
+      svg {
+        fill: #000000b0;
+        margin-right: 5px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}
+
 #vacancy-overview {
   background: #333333;
   padding-top: 140px;
@@ -1271,6 +1459,9 @@ blockquote {
       color: #ffffff;
     }
     h2 {
+      font-size: 2rem;
+      color: #ffffff;
+      font-family: $muli;
       font-weight: bold;
     }
     p {
@@ -1596,6 +1787,9 @@ p.description[data-readmore] {
 }
 
 @media screen and (max-width: 767px) {
+  .hmd {
+    display: none !important;
+  }
   #counter {
     display: none;
   }
