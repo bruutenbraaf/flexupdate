@@ -937,7 +937,7 @@ input#mce-EMAIL {
   background-size: cover;
   background-position: center center; }
 
-.pr-img {
+.pr-img img {
   max-width: 90%; }
 
 .carrousel-item,
