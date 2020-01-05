@@ -499,6 +499,9 @@ nav {
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
     border-radius: 8px 8px 0px 0px; }
 
+.tab-archive li a {
+  color: #ffffff; }
+
 .overlay-item {
   position: fixed;
   width: 100vw;

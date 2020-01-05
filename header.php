@@ -61,7 +61,7 @@
             </div>
         </div>
     </nav>
-    <div class="tabs-nav">
+    <div class="tabs-nav <?php if (is_archive()) { ?>tab-archive<?php } ?>">
         <?php wp_nav_menu(array('theme_location' => 'side_menu')); ?>
     </div>
     <div class="mobile-nav">
