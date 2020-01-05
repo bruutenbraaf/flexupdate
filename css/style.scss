@@ -1512,6 +1512,7 @@ blockquote {
     .pr--heading {
       display: flex;
       align-items: center;
+      max-width: 80%;
       h4 {
         color: $brandcolor;
         font-family: $roboto;

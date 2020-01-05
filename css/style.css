@@ -1221,7 +1221,8 @@ blockquote :before {
       text-decoration: underline; }
     #initiatiefnemers .pr-item .pr--heading {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      max-width: 80%; }
       #initiatiefnemers .pr-item .pr--heading h4 {
         color: #403f92;
         font-family: "Roboto", sans-serif;
