@@ -18,11 +18,30 @@ get_header(); ?>
             <div class="container">
                 <div class="row">
                     <div class="offset-md-2 col-md-8">
-                        <?php the_content();?>
+                        <?php the_content(); ?>
                     </div>
                 </div>
             </div>
         <?php endwhile; ?>
     <?php endif; ?>
+    <div class="container share">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div id="shareBlock"></div>
+                <script>
+                    jQuery(document).ready(function() {
+                        jQuery('#shareBlock').cShare({
+                            show_buttons: [
+                                'fb',
+                                'twitter',
+                                'tumblr',
+                                'email'
+                            ]
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
 </main>
 <?php get_footer(); ?>

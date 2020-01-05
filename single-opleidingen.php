@@ -131,5 +131,24 @@ get_header(); ?>
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>
+    <div class="container share">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div id="shareBlock"></div>
+                <script>
+                    jQuery(document).ready(function() {
+                        jQuery('#shareBlock').cShare({
+                            show_buttons: [
+                                'fb',
+                                'twitter',
+                                'tumblr',
+                                'email'
+                            ]
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
 </main>
 <?php get_footer(); ?>
