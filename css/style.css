@@ -502,6 +502,10 @@ nav {
 .tab-archive li a {
   color: #ffffff; }
 
+#shareBlock {
+  margin-left: -5px;
+  margin-top: 30px; }
+
 .overlay-item {
   position: fixed;
   width: 100vw;
