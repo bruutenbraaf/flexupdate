@@ -26,6 +26,18 @@ $roboto: "Roboto", sans-serif;
 $nunito: "Nunito", sans-serif;
 $muli: "Muli", sans-serif;
 
+ul {
+  margin-top: 15px;
+  li {
+    font-family: $muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: $darkgray;
+  }
+}
+
 article[data-emergence="hidden"] {
   opacity: 0;
   margin-top: 20px;
