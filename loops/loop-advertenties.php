@@ -11,7 +11,7 @@
                     </span>
                 </div>
                 <div class="d-flex col-md-12 align-items-center">
-                    <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
+                    <?php $postimage = get_the_post_thumbnail_url('', 'large'); ?>
                     <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
                     <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
                         <svg width="55" height="357" viewBox="0 0 55 357" fill="none" xmlns="http://www.w3.org/2000/svg">
