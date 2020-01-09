@@ -81,23 +81,3 @@ if ($_POST && array_key_exists('uzp_vacancy_search', $_POST) && (!empty($search_
 		<?php } ?>
 	<?php } ?>
 <?php } ?>
-
-<div class="container share">
-	<div class="row">
-		<div class="col-md-10 offset-md-1">
-			<div id="shareBlock"></div>
-			<script>
-				jQuery(document).ready(function() {
-					jQuery('#shareBlock').cShare({
-						show_buttons: [
-							'fb',
-							'twitter',
-							'tumblr',
-							'email'
-						]
-					});
-				});
-			</script>
-		</div>
-	</div>
-</div>
