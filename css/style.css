@@ -87,12 +87,16 @@ nav {
     -webkit-appearance: none;
     border: 0px;
     font-family: "Nunito", sans-serif;
-    padding: 15px 20px;
+    padding: 10px 5px;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
     color: #ffffff; }
+    nav .nav-btn a {
+      color: #ffffff; }
+      nav .nav-btn a:hover:after {
+        display: none; }
     nav .nav-btn:hover {
       background: #2d9732;
       cursor: pointer; }
