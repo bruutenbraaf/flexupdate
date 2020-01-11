@@ -141,7 +141,7 @@ nav {
       font-family: "Nunito", sans-serif;
       font-size: 16px;
       font-weight: 700;
-      color: #ffffff; }
+      color: #ffffff !important; }
       nav .nav-btn a:hover:after {
         display: none; }
     nav .nav-btn:hover {
