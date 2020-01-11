@@ -87,13 +87,11 @@ nav {
     -webkit-appearance: none;
     border: 0px;
     font-family: "Nunito", sans-serif;
-    padding: 10px 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    color: #ffffff; }
+    padding: 10px 5px; }
     nav .nav-btn a {
+      font-family: "Nunito", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
       color: #ffffff; }
       nav .nav-btn a:hover:after {
         display: none; }
