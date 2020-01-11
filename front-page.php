@@ -108,9 +108,11 @@ get_header(); ?>
                                                 <?php } ?>
                                             </div>
                                             <div class="post--image ml-auto">
-                                                <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
-                                                <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
-                                                <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                                                <?php
+                                                $placeholder = get_field('upload_placeholder', 'option');
+                                                $term_id_prefixed = '_' . $term_id;
+                                                $bedrijfafbeelding = get_field( 'bedrijfafbeelding', $term_id_prefixed ); ?>
+                                                <div class="the-post--image" style="background-image:url( <?php if ($bedrijfafbeelding) { ?> <?php echo $bedrijfafbeelding; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
                                                 </div>
                                             </div>
                                         </div>
