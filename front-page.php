@@ -112,7 +112,7 @@ get_header(); ?>
                                                 $placeholder = get_field('upload_placeholder', 'option');
                                                 $term_id_prefixed = '_' . $term_id;
                                                 $bedrijfafbeelding = get_field( 'bedrijfafbeelding', $term_id_prefixed ); ?>
-                                                <div class="the-post--image" style="background-image:url( <?php if ($bedrijfafbeelding) { ?> <?php echo $bedrijfafbeelding; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                                                <div class="the-post--image" style="background-image:url( <?php if ($bedrijfafbeelding) { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
                                                 </div>
                                             </div>
                                         </div>
