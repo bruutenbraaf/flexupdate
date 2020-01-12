@@ -2010,7 +2010,7 @@ p.description[data-readmore] {
         color: $brandcolor;
       }
     }
-  } 
+  }
 
   nav .search .search-button {
     z-index: 9999;
@@ -2132,7 +2132,7 @@ p.description[data-readmore] {
     align-items: center;
     padding: 0 10px;
     width: 70px;
-    z-index:9999;
+    z-index: 9999;
     justify-content: center;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
   }
@@ -2212,6 +2212,9 @@ p.description[data-readmore] {
   }
   #newsletter .news-block {
     padding: 30px 30px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    border-radius: 0px;
   }
   .vacancy-profile {
     margin-bottom: 30px;

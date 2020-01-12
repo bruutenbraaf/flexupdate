@@ -1792,7 +1792,10 @@ p.description[data-readmore] {
     margin-bottom: 30px; }
 
   #newsletter .news-block {
-    padding: 30px 30px; }
+    padding: 30px 30px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    border-radius: 0px; }
 
   .vacancy-profile {
     margin-bottom: 30px; }
