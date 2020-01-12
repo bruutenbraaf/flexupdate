@@ -55,7 +55,7 @@ get_header(); ?>
                 <article>
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-1 col-md-10 offset-md-1">
+                            <div class="col-lg-1 offset-lg-0 col-md-10 offset-md-1">
                                 <?php $postdate = get_the_time('m / d'); ?>
                                 <?php if ($currentdate == $postdate) { ?>
                                     <div class="st">
@@ -70,7 +70,7 @@ get_header(); ?>
                                 <?php } ?>
                             </div>
                             <?php $postlink = get_field('item_link'); ?>
-                            <div class="col-lg-10 col-md-10 offset-md-1 the--post" data-emergence="hidden">
+                            <div class="col-lg-10 offset-lg-0 col-md-10 offset-md-1 the--post" data-emergence="hidden">
                                 <a href="<?php if ($postlink) { ?><?php echo ($postlink); ?><?php } else { ?><?php the_permalink(); ?><?php } ?>" <?php if ($postlink) { ?>target="_blank" <?php } ?>>
                                     <div class="wrapper-cell">
                                         <div class="text">
