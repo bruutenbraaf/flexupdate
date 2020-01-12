@@ -7,14 +7,14 @@
                         <section id="newsletter">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-lg-12 col-md-10 offset-md-1">
                                         <div class="news-block">
                                             <div class="row align-items-center">
-                                                <div class="col-md-4">
+                                                <div class="col-lg-4 col-md-12">
                                                     <h4><?php the_sub_field('subtitle'); ?></h4>
                                                     <h2><?php the_sub_field('titel'); ?></h2>
                                                 </div>
-                                                <div class="col-md-8 signup--form">
+                                                <div class="col-lg-8 col-md-12 signup--form">
                                                     <div id="mc_embed_signup" class="justify-content-center d-flex">
                                                         <?php echo do_shortcode('[mailchimp]'); ?>
                                                     </div>
