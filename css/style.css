@@ -230,10 +230,11 @@ nav {
     font-family: "Nunito", sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
     color: #a9acbe;
     opacity: 0.9;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-size: 24px;
+    float: right; }
   #posts article .the--post {
     background: #ffffff;
     box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.05);

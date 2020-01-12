@@ -58,11 +58,15 @@ get_header(); ?>
                             <div class="col-md-1">
                                 <?php $postdate = get_the_time('m / d'); ?>
                                 <?php if ($currentdate == $postdate) { ?>
-                                    <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
-                                    <span class="post--date"><?php the_time('d / m'); ?></span>
+                                    <div class="st">
+                                        <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
+                                        <span class="post--date"><?php the_time('d / m'); ?></span>
+                                    </div>
                                 <?php } else { ?>
-                                    <span class="post--date"> <?php the_time('l'); ?></span>
-                                    <span class="post--date"><?php the_time('d / m'); ?></span>
+                                    <div class="st">
+                                        <span class="post--date"> <?php the_time('l'); ?></span>
+                                        <span class="post--date"><?php the_time('d / m'); ?></span>
+                                    </div>
                                 <?php } ?>
                             </div>
                             <?php $postlink = get_field('item_link'); ?>
@@ -111,7 +115,7 @@ get_header(); ?>
                                                 <?php
                                                 $placeholder = get_field('upload_placeholder', 'option');
                                                 $term_id_prefixed = '_' . $term_id;
-                                                $bedrijfafbeelding = get_field( 'bedrijfafbeelding', $term_id_prefixed ); ?>
+                                                $bedrijfafbeelding = get_field('bedrijfafbeelding', $term_id_prefixed); ?>
                                                 <div class="the-post--image" style="background-image:url( <?php if ($bedrijfafbeelding) { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
                                                 </div>
                                             </div>
@@ -122,7 +126,8 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
-                <?php // advertenties loops ?>
+                <?php // advertenties loops 
+                ?>
                 <?php $count++; ?>
                 <?php if ($count == 3) { ?>
                     <?php
