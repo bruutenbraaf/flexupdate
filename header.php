@@ -12,8 +12,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-
     <nav>
         <div class="reading-progress"></div>
         <div class="container">
@@ -137,33 +135,3 @@
             </div>
         </div>
     </div>
-
-
-    <!-- <div class="search--form">
-        <div class="inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <form action="<?php echo home_url('/'); ?>" method="get">
-                            <input type="text" name="s" id="search" placeholder="Geef een zoekterm op" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Geef een zoekterm op'" value="<?php the_search_query(); ?>" />
-                            <input type="submit" id="searchsubmit" value="Zoeken" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="newsletter--bar">
-        <div class="inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="mc_embed_signup" class="d-flex">
-                            <?php echo do_shortcode('[mailchimp]'); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
