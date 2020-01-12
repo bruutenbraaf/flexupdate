@@ -58,6 +58,7 @@ jQuery(document).ready(function () {
     jQuery('.hamburger div:nth-child(3)').toggleClass('last');
     jQuery('.hamburger').removeClass('m-tg');
     jQuery('.hamburger').addClass('s-tg');
+    jQuery(this).fadeToggle(300);
     jQuery('nav .search form').animate({
       width: "toggle"
     });
@@ -74,6 +75,7 @@ jQuery(document).ready(function () {
     jQuery('nav .search form').animate({
       width: "toggle"
     });
+    jQuery('.src-m-toggle').fadeToggle(300);
   });
 });
 
