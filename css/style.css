@@ -1831,5 +1831,10 @@ p.description[data-readmore] {
   .image {
     min-width: 119px;
     height: 130px; } }
+@media screen and (max-width: 425px) {
+  #static .post--image {
+    width: 100%;
+    max-width: 100vw;
+    border-radius: 0px; } }
 
 /*# sourceMappingURL=style.css.map */
