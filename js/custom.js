@@ -17,7 +17,7 @@ jQuery('.btp').on('click', function (e) {
   jQuery('html, body').animate({ scrollTop: 0 }, '300');
 });
 
-jQuery("body").on('click', '.hamburger', function () {
+jQuery("body").on('click', '.m-tg', function () {
   jQuery('.mobile-nav').animate({ 'height': 'toggle' }, 200);
   jQuery('main').toggleClass('blurred');
   jQuery('.mt-btns').toggleClass('displayed');
@@ -34,6 +34,47 @@ jQuery("body").on('click', '.src-toggle', function () {
     width: "toggle"
   });
   jQuery('.hmd').toggleClass('search-active');
+});
+
+jQuery(document).ready(mobilesearch);
+jQuery(window).on('resize', mobilesearch);
+
+function mobilesearch() {
+  var $containerWidth = jQuery(window).width();
+  if ($containerWidth <= 768) {
+    jQuery('.search-button').removeClass('src-toggle');
+    jQuery('.search-button').addClass('src-m-toggle');
+  }
+  if ($containerWidth > 768) {
+    jQuery('.search-button').addClass('src-toggle');
+    jQuery('.search-button').removeClass('src-m-toggle');
+  }
+}
+
+jQuery(document).ready(function () {
+  jQuery("body").on('click', '.src-m-toggle', function () {
+    jQuery('.hamburger div:nth-child(1)').toggleClass('first');
+    jQuery('.hamburger div:nth-child(2)').toggleClass('middle');
+    jQuery('.hamburger div:nth-child(3)').toggleClass('last');
+    jQuery('.hamburger').removeClass('m-tg');
+    jQuery('.hamburger').addClass('s-tg');
+    jQuery('nav .search form').animate({
+      width: "toggle"
+    });
+  });
+});
+
+jQuery(document).ready(function () {
+  jQuery("body").on('click', '.s-tg', function () {
+    jQuery('.hamburger').removeClass('s-tg');
+    jQuery('.hamburger').addClass('m-tg');
+    jQuery('.hamburger div:nth-child(1)').toggleClass('first');
+    jQuery('.hamburger div:nth-child(2)').toggleClass('middle');
+    jQuery('.hamburger div:nth-child(3)').toggleClass('last');
+    jQuery('nav .search form').animate({
+      width: "toggle"
+    });
+  });
 });
 
 jQuery("body").on('click', '.search-active', function () {

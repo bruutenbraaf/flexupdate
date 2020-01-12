@@ -46,8 +46,8 @@
                         <div></div>
                     </div>
                 </div>
-                <div class="p-2 xl ma">
-                    <div class="hamburger">
+                <div class="p-2 xl ma ">
+                    <div class="hamburger m-tg">
                         <div></div>
                         <div></div>
                         <div></div>

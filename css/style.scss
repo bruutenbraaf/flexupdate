@@ -1990,8 +1990,33 @@ p.description[data-readmore] {
   }
 }
 
-
 @media screen and (max-width: 768px) {
+  nav .search form {
+    background: white;
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    height: 80px;
+    top: 0px;
+    z-index: 999;
+    input {
+      height: 80px;
+      padding: 15px;
+      font-size: 18px;
+      color: $brandcolor !important;
+      font-family: $nunito;
+      font-weight: 700;
+      &::placeholder {
+        color: $brandcolor;
+      }
+    }
+  } 
+
+  nav .search .search-button {
+    z-index: 9999;
+  }
+
   #menu-socket {
     display: block;
   }
@@ -2108,6 +2133,7 @@ p.description[data-readmore] {
     align-items: center;
     padding: 0 10px;
     width: 70px;
+    z-index:9999;
     justify-content: center;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
   }
