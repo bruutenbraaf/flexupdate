@@ -242,8 +242,10 @@ nav {
     min-height: 264px; }
     #posts article .the--post:hover {
       box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.099); }
+  #posts article .the--post-single {
+    padding: 15px; }
   #posts article .post--info {
-    padding-right: 15px; }
+    padding-right: 30px; }
     #posts article .post--info h2 {
       font-family: "Roboto", sans-serif;
       font-style: normal;
@@ -260,14 +262,20 @@ nav {
       color: #828282; }
   #posts article .post--image {
     height: 100%;
-    align-items: center;
-    margin-left: 30px; }
+    align-items: center; }
     #posts article .post--image .the-post--image {
       width: 258px;
       height: 174px;
       border-radius: 4px;
       background-size: cover;
       background-position: center center; }
+  #posts article .post--image-single {
+    width: inherit;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+    #posts article .post--image-single .the-post--image {
+      width: 150px;
+      height: 100px; }
 
 #pagination {
   padding: 20px 0px; }
@@ -558,8 +566,13 @@ nav {
       top: 0px;
       height: 100%;
       width: auto; }
+  .adv .the--adv .the-post--image-single {
+    min-height: calc(100% + 30px);
+    background-position: center center;
+    margin-top: -15px; }
   .adv .the--adv .the-post--ad {
-    width: 70%; }
+    width: 70%;
+    padding: 15px 0px 15px 0px; }
     .adv .the--adv .the-post--ad h2 {
       font-family: "Roboto", sans-serif;
       font-style: normal;
@@ -587,6 +600,15 @@ nav {
       font-size: 16px;
       line-height: 22px;
       color: #fff; }
+  .adv .the--adv .the-post-ad-single p {
+    font-size: 14px !important; }
+  .adv .the--adv .the-post-ad-single h2 {
+    font-size: 18px !important; }
+  .adv .the--adv .the-post-ad-single .btn {
+    font-size: 14px !important;
+    padding: 10px 15px !important; }
+.adv .the--adv-single {
+  padding: 0px 15px 0px 0px !important; }
 
 .vac .the--vac {
   background: #ffffff;
@@ -735,6 +757,17 @@ nav {
   width: calc(100% - 30px);
   right: 15px;
   left: 15px; }
+
+.recommend .wrapper-cell {
+  position: absolute !important; }
+  .recommend .wrapper-cell .image {
+    height: 100px;
+    width: 150px;
+    min-width: 150px; }
+.recommend article .the--post {
+  min-height: inherit !important; }
+  .recommend article .the--post p {
+    margin-bottom: 0px !important; }
 
 @keyframes placeHolderShimmer {
   0% {
@@ -1544,6 +1577,9 @@ p.description[data-readmore] {
 
 .mobile-nav {
   display: none; }
+
+.recommend {
+  margin-top: 60px; }
 
 @media screen and (max-width: 767px) {
   .hmd {
