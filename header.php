@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Bruut en Braaf">
+    <meta name="theme-color" content="#403f92">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
     <title><?php wp_title('&raquo;', 'true', 'right'); ?><?php bloginfo('name'); ?></title>
