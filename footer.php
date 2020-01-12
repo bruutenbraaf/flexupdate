@@ -7,7 +7,7 @@
                         <section id="newsletter">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-10 offset-md-1">
+                                    <div class="col-lg-12 offset-lg-0 col-md-10 offset-md-1">
                                         <div class="news-block">
                                             <div class="row align-items-center">
                                                 <div class="col-lg-4 col-md-12">
