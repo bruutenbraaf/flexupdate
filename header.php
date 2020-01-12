@@ -25,9 +25,6 @@
                         </a>
                     <?php } ?>
                 </div>
-                <!-- <div class="p-2 mx">
-                    <button id="newsletterbtn"><?php _e('Gratis nieuwsbrief', 'flexupdate'); ?></button>
-                </div> -->
                 <div class="p-2 mx">
                     <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
                 </div>
