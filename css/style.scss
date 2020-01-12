@@ -706,7 +706,6 @@ nav {
     }
     .the-post--image {
       min-height: 250px;
-      height: 100%;
       width: 30%;
       position: relative;
       background-size: cover;
@@ -2230,6 +2229,7 @@ p.description[data-readmore] {
   }
   .adv .the--adv .the-post--image svg {
     transform: rotate(90deg) translate(50%, -34%);
+    height: 100%;
     left: 50%;
     bottom: -12px;
     position: absolute;
