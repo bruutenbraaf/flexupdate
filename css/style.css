@@ -200,7 +200,8 @@ nav {
   transform-origin: left; }
 
 #hp {
-  padding: 40px 0px; }
+  padding: 80px 0px;
+  overflow: hidden; }
 
 #counter {
   padding: 30px 0px; }
@@ -557,10 +558,12 @@ nav {
       margin-left: 12px; }
   .adv .the--adv .the-post--image {
     min-height: 250px;
+    height: 100%;
     width: 30%;
-    margin: 0px 15px -15px -35px;
     position: relative;
-    background-size: cover; }
+    background-size: cover;
+    margin-bottom: -15px;
+    margin-left: -35px; }
     .adv .the--adv .the-post--image svg {
       position: absolute;
       right: 0px;
@@ -1589,6 +1592,10 @@ p.description[data-readmore] {
   #hp {
     padding: 40px 0;
     padding-top: 80px; } }
+@media screen and (max-width: 991px) {
+  #posts article .post--date {
+    float: left;
+    margin-right: 10px; } }
 @media screen and (max-width: 768px) {
   #menu-socket {
     display: block; }
