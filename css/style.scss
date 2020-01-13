@@ -705,7 +705,8 @@ nav {
       }
     }
     .the-post--image {
-      min-height: 250px;
+      min-height: calc(100% + 15px);
+      margin-right: 15px;
       width: 30%;
       position: relative;
       background-size: cover;

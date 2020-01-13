@@ -557,7 +557,8 @@ nav {
     .adv .the--adv .adv--info svg {
       margin-left: 12px; }
   .adv .the--adv .the-post--image {
-    min-height: 250px;
+    min-height: calc(100% + 15px);
+    margin-right: 15px;
     width: 30%;
     position: relative;
     background-size: cover;
