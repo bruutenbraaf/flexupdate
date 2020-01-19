@@ -591,6 +591,9 @@ nav {
       font-size: 16px;
       line-height: 32px;
       color: #828282; }
+      .adv .the--adv .the-post--ad p a {
+        color: #828282;
+        text-decoration: underline; }
     .adv .the--adv .the-post--ad .btn {
       background: #33ab38;
       box-shadow: 0 0 20px rgba(85, 217, 187, 0.25);

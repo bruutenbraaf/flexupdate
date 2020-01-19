@@ -72,9 +72,12 @@ get_header(); ?>
                                                 <?php } ?>
                                             </div>
                                             <div class="post--image ml-auto">
-                                                <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
-                                                <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
-                                                <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                                                <?php
+                                                $postimage = get_the_post_thumbnail_url('', 'medium');
+                                                $placeholder = get_field('upload_placeholder', 'option');
+                                                $term_id_prefixed = '_' . $term_id;
+                                                $bedrijfafbeelding = get_field('bedrijfafbeelding', $term_id_prefixed); ?>
+                                                <div class="the-post--image" style="background-image:url( <?php if ($bedrijfafbeelding) { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } elseif ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?><?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
                                                 </div>
                                             </div>
                                         </div>
@@ -96,11 +99,11 @@ get_header(); ?>
                     <div class="col-md-8">
                         <?php $search_query = get_search_query(); ?>
                         <h2><?php _e('Geen resulaten voor:', 'flexupdate'); ?> <?php echo $search_query; ?></h2>
-                        <p class="no--post"><?php _e('Uw zoekactie heeft helaas geen zoekresultaten opgeleverd. Probeer het opnieuw met andere zoektermen of maak de zoektermen algemener.', ''); ?>
-                            <form action="<?php echo home_url('/'); ?>" class="search--formpage" method="get">
-                                <input type="text" name="s" id="search" placeholder="Geef een zoekterm op" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Geef een zoekterm op'" value="<?php the_search_query(); ?>" />
-                                <input type="submit" id="searchsubmit" value="Zoeken" />
-                            </form>
+                        <p class="no--post"><?php _e('Uw zoekactie heeft helaas geen zoekresultaten opgeleverd. Probeer het opnieuw met andere zoektermen of maak de zoektermen algemener.', ''); ?></p>
+                        <form action="<?php echo home_url('/'); ?>" class="search--formpage" method="get">
+                            <input type="text" name="s" id="search" placeholder="Geef een zoekterm op" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Geef een zoekterm op'" value="<?php the_search_query(); ?>" />
+                            <input type="submit" id="searchsubmit" value="Zoeken" />
+                        </form>
                     </div>
                 </div>
             </div>

@@ -743,6 +743,10 @@ nav {
         font-size: 16px;
         line-height: 32px;
         color: $paragraph;
+        a {
+          color: $paragraph;
+          text-decoration: underline;
+        }
       }
       .btn {
         background: $cta;
