@@ -141,7 +141,7 @@ get_header(); ?>
                             show_buttons: [
                                 'fb',
                                 'twitter',
-                                'tumblr',
+                                'linkedin',
                                 'email'
                             ]
                         });

@@ -39,14 +39,13 @@
             },
             show: true
           },
-          line: {
-            fa: 'fab fa-line fa-2x',
-            name: 'Line',
+          linkedin: {
+            fa: 'fab fa-linkedin-in',
+            name: 'linkedin',
             href: function href(url) {
-              return 'https://lineit.line.me/share/ui?url=' + url;
+              return 'https://www.linkedin.com/shareArticle?mini=true&url=' + url;
             },
             show: true,
-            hideWrapper: true
           },
           plurk: {
             fa: 'fa-plurk',
@@ -155,7 +154,7 @@
       this.find('.fa-stack-1x').css('color', '#ffffff');
       this.find('[data-icon=fb] .fa-stack-2x').css('color', '#3B5998');
       this.find('[data-icon=gPlus] .fa-stack-2x').css('color', '#d73d32');
-      this.find('[data-icon=line] .fa-stack-1x').css('color', '#00c300');
+      this.find('[data-icon=linkedin] .fa-stack-1x').css('color', '#ffffff');
       this.find('[data-icon=plurk] .fa-stack-2x').css('color', '#cf682f');
       this.find('[data-icon=plurk] .fa-plurk').css({
         'font-family': 'arial',

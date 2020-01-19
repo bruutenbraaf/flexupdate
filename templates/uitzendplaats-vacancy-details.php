@@ -131,7 +131,7 @@
 								show_buttons: [
 									'fb',
 									'twitter',
-									'tumblr',
+									'linkedin',
 									'email'
 								]
 							});
