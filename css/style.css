@@ -204,7 +204,7 @@ nav {
   overflow: hidden; }
 
 #counter {
-  padding: 30px 0px; }
+  padding: 20px 0 5px; }
   #counter .count .counters {
     text-align: center;
     padding: 16px 54px;
