@@ -15,7 +15,7 @@
       </div>
       <div class="_button-wrapper _full_width">
         <button id="_form_1_submit" class="_submit" type="submit">
-          Verzend
+          Aanmelden
         </button>
       </div>
     </div>
