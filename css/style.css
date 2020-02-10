@@ -558,6 +558,7 @@ nav {
       margin-left: 12px; }
   .adv .the--adv .the-post--image {
     min-height: calc(100% + 15px);
+    height: 100%;
     margin-right: 15px;
     width: 30%;
     position: relative;
