@@ -9,9 +9,9 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
+    <?php $postimage = get_the_post_thumbnail_url('', 'large'); ?>
     <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
-    <div class="post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+    <div class="post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['large']; ?> <?php } ?>);">
     </div>
     <div class="container">
         <div class="row">
