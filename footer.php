@@ -16,7 +16,7 @@
                                                 </div>
                                                 <div class="col-lg-8 col-md-12 signup--form">
                                                     <div id="mc_embed_signup" class="justify-content-center d-flex">
-                                                        <?php echo do_shortcode('[mailchimp]'); ?>
+                                                        <?php get_template_part('template-parts/content', 'mailblue'); ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -40,16 +40,16 @@
                             <div class="offset-md-1 col-md-10">
                                 <div class="the--promotors">
                                     <?php $loop = new WP_Query(array(
-                                                    'post_type' => 'initiatiefnemers',
-                                                    'posts_per_page' => -1,
-                                                    'order' => 'RAND'
-                                                )); ?>
+                                        'post_type' => 'initiatiefnemers',
+                                        'posts_per_page' => -1,
+                                        'order' => 'RAND'
+                                    )); ?>
                                     <?php if ($loop->have_posts()) : ?>
                                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                             <div class="item">
                                                 <?php $promotor = get_the_post_thumbnail_url('', 'medium'); ?>
                                                 <?php if ($promotor) { ?>
-                                                    <a href="<?php the_permalink();?>"><img src="<?php echo $promotor; ?>"></a>
+                                                    <a href="<?php the_permalink(); ?>"><img src="<?php echo $promotor; ?>"></a>
                                                 <?php } ?>
                                             </div>
                                         <?php endwhile; ?>

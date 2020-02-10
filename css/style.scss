@@ -463,21 +463,48 @@ nav {
           width: 100% !important;
           max-width: 100%;
           padding: 0 20px;
-        }
-        input[type="submit"] {
-          background: $cta;
-          font-family: $nunito;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 16px;
-          line-height: 22px;
-          text-align: center;
-          color: #ffffff;
-          padding: 0px 48px;
-          border: none;
+          outline: none !important;
         }
       }
     }
+  }
+  button {
+    outline: none !important;
+    background: $cta;
+    font-family: $nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0px 48px;
+    border: none;
+    height: 46px;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    &:hover {
+      cursor: pointer;
+      background: darken($cta, 5%);
+    }
+  }
+}
+
+._form-thank-you {
+  background: #33ab38;
+  color: white;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.the-form {
+  position: relative;
+  button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
 }
 

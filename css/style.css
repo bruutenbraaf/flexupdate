@@ -360,18 +360,41 @@ nav {
         border-radius: 10px !important;
         width: 100% !important;
         max-width: 100%;
-        padding: 0 20px; }
-      #newsletter .news-block .signup--form form input[type="submit"] {
-        background: #33ab38;
-        font-family: "Nunito", sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 22px;
-        text-align: center;
-        color: #ffffff;
-        padding: 0px 48px;
-        border: none; }
+        padding: 0 20px;
+        outline: none !important; }
+  #newsletter button {
+    outline: none !important;
+    background: #33ab38;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0px 48px;
+    border: none;
+    height: 46px;
+    border-radius: 10px;
+    transition-duration: 0.2s; }
+    #newsletter button:hover {
+      cursor: pointer;
+      background: #2d9732; }
+
+._form-thank-you {
+  background: #33ab38;
+  color: white;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px; }
+
+.the-form {
+  position: relative; }
+  .the-form button {
+    position: absolute;
+    right: 0px;
+    top: 0px; }
 
 #promoters h3 {
   font-family: "Nunito", sans-serif;
