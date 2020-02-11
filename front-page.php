@@ -103,7 +103,6 @@ get_header(); ?>
                                                         $term_id = $term->term_id;
                                                     }
                                                 } ?>
-        
                                                 <?php
                                                 $term_id_prefixed = '_' . $term_id;
                                                 $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
@@ -111,7 +110,6 @@ get_header(); ?>
                                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
                                                 <?php } else { ?>
                                                 <?php } ?>
-                                                <?php print_r($bedrijfsicon);?>
                                             </div>
                                             <div class="post--image ml-auto">
                                                 <?php
