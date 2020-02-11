@@ -104,7 +104,7 @@ get_header(); ?>
                                                     }
                                                 } ?>
                                                 <?php
-                                                $term_id_prefixed = '_' . $term_id;
+                                                $term_id_prefixed = $term_id;
                                                 $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
                                                 <?php if ($bedrijfsicon) { ?>
                                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
