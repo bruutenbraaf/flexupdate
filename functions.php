@@ -4,7 +4,7 @@ add_image_size('home', 1920, 600, true);
 
 add_theme_support('post-thumbnails');
 
-function leerbouwen_scripts()
+function flexupdate_scripts()
 {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('share', get_template_directory_uri() . '/js/jquery.c-share.js', array(), '1.0.0', true);
@@ -21,7 +21,8 @@ function leerbouwen_scripts()
 
 	wp_enqueue_style('fa', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 }
-add_action('wp_enqueue_scripts', 'leerbouwen_scripts');
+add_action('wp_enqueue_scripts', 'flexupdate_scripts');
+
 
 // Add option page
 

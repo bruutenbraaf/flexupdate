@@ -71,24 +71,35 @@ get_header(); ?>
                             </div>
                             <?php $postlink = get_field('item_link'); ?>
                             <div class="col-lg-10 offset-lg-0 col-md-10 offset-md-1 the--post" data-emergence="hidden">
-                                <a href="<?php if ($postlink) { ?><?php echo ($postlink); ?><?php } else { ?><?php the_permalink(); ?><?php } ?>" <?php if ($postlink) { ?>target="_blank" <?php } ?>>
-                                    <div class="wrapper-cell">
-                                        <div class="text">
-                                            <div class="text-line"> </div>
-                                            <div class="text-line"></div>
-                                            <div class="text-line"></div>
-                                            <div class="text-line"></div>
-                                        </div>
-                                        <div class="image"></div>
+                                <div class="wrapper-cell">
+                                    <div class="text">
+                                        <div class="text-line"> </div>
+                                        <div class="text-line"></div>
+                                        <div class="text-line"></div>
+                                        <div class="text-line"></div>
                                     </div>
-                                    <div class="post-inner">
-                                        <?php if ('post' == get_post_type()) { ?>
-                                            <div class="submitted--info d-flex justify-content-center">
+                                    <div class="image"></div>
+                                </div>
+                                <div class="post-inner">
+                                    <?php
+                                    global $post;
+                                    $term_id_prefixed = '_' . $term_id;
+                                    $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed);
+                                    $a_id = $post->post_author; ?>
+                                    <?php if ('post' == get_post_type()) { ?>
+                                        <div class="submitted--info d-flex justify-content-center">
+                                            <?php if ($a_id) { ?>
+                                                <span>
+                                                    <?php _e('Ingezonden door:', 'flexupdate'); ?> <a href="<?php echo get_author_posts_url($a_id); ?>"><?php the_author_meta('display_name', $a_id); ?></a>
+                                                </span>
+                                            <?php } else { ?>
                                                 <span>
                                                     <?php _e('Ingezonden bericht', 'flexupdate'); ?>
                                                 </span>
-                                            </div>
-                                        <?php } ?>
+                                            <?php } ?>
+                                        </div>
+                                    <?php } ?>
+                                    <a href="<?php if ($postlink) { ?><?php echo ($postlink); ?><?php } else { ?><?php the_permalink(); ?><?php } ?>" <?php if ($postlink) { ?>target="_blank" <?php } ?>>
                                         <div class="d-flex">
                                             <div class="post--info">
                                                 <h2><?php the_title(); ?>
@@ -103,12 +114,31 @@ get_header(); ?>
                                                         $term_id = $term->term_id;
                                                     }
                                                 } ?>
-                                                <?php
-                                                $term_id_prefixed = '_' . $term_id;
-                                                $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
                                                 <?php if ($bedrijfsicon) { ?>
                                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
-                                                <?php } else { ?>
+                                                <?php } ?>
+                                                <?php if ('post' == get_post_type()) { ?>
+                                                    <?php if ($a_id) { ?>
+                                                        <div class="ing">
+                                                            <a href="<?php echo get_author_posts_url($a_id); ?>">
+                                                                <?php $profilePic = get_field('user_info_afbeelding', 'user_' . $a_id); ?>
+                                                                <?php if ($profilePic) { ?>
+                                                                    <img class="profilePic" src="<?php echo $profilePic; ?>">
+                                                                <?php } ?>
+                                                                <?php the_author_meta('display_name', $a_id); ?>
+                                                            </a>
+                                                        </div>
+                                                    <?php } else { ?>
+                                                        <div class="ing">
+                                                            <a href="<?php the_field('gast_website'); ?>" target="_blank">
+                                                                <?php $profilePic = get_field('gast_logo') ?>
+                                                                <?php if ($profilePic) { ?>
+                                                                    <img class="profilePic" src="<?php echo $profilePic; ?>">
+                                                                <?php } ?>
+                                                                <?php the_field('gast_bedrijfsnaam'); ?>
+                                                            </a>
+                                                        </div>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </div>
                                             <div class="post--image ml-auto">
@@ -121,8 +151,8 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

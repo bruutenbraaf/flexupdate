@@ -79,6 +79,14 @@ jQuery(document).ready(function () {
   });
 });
 
+
+jQuery(document).ready(function () {
+  jQuery("body").on('click', '.apply-guest', function () {
+    jQuery('.apply-post').slideToggle(300);
+  });
+});
+
+
 jQuery("body").on('click', '.search-active', function () {
   jQuery('.mx').fadeToggle();
   jQuery('.search-button').toggleClass('src-toggle');

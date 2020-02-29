@@ -47,6 +47,25 @@
                         <div></div>
                     </div>
                 </div>
+                <?php
+                if (is_user_logged_in()) { ?>
+                    <?php $editProfile = get_field('profiel_aanpassen_pagina', 'option'); ?>
+                    <?php if ($editProfile) { ?>
+                        <div class="p-2">
+                            <?php
+                            global $current_user;
+                            get_currentuserinfo();
+                            $url = get_author_posts_url($current_user->ID);
+                            $loged = get_current_user_id();
+                            $afbeelding = get_field('user_info_afbeelding', 'user_' . $loged); ?>
+                            <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
+                            <a href="<?php echo $url; ?>">
+                                <div class="user_img" style="background-image:url(<?php if ($afbeelding) { ?><?php echo $afbeelding; ?><?php } else { ?><?php echo $placeholder['sizes']['large']; ?><?php } ?>);">
+                                </div>
+                            </a>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
                 <div class="p-2 xl ma ">
                     <div class="hamburger m-tg">
                         <div></div>

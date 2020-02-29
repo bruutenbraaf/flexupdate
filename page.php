@@ -1,7 +1,5 @@
 <?php
 get_header(); ?>
-<?php
-get_header(); ?>
 <main id="static">
     <?php if (have_rows('header_single')) : ?>
         <?php while (have_rows('header_single')) : the_row(); ?>
@@ -130,6 +128,4 @@ get_header(); ?>
         <?php endwhile; ?>
     <?php endif; ?>
 </main>
-<?php get_footer(); ?>
-
 <?php get_footer(); ?>
