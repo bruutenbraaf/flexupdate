@@ -40,7 +40,7 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
                     </a>
                 <?php } ?>
                 <p>
-                    <?php $authorDesc = the_author_meta('description'); ?>
+                    <?php $authorDesc = get_the_author_meta('description'); ?>
                     <?php if ($authorDesc) { ?>
                         <?php echo $authorDesc; ?>
                     <?php } else { ?>
