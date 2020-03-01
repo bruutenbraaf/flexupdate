@@ -7,7 +7,6 @@ $user = wp_get_current_user();
 $placeholder = get_field('upload_placeholder', 'option');
 $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
 $nickname = get_the_author_meta('nickname');
-$authorDesc = get_the_author_meta('description'); 
 ?>
 <main id="author">
     <div class="container">
@@ -26,7 +25,7 @@ $authorDesc = get_the_author_meta('description');
                             </a>
                         <?php } ?>
                     </div>
-                    <h1><?php echo $nickname; ?></h1>   
+                    <h1><?php echo $nickname; ?></h1>
                 </div>
             </div>
         </div>
@@ -42,6 +41,7 @@ $authorDesc = get_the_author_meta('description');
                     </a>
                 <?php } ?>
                 <p>
+                    <?php $authorDesc = get_the_author_meta('description'); ?>
                     <?php if ($authorDesc) { ?>
                         <?php echo $authorDesc; ?>
                     <?php } else { ?>
