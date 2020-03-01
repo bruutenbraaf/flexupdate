@@ -2256,7 +2256,7 @@ p.description[data-readmore] {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      bottom: 20px; }
+      bottom: 50px; }
       .mobile-nav .socials li {
         margin: 0px 15px; }
         .mobile-nav .socials li a {
