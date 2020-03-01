@@ -84,6 +84,7 @@ get_header(); ?>
                                     <?php
                                     global $post;
                                     $term_id_prefixed = '_' . $term_id;
+                                    $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed);
                                     $a_id = $post->post_author; ?>
                                     <?php if ('post' == get_post_type()) { ?>
                                         <div class="submitted--info d-flex justify-content-center">
@@ -106,7 +107,13 @@ get_header(); ?>
                                                 <p>
                                                     <?php echo excerpt(40); ?>
                                                 </p>
-                                                <?php $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
+                                                <?php
+                                                $terms = get_the_terms($post->ID, 'soort_item');
+                                                if ($terms) {
+                                                    foreach ($terms as $term) {
+                                                        $term_id = $term->term_id;
+                                                    }
+                                                } ?>
                                                 <?php if ($bedrijfsicon) { ?>
                                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
                                                 <?php } ?>
