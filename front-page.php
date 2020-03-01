@@ -113,7 +113,7 @@ get_header(); ?>
                                                         $term_id = $term->term_id;
                                                     }
                                                 } ?>
-                                                <?php $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
+                                                <?php $bedrijfsicon = get_field('bedrijfsicon', $term_id); ?>
                                                 <?php if ($bedrijfsicon) { ?>
                                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
                                                 <?php } ?>
