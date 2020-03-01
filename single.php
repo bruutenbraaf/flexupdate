@@ -21,7 +21,9 @@ get_header(); ?>
                     <div class="col-6">
                         <?php
                         global $post;
-                        $a_id = $post->post_author; ?>
+                        $a_id = $post->post_author;
+                        $author = get_user_by('slug', get_query_var('author_name'));
+                        $nickname = get_the_author_meta('nickname', $author->ID);  ?>
 
                         <?php if ($a_id) { ?>
                             <div class="ing">
@@ -30,7 +32,7 @@ get_header(); ?>
                                     <?php if ($profilePic) { ?>
                                         <img class="profilePic" src="<?php echo $profilePic; ?>">
                                     <?php } ?>
-                                    <?php the_author_meta('display_name', $a_id); ?>
+                                    <?php echo $nickname; ?>
                                 </a>
                             </div>
                         <?php } else { ?>
