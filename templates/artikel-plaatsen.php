@@ -24,7 +24,7 @@ get_header(); ?>
                 if (is_user_logged_in()) { ?>
                     <p><?php _e('Je plaats berichten onder de naam','flexupdate');?> <?php echo $current_user->display_name; ?>.
                 <?php } else { ?>
-                    <p>Je plaats berichten als een gast gebruiker. Heeft u een account? <a href="<?php the_field( 'inloggen_pagina', 'option' ); ?>">Klik hier om in te loggen.</a></p>
+                    <p><?php _e('Je plaats berichten als een gast gebruiker. Uw bericht wordt eerst gecontroleerd voordat uw bericht zichtbaar is in het overzicht.', 'flexupdate');?> </p>
                     <div class="apply-guest solid-btn"><?php _e('Doorgaan als gast','flexupdate');?></div><a href="<?php the_field('inloggen_pagina', 'option'); ?>" class="btn"><?php _e('Inloggen als auteur','flexupdate');?></a>
                 <?php } ?>
 
