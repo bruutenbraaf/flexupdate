@@ -6,7 +6,6 @@ $author = get_user_by('slug', get_query_var('author_name'));
 $user = wp_get_current_user();
 $placeholder = get_field('upload_placeholder', 'option');
 $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
-$nickname = get_the_author_meta('nickname');
 ?>
 <main id="author">
     <div class="container">
@@ -25,6 +24,7 @@ $nickname = get_the_author_meta('nickname');
                             </a>
                         <?php } ?>
                     </div>
+                    <?php $nickname = get_the_author_meta('nickname'); ?>
                     <h1><?php echo $nickname; ?></h1>
                 </div>
             </div>
