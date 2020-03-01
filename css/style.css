@@ -30,6 +30,13 @@ article[data-emergence="hidden"] {
   -o-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out; }
 
+.nf-response-msg {
+  background: #33ab38;
+  border-radius: 10px; }
+  .nf-response-msg p {
+    color: #ffffff;
+    padding: 15px; }
+
 article[data-emergence="visible"] {
   opacity: 1;
   margin-top: 0; }
@@ -426,7 +433,8 @@ nav {
 .update-pagination .next svg path {
   fill: #ffffff; }
 
-.page-template-overzicht-vacatures .tabs-nav li a, .post-type-archive .tabs-nav li a {
+.page-template-overzicht-vacatures .tabs-nav li a,
+.post-type-archive .tabs-nav li a {
   color: #ffffff; }
 
 #newsletter {

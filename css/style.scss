@@ -47,6 +47,15 @@ article[data-emergence="hidden"] {
   transition: all 2s ease-in-out;
 }
 
+.nf-response-msg {
+  background: $cta;
+  border-radius: 10px;
+  p {
+    color: #ffffff;
+    padding: 15px;
+  }
+}
+
 article[data-emergence="visible"] {
   opacity: 1;
   margin-top: 0;
@@ -549,7 +558,8 @@ nav {
   }
 }
 
-.page-template-overzicht-vacatures, .post-type-archive {
+.page-template-overzicht-vacatures,
+.post-type-archive {
   .tabs-nav {
     li {
       a {
