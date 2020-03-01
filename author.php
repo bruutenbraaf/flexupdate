@@ -126,7 +126,7 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
             <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                 <div class="col-lg-6">
                     <div class="post-item d-flex">
-                        <a href="<?php the_permalink(); ?>">
+                        <a class="d-flex" href="<?php the_permalink(); ?>">
                             <div>
                                 <h2><?php the_title(); ?></h2>
                                 <p><?php echo excerpt(10); ?></p>
