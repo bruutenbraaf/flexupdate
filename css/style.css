@@ -1336,6 +1336,8 @@ input#mce-EMAIL {
   border-radius: 0 20px 20px 0;
   background-size: cover;
   background-position: center center; }
+#static #shareBlock {
+  margin-top: 0px; }
 
 .featured--image {
   border-radius: 10px;
