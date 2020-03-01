@@ -413,6 +413,16 @@ nav {
       height: 29px;
       width: 11px; }
 
+.update-pagination .current {
+  background: #33ab38 !important;
+  transition: ease-in-out 0.2s; }
+.update-pagination .page-numbers {
+  transition: ease-in-out 0.2s; }
+  .update-pagination .page-numbers:hover {
+    background: #403f92 !important; }
+.update-pagination .next svg path {
+  fill: #ffffff; }
+
 #newsletter {
   margin: 0px 0px 40px 0px; }
   #newsletter .news-block {
@@ -1583,7 +1593,7 @@ blockquote :before {
           top: 15px;
           left: 12px;
           height: 12px;
-          transition: ease-in-out .2s; }
+          transition: ease-in-out 0.2s; }
         #updates .update-item .inner .go--btn:hover svg {
           left: 14px; }
     #updates .update-item h4 {

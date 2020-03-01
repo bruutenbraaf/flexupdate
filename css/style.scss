@@ -525,6 +525,26 @@ nav {
   }
 }
 
+.update-pagination {
+  .current {
+    background: $cta !important;
+    transition: ease-in-out 0.2s;
+  }
+  .page-numbers {
+    transition: ease-in-out 0.2s;
+    &:hover {
+      background: $brandcolor !important;
+    }
+  }
+  .next {
+    svg {
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
 #newsletter {
   margin: 0px 0px 40px 0px;
   .news-block {
@@ -1974,7 +1994,7 @@ blockquote {
           top: 15px;
           left: 12px;
           height: 12px;
-          transition: ease-in-out .2s;
+          transition: ease-in-out 0.2s;
         }
         &:hover {
           svg {

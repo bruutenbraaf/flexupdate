@@ -7,31 +7,32 @@ get_header(); ?>
                 <h1><?php the_field("updates_archive_title", "option"); ?></h1>
                 <p><?php the_field("updates_archive_intro", "option"); ?></p>
             </div>
-            <?php if (have_posts()) { ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <div class="offset-md-1 col-md-10">
-                        <div class="update-item">
-                            <a href="<?php the_field('link_update'); ?>" target="_blank">
-                                <div class="inner">
-                                    <div class="head d-flex justify-content-between">
-                                        <h4><?php the_title(); ?></h4>
-                                        <div class="date"><?php the_time('m / d'); ?></div>
-                                    </div>
-                                    <?php the_content(); ?>
-                                    <div class="go--btn">
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
+            <?php $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            $args = array('post_type' => 'updates', 'posts_per_page' => 8, 'paged' => $paged);
+            $loop = new WP_Query($args);
+            while ($loop->have_posts()) : $loop->the_post(); ?>
+                <div class="offset-md-1 col-md-10">
+                    <div class="update-item">
+                        <a href="<?php the_field('link_update'); ?>" target="_blank">
+                            <div class="inner">
+                                <div class="head d-flex justify-content-between">
+                                    <h4><?php the_title(); ?></h4>
+                                    <div class="date"><?php the_time('m / d'); ?></div>
                                 </div>
-                            </a>
-                        </div>
+                                <?php the_content(); ?>
+                                <div class="go--btn">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                <?php endwhile; ?>
-            <?php } ?>
+                </div>
+            <?php endwhile; ?>
         </div>
     </div>
-    <section id="pagination">
+    <section id="pagination" class="update-pagination">
         <div class="d-flex justify-content-center">
             <?php if ($loop->max_num_pages > 1) { ?>
                 <?php
