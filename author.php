@@ -24,7 +24,7 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
                             </a>
                         <?php } ?>
                     </div>
-                    <?php $nickname = get_the_author_meta('nickname'); ?>
+                    <?php $nickname = get_the_author_meta('nickname', $author->ID); ?>
                     <h1><?php echo $nickname; ?></h1>
                 </div>
             </div>
@@ -41,7 +41,7 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
                     </a>
                 <?php } ?>
                 <p>
-                    <?php $authorDesc = get_the_author_meta('description'); ?>
+                    <?php $authorDesc = get_the_author_meta('description', $author->ID); ?>
                     <?php if ($authorDesc) { ?>
                         <?php echo $authorDesc; ?>
                     <?php } else { ?>
