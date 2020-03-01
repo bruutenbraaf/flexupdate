@@ -35,7 +35,6 @@ get_header(); ?>
                     $logedOut = get_field('ingelogd_formulier_shortcode');
                     echo do_shortcode($logedOut); ?>
                 <?php } else { ?>
-                    Uitgelogd
                     <div class="apply-post">
                         <?php
                         $logedOut = get_field('gast_formulier_shortcode');
