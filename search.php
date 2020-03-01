@@ -21,40 +21,56 @@ get_header(); ?>
                 <article>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-1">
+                            <div class="col-lg-1 offset-lg-0 col-md-10 offset-md-1">
                                 <?php $postdate = get_the_time('m / d'); ?>
                                 <?php if ($currentdate == $postdate) { ?>
-                                    <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
+                                    <div class="st">
+                                        <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
+                                        <span class="post--date"><?php the_time('d / m'); ?></span>
+                                    </div>
                                 <?php } else { ?>
-                                    <span class="post--date"><?php the_time('m / d'); ?></span>
-                                    <span class="post--date"> <?php the_time('l'); ?></span>
+                                    <div class="st">
+                                        <span class="post--date"> <?php the_time('l'); ?></span>
+                                        <span class="post--date"><?php the_time('d / m'); ?></span>
+                                    </div>
                                 <?php } ?>
                             </div>
                             <?php $postlink = get_field('item_link'); ?>
-                            <div class="col-md-10 the--post" data-emergence="hidden">
-                                <a href="<?php if ($postlink) { ?><?php echo ($postlink); ?><?php } else { ?><?php the_permalink(); ?><?php } ?>" <?php if ($postlink) { ?>target="_blank" <?php } ?>>
-                                    <div class="wrapper-cell">
-                                        <div class="text">
-                                            <div class="text-line"> </div>
-                                            <div class="text-line"></div>
-                                            <div class="text-line"></div>
-                                            <div class="text-line"></div>
-                                        </div>
-                                        <div class="image"></div>
+                            <div class="col-lg-10 offset-lg-0 col-md-10 offset-md-1 the--post" data-emergence="hidden">
+                                <div class="wrapper-cell">
+                                    <div class="text">
+                                        <div class="text-line"> </div>
+                                        <div class="text-line"></div>
+                                        <div class="text-line"></div>
+                                        <div class="text-line"></div>
                                     </div>
-                                    <div class="post-inner">
-                                        <?php if ('post' == get_post_type()) { ?>
-                                            <div class="submitted--info d-flex justify-content-center">
+                                    <div class="image"></div>
+                                </div>
+                                <div class="post-inner">
+                                    <?php
+                                    global $post;
+                                    $term_id_prefixed = '_' . $term_id;
+                                    $a_id = $post->post_author; ?>
+                                    <?php if ('post' == get_post_type()) { ?>
+                                        <div class="submitted--info d-flex justify-content-center">
+                                            <?php if ($a_id) { ?>
+                                                <span>
+                                                    <?php _e('Ingezonden door:', 'flexupdate'); ?> <a href="<?php echo get_author_posts_url($a_id); ?>"><?php the_author_meta('display_name', $a_id); ?></a>
+                                                </span>
+                                            <?php } else { ?>
                                                 <span>
                                                     <?php _e('Ingezonden bericht', 'flexupdate'); ?>
                                                 </span>
-                                            </div>
-                                        <?php } ?>
+                                            <?php } ?>
+                                        </div>
+                                    <?php } ?>
+                                    <a href="<?php if ($postlink) { ?><?php echo ($postlink); ?><?php } else { ?><?php the_permalink(); ?><?php } ?>" <?php if ($postlink) { ?>target="_blank" <?php } ?>>
                                         <div class="d-flex">
                                             <div class="post--info">
                                                 <h2><?php the_title(); ?>
                                                 </h2>
-                                                <p><?php echo excerpt(40); ?>
+                                                <p>
+                                                    <?php echo excerpt(40); ?>
                                                 </p>
                                                 <?php
                                                 $terms = get_the_terms($post->ID, 'soort_item');
@@ -63,12 +79,32 @@ get_header(); ?>
                                                         $term_id = $term->term_id;
                                                     }
                                                 } ?>
-                                                <?php
-                                                $term_id_prefixed = '_' . $term_id;
-                                                $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
+                                                <?php $bedrijfsicon = get_field('bedrijfsicon', '_' . $term_id); ?>
                                                 <?php if ($bedrijfsicon) { ?>
                                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
-                                                <?php } else { ?>
+                                                <?php } ?>
+                                                <?php if ('post' == get_post_type()) { ?>
+                                                    <?php if ($a_id) { ?>
+                                                        <div class="ing">
+                                                            <a href="<?php echo get_author_posts_url($a_id); ?>">
+                                                                <?php $profilePic = get_field('user_info_afbeelding', 'user_' . $a_id); ?>
+                                                                <?php if ($profilePic) { ?>
+                                                                    <img class="profilePic" src="<?php echo $profilePic; ?>">
+                                                                <?php } ?>
+                                                                <?php the_author_meta('display_name', $a_id); ?>
+                                                            </a>
+                                                        </div>
+                                                    <?php } else { ?>
+                                                        <div class="ing">
+                                                            <a href="<?php the_field('gast_website'); ?>" target="_blank">
+                                                                <?php $profilePic = get_field('gast_logo') ?>
+                                                                <?php if ($profilePic) { ?>
+                                                                    <img class="profilePic" src="<?php echo $profilePic; ?>">
+                                                                <?php } ?>
+                                                                <?php the_field('gast_bedrijfsnaam'); ?>
+                                                            </a>
+                                                        </div>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </div>
                                             <div class="post--image ml-auto">
@@ -77,12 +113,12 @@ get_header(); ?>
                                                 $placeholder = get_field('upload_placeholder', 'option');
                                                 $term_id_prefixed = '_' . $term_id;
                                                 $bedrijfafbeelding = get_field('bedrijfafbeelding', $term_id_prefixed); ?>
-                                                <div class="the-post--image" style="background-image:url( <?php if ($bedrijfafbeelding) { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } elseif ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?><?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
+                                                <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } ?>);">
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
