@@ -545,6 +545,16 @@ nav {
   }
 }
 
+.page-template-overzicht-vacatures, .post-type-archive {
+  .tabs-nav {
+    li {
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
 #newsletter {
   margin: 0px 0px 40px 0px;
   .news-block {

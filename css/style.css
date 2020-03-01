@@ -423,6 +423,9 @@ nav {
 .update-pagination .next svg path {
   fill: #ffffff; }
 
+.page-template-overzicht-vacatures .tabs-nav li a, .post-type-archive .tabs-nav li a {
+  color: #ffffff; }
+
 #newsletter {
   margin: 0px 0px 40px 0px; }
   #newsletter .news-block {
