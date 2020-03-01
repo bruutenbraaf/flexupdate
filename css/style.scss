@@ -1638,6 +1638,14 @@ input#mce-EMAIL {
       background-size: cover;
       margin-left: 15px;
     }
+    a {
+      &:hover {
+        text-decoration: none;
+        h2 {
+          text-decoration: underline;
+        }
+      }
+    }
   }
   .posts-title {
     margin-bottom: 15px;

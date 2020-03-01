@@ -1301,6 +1301,10 @@ input#mce-EMAIL {
       border-radius: 10px;
       background-size: cover;
       margin-left: 15px; }
+    #author .post-item a:hover {
+      text-decoration: none; }
+      #author .post-item a:hover h2 {
+        text-decoration: underline; }
   #author .posts-title {
     margin-bottom: 15px; }
 

@@ -126,17 +126,19 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
             <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                 <div class="col-lg-6">
                     <div class="post-item d-flex">
-                        <div>
-                            <h2><?php the_title(); ?></h2>
-                            <p><?php echo excerpt(10); ?></p>
-                        </div>
-                        <?php
-                        $postimage = get_the_post_thumbnail_url('', 'medium');
-                        $placeholder = get_field('upload_placeholder', 'option');
-                        $term_id_prefixed = '_' . $term_id;
-                        $bedrijfafbeelding = get_field('bedrijfafbeelding', $term_id_prefixed); ?>
-                        <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } ?>);">
-                        </div>
+                        <a href="<?php the_permalink(); ?>">
+                            <div>
+                                <h2><?php the_title(); ?></h2>
+                                <p><?php echo excerpt(10); ?></p>
+                            </div>
+                            <?php
+                            $postimage = get_the_post_thumbnail_url('', 'medium');
+                            $placeholder = get_field('upload_placeholder', 'option');
+                            $term_id_prefixed = '_' . $term_id;
+                            $bedrijfafbeelding = get_field('bedrijfafbeelding', $term_id_prefixed); ?>
+                            <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } ?>);">
+                            </div>
+                        </a>
                     </div>
                 </div>
             <?php endwhile; ?>
