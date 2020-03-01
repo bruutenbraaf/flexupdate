@@ -26,7 +26,8 @@
                         </a>
                     <?php } ?>
                 </div>
-                <div class="p-2 mx">
+                <div class="p-2 mx d-flex align-items-center">
+                    <div class="nav-second-btn news-btn">Aanmelden nieuwsbrief</div>
                     <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
                 </div>
                 <div class="p-2 search ma">

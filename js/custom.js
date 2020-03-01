@@ -86,6 +86,12 @@ jQuery(document).ready(function () {
   });
 });
 
+jQuery(document).ready(function () {
+  jQuery("body").on('click', '.news-btn, .letter-overlay, .close-letter', function () {
+    jQuery('.pop-up-letter').toggleClass('letter-open');
+    jQuery('.letter-overlay').toggleClass('ov-open');
+  });
+});
 
 jQuery("body").on('click', '.search-active', function () {
   jQuery('.mx').fadeToggle();

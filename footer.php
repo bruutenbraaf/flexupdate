@@ -28,6 +28,39 @@
                     <?php endwhile; ?>
                 <?php endif; ?>
             <?php } ?>
+            <?php if (get_sub_field('toon_nieuwsbrief') == 1) { ?>
+                <?php if (have_rows('nieuwsbrief')) : ?>
+                    <?php while (have_rows('nieuwsbrief')) : the_row(); ?>
+                        <section id="newsletter" class="pop-up-letter">
+                            <div class="container">
+                                <div class="close-letter">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5 2.00998L13.09 0.599976L7.5 6.18998L1.91 0.599976L0.5 2.00998L6.09 7.59998L0.5 13.19L1.91 14.6L7.5 9.00998L13.09 14.6L14.5 13.19L8.91 7.59998L14.5 2.00998Z" fill="black" />
+                                    </svg>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 offset-lg-0 col-md-10 offset-md-1">
+                                        <div class="news-block">
+                                            <div class="row align-items-center">
+                                                <div class="col-lg-4 col-md-12">
+                                                    <h4><?php the_sub_field('subtitle'); ?></h4>
+                                                    <h2><?php the_sub_field('titel'); ?></h2>
+                                                </div>
+                                                <div class="col-lg-8 col-md-12 signup--form">
+                                                    <div id="mc_embed_signup" class="justify-content-center d-flex">
+                                                        <?php get_template_part('template-parts/content', 'mailblue'); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="letter-overlay"></div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            <?php } ?>
             <?php if (get_sub_field('toon_initiatiefnemers') == 1) { ?>
                 <section id="promoters">
                     <div class="container">
