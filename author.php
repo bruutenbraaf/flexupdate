@@ -30,7 +30,7 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
             </div>
         </div>
         <div class="row pro-inf">
-            <div class="col-lg-9 desc">
+            <div class="col-md-8 col-lg-9 desc">
                 <?php if ($author->ID == $user->ID) { ?>
                     <a href="<?php the_field('profiel_aanpassen_pagina', 'option'); ?>">
                         <div class="edit-desc">
@@ -65,7 +65,7 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
                     </a>
                 <?php } ?>
             </div>
-            <div class="col-lg-3 side">
+            <div class="col-md-4 col-lg-3 side">
                 <?php if ($author->ID == $user->ID) { ?>
                     <a href="<?php echo wp_logout_url(); ?>" class="solid-btn"><?php _e('Uitloggen', 'flexupdate'); ?></a>
                     <a href="<?php the_field('profiel_aanpassen_pagina', 'option'); ?>" class="btn edit-profile-btn"><?php _e('Profiel aanpassen', 'flexupdate'); ?></a>
@@ -124,7 +124,7 @@ $placeholderOmslag = get_field('omslagfoto_placeholder', 'option');
                 <h2>Laatste berichten van <?php echo $author->display_name; ?></h2>
             </div>
             <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="post-item d-flex">
                         <a class="d-flex" href="<?php the_permalink(); ?>">
                             <div>

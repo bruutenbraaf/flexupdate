@@ -457,7 +457,7 @@ nav {
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
-      color: #bdbdbd; }
+      color: #828282; }
     #newsletter .news-block .signup--form form {
       width: 100%; }
       #newsletter .news-block .signup--form form #mc_embed_signup_scroll {
@@ -703,7 +703,8 @@ nav {
     background-size: cover;
     margin-bottom: -15px;
     margin-left: -35px;
-    overflow: hidden; }
+    overflow: hidden;
+    background-position: center center; }
     .adv .the--adv .the-post--image:after {
       content: "";
       background-size: contain;
@@ -2043,6 +2044,20 @@ p.description[data-readmore] {
     padding: 40px 0;
     padding-top: 80px; } }
 @media screen and (max-width: 991px) {
+  #author .post-item .the-post--image {
+    min-width: 100px;
+    min-height: auto;
+    height: 100px;
+    background-position: center center; }
+
+  #author .post-item h2 {
+    font-size: 18px;
+    line-height: 22px; }
+
+  #author .post-item p {
+    font-size: 16px;
+    line-height: 22px; }
+
   .image {
     min-width: 150px;
     height: 145px;
@@ -2058,8 +2073,8 @@ p.description[data-readmore] {
 
   #posts article .post--image .the-post--image {
     width: 150px;
-    height: 130px; } }
-@media screen and (max-width: 768px) {
+    height: 130px; }
+
   nav .search form {
     background: white;
     display: none;
@@ -2084,9 +2099,6 @@ p.description[data-readmore] {
 
   #author .pro-inf {
     margin: 60px 0px; }
-
-  #author .side {
-    margin-top: 60px; }
 
   nav .user_img {
     top: 3px;
@@ -2123,10 +2135,6 @@ p.description[data-readmore] {
       background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 95%);
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 95%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); }
-
-  .submitted--info {
-    margin-left: -15px;
-    width: calc(100% + 30px); }
 
   .hmd {
     display: none !important; }
@@ -2167,10 +2175,6 @@ p.description[data-readmore] {
       #newsletter .container .col-md-12 .news-block {
         border-radius: 0px; }
 
-  #posts article .the--post {
-    border-radius: 0;
-    padding: 30px 15px; }
-
   article .container {
     max-width: 100vw; }
     article .container .col-md-12 {
@@ -2181,11 +2185,6 @@ p.description[data-readmore] {
   nav .container {
     max-width: 100vw;
     padding: 0px 5px 0px 15px; }
-
-  .vac .the--vac,
-  .edu .the--edu,
-  .adv .the--adv {
-    border-radius: 0px; }
 
   .mx {
     display: none; }
@@ -2277,19 +2276,46 @@ p.description[data-readmore] {
   .vac-col {
     margin-bottom: 30px; }
 
+  .vacancy-profile {
+    margin-bottom: 30px; }
+
+  .image {
+    min-width: 119px;
+    height: 130px; }
+
+  #newsletter .news-block {
+    margin-left: -15px;
+    margin-right: -15px; } }
+@media screen and (max-width: 767px) {
+  #newsletter button {
+    padding: 0px 15px; }
+
+  .solid-btn,
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; }
+
   #newsletter .news-block {
     padding: 30px 30px;
     margin-left: -15px;
     width: calc(100% + 30px);
     border-radius: 0px; }
 
-  .vacancy-profile {
-    margin-bottom: 30px; }
+  .vac .the--vac,
+  .edu .the--edu,
+  .adv .the--adv {
+    border-radius: 0px; }
 
-  .image {
-    min-width: 119px;
-    height: 130px; } }
-@media screen and (max-width: 425px) {
+  #posts article .the--post {
+    border-radius: 0;
+    padding: 30px 15px; }
+
+  #author .side {
+    margin-top: 60px; }
+
   .adv .d-flex {
     flex-wrap: wrap; }
 
@@ -2328,8 +2354,8 @@ p.description[data-readmore] {
 
   #author .omslagfoto h1 {
     left: calc(60px + 100px);
-    bottom: 0px;
-    font-size: 20px; }
+    font-size: 20px;
+    line-height: 22px; }
 
   #author .solid-btn,
   #author .btn {
