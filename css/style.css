@@ -1713,6 +1713,9 @@ p.description[data-readmore] {
   margin-top: 160px;
   margin-bottom: 60px; }
 
+.nf-form-layout {
+  margin-top: 50px; }
+
 .ninja-forms-form-wrap p {
   font-family: "Muli", sans-serif;
   font-style: normal;
