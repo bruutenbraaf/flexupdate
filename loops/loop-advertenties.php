@@ -14,9 +14,6 @@
                     <?php $postimage = get_the_post_thumbnail_url('', 'large'); ?>
                     <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
                     <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['medium']; ?> <?php } ?>);">
-                        <svg viewBox="0 0 55 357" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 357C89.6 194.6 37.3333 51.3333 0 0H55V357H0Z" fill="white" />
-                        </svg>
                     </div>
                     <div class="the-post--ad">
                         <h2><?php the_title(); ?></h2>
