@@ -60,6 +60,10 @@ nav {
   width: 100vw;
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(69, 93, 199, 0.18);
+  .btnsnav {
+    display: flex;
+    align-items: center;
+  }
   .user_img {
     width: 30px;
     height: 30px;
