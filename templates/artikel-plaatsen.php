@@ -22,7 +22,7 @@ get_header(); ?>
 
                 <?php
                 if (is_user_logged_in()) { ?>
-                    <p><?php _e('Je plaats berichten onder de naam','flexupdate');?> <?php echo $current_user->display_name; ?>.
+                    <p><?php _e('Vul het onderstaande formulier zo volledig mogelijk in. Uw bericht wordt eerst gecontroleerd voordat het bericht zichtbaar is in het overzicht.','flexupdate');?>.
                 <?php } else { ?>
                     <p><?php _e('Je plaats berichten als een gast gebruiker. Uw bericht wordt eerst gecontroleerd voordat uw bericht zichtbaar is in het overzicht.', 'flexupdate');?> </p>
                     <div class="apply-guest solid-btn"><?php _e('Doorgaan als gast','flexupdate');?></div><a href="<?php the_field('inloggen_pagina', 'option'); ?>" class="btn"><?php _e('Inloggen als auteur','flexupdate');?></a>
@@ -30,7 +30,6 @@ get_header(); ?>
 
                 <?php
                 if (is_user_logged_in()) { ?>
-                Ingelogd
                     <?php
                     $logedOut = get_field('ingelogd_formulier_shortcode');
                     echo do_shortcode($logedOut); ?>
