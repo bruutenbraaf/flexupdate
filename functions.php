@@ -24,6 +24,12 @@ function flexupdate_scripts()
 add_action('wp_enqueue_scripts', 'flexupdate_scripts');
 
 
+add_action('wp_logout','ps_redirect_after_logout');
+function ps_redirect_after_logout(){
+         wp_redirect( 'https://flexupdate.nl' );
+         exit();
+}
+
 // Add option page
 
 acf_add_options_page(array(
