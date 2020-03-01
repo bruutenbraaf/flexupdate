@@ -8,7 +8,7 @@ get_header(); ?>
                 <?php $placeholder = get_field('upload_placeholder', 'option'); ?>
                 <div class="featured--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $placeholder['sizes']['large']; ?> <?php } ?>);">
                 </div>
-                <span class="time"><?php _e('Geplaats op:', 'flexupdate'); ?> <?php the_time('j F Y'); ?></span>
+                <span class="time"><?php _e('Geplaatst op:', 'flexupdate'); ?> <?php the_time('j F Y'); ?></span>
                 <div class="intro">
                     <h1><?php the_title(); ?></h1>
                     <p><?php the_field('intro_text'); ?></p>
