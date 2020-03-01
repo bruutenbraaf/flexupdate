@@ -24,7 +24,7 @@ get_header(); ?>
                         $a_id = $post->post_author;
                         $author = get_user_by('slug', get_query_var('author_name'));
                         $nickname = get_the_author_meta('nickname', $author->ID);  ?>
-                        <?php if ($a_id) { ?>
+                        <?php if ($nickname != 'Gast') { ?>
                             <div class="ing">
                                 <a href="<?php echo get_author_posts_url($a_id); ?>">
                                     <?php $profilePic = get_field('user_info_afbeelding', 'user_' . $a_id); ?>

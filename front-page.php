@@ -84,12 +84,12 @@ get_header(); ?>
                                     <?php
                                     global $post;
                                     $term_id_prefixed = '_' . $term_id;
-                                    $a_id = $post->post_author; 
+                                    $a_id = $post->post_author;
                                     $author = get_user_by('slug', get_query_var('author_name'));
                                     $nickname = get_the_author_meta('nickname', $author->ID); ?>
                                     <?php if ('post' == get_post_type()) { ?>
                                         <div class="submitted--info d-flex justify-content-center">
-                                            <?php if ($a_id) { ?>
+                                            <?php if ($nickname != 'Gast') { ?>
                                                 <span>
                                                     <?php _e('Ingezonden door:', 'flexupdate'); ?> <a href="<?php echo get_author_posts_url($a_id); ?>"><?php echo $nickname; ?></a>
                                                 </span>
@@ -115,12 +115,12 @@ get_header(); ?>
                                                         $term_id = $term->term_id;
                                                     }
                                                 } ?>
-                                                <?php $bedrijfsicon = get_field('bedrijfsicon', '_' . $term_id);?>
+                                                <?php $bedrijfsicon = get_field('bedrijfsicon', '_' . $term_id); ?>
                                                 <?php if ($bedrijfsicon) { ?>
                                                     <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
                                                 <?php } ?>
                                                 <?php if ('post' == get_post_type()) { ?>
-                                                    <?php if ($a_id) { ?>
+                                                    <?php if ($nickname != 'Gast') { ?>
                                                         <div class="ing">
                                                             <a href="<?php echo get_author_posts_url($a_id); ?>">
                                                                 <?php $profilePic = get_field('user_info_afbeelding', 'user_' . $a_id); ?>
@@ -130,7 +130,7 @@ get_header(); ?>
                                                                 <?php echo $nickname; ?>
                                                             </a>
                                                         </div>
-                                                    <?php } else { ?>
+                                                    <?php  } else { ?>
                                                         <div class="ing">
                                                             <a href="<?php the_field('gast_website'); ?>" target="_blank">
                                                                 <?php $profilePic = get_field('gast_logo') ?>
