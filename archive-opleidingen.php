@@ -19,7 +19,6 @@ get_header(); ?>
                             <article class="opl-item">
                                 <div class="opl--heading">
                                     <h4><?php the_title(); ?></h4>
-
                                     <?php if (have_rows('gegevens_opleiding')) : ?>
                                         <?php while (have_rows('gegevens_opleiding')) : the_row(); ?>
                                             <span class="location ml-auto"> <?php the_sub_field('locatie_opleiding'); ?></span>

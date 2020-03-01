@@ -194,7 +194,7 @@ nav {
   pointer-events: none;
   top: 80%;
   opacity: 0;
-  transition: ease-in-out .2s; }
+  transition: ease-in-out 0.2s; }
   .pop-up-letter .container {
     position: relative; }
   .pop-up-letter .close-letter {
@@ -210,7 +210,7 @@ nav {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    transition: ease-in-out .2s; }
+    transition: ease-in-out 0.2s; }
     .pop-up-letter .close-letter svg path {
       fill: #ffffff; }
     .pop-up-letter .close-letter:hover {
@@ -1543,6 +1543,65 @@ blockquote :before {
         margin-right: 5px;
         position: relative;
         top: -2px; }
+
+#updates {
+  background: #333333;
+  padding-top: 140px;
+  margin-bottom: -150px;
+  padding-bottom: calc(80px + 150px); }
+  #updates .int h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: "Muli", sans-serif;
+    font-weight: bold; }
+  #updates .int p {
+    color: #ffffff; }
+  #updates .update-item {
+    margin-bottom: 30px; }
+    #updates .update-item .inner {
+      padding: 20px;
+      height: 100%;
+      background: #fff;
+      box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+      display: block;
+      position: relative; }
+      #updates .update-item .inner .go--btn {
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        width: 35px;
+        height: 35px;
+        background: #33ab38;
+        border-radius: 99px 0 30px 0; }
+        #updates .update-item .inner .go--btn svg {
+          stroke: #fff;
+          position: absolute;
+          top: 15px;
+          left: 12px;
+          height: 12px;
+          transition: ease-in-out .2s; }
+        #updates .update-item .inner .go--btn:hover svg {
+          left: 14px; }
+    #updates .update-item h4 {
+      color: #403f92;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      margin: 0;
+      margin-bottom: 14px; }
+    #updates .update-item p {
+      color: #6c757d;
+      margin: 0px; }
+    #updates .update-item:hover h4 {
+      text-decoration: underline; }
+    #updates .update-item:hover .go--btn svg {
+      left: 14px; }
+  #updates a:hover {
+    text-decoration: none; }
 
 #initiatiefnemers {
   background: #333333;
