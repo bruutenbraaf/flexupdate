@@ -26,11 +26,11 @@
                         </a>
                     <?php } ?>
                 </div>
-                <div class="p-2 mx btnsnav">
+                <div class="p-2 mx btnsnav d-none d-md-none d-lg-flex">
                     <div class="nav-second-btn news-btn">Aanmelden nieuwsbrief</div>
                     <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
                 </div>
-                <div class="p-2 search ma">
+                <div class="p-2 search ma order-2 order-lg-1">
                     <div class="search-button src-toggle">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="13.5" cy="8.5" r="7.5" stroke="#333333" stroke-width="2" />
@@ -41,7 +41,7 @@
                         <input type="text" name="s" id="search" placeholder="Geef een zoekterm op" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Geef een zoekterm op'" value="<?php the_search_query(); ?>" />
                     </form>
                 </div>
-                <div class="p-2 hmd">
+                <div class="p-2 hmd order-md-3 order-lg-2">
                     <div class="hamb hmb-toggle">
                         <div></div>
                         <div></div>
@@ -52,7 +52,7 @@
                 if (is_user_logged_in()) { ?>
                     <?php $editProfile = get_field('profiel_aanpassen_pagina', 'option'); ?>
                     <?php if ($editProfile) { ?>
-                        <div class="p-2">
+                        <div class="p-2 order-1 order-md-1 order-lg-3">
                             <?php
                             global $current_user;
                             get_currentuserinfo();
@@ -67,7 +67,7 @@
                         </div>
                     <?php } ?>
                 <?php } ?>
-                <div class="p-2 xl ma ">
+                <div class="p-2 xl ma order-3">
                     <div class="hamburger m-tg">
                         <div></div>
                         <div></div>
