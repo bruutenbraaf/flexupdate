@@ -13,7 +13,10 @@ get_header(); ?>
                         <div class="update-item">
                             <a href="<?php the_field('link_update'); ?>" target="_blank">
                                 <div class="inner">
-                                    <h4><?php the_title(); ?></h4>
+                                    <div class="head d-flex justify-content-between">
+                                        <h4><?php the_title(); ?></h4>
+                                        <div class="date"><?php the_time('m / d'); ?></div>
+                                    </div>
                                     <?php the_content(); ?>
                                     <div class="go--btn">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

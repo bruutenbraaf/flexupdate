@@ -1567,6 +1567,8 @@ blockquote :before {
       overflow: hidden;
       display: block;
       position: relative; }
+      #updates .update-item .inner .date {
+        color: #828282; }
       #updates .update-item .inner .go--btn {
         position: absolute;
         right: 0px;
