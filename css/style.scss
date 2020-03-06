@@ -641,23 +641,23 @@ nav {
 }
 
 .checkbox-container.label-right label:after {
-  left: -28px;
-  top: 5px;
+  left: -28px !important;
+  top: 5px !important;
 }
 
 .checkbox-container.label-right label:before {
-  left: -30px;
-  width: 4px;
-  top: -2px;
-  font-size: 14px;
-  left: -26px;
-  color: $brandcolor;
+  left: -30px !important;
+  width: 4px !important;
+  top: -2px !important;
+  font-size: 14px !important;
+  left: -26px !important;
+  color: $brandcolor !important;
 }
 
 ._form-thank-you {
   background: #33ab38;
-  color: white;
-  font-family: Nunito, sans-serif;
+  color: white !important;
+  font-family: $nunito; 
   font-weight: 700;
   border-radius: 10px;
   padding: 10px 20px;
