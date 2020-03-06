@@ -640,6 +640,20 @@ nav {
   }
 }
 
+.checkbox-container.label-right label:after {
+  left: -28px;
+  top: 5px;
+}
+
+.checkbox-container.label-right label:before {
+  left: -30px;
+  width: 4px;
+  top: -2px;
+  font-size: 14px;
+  left: -26px;
+  color: $brandcolor;
+}
+
 ._form-thank-you {
   background: #33ab38;
   color: white;
