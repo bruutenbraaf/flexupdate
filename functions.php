@@ -387,13 +387,20 @@ endif;
 
 
 
-
-function fields_in_feed($content)
-{
-	if (is_feed()) {
-		$output .= '<img src=" ' . get_the_post_thumbnail_url('', 'medium') . '">';
-		$content = $output . $content;
-	}
-	return $content;
+add_action('init', 'customRSS');
+function customRSS(){
+        add_feed('nieuwsbrief', 'customRSSFunc');
 }
-add_filter('the_content', 'fields_in_feed');
+
+function customRSSFunc(){
+	get_template_part('rss', 'nieuwsbrief');
+}
+
+
+global $wp_rewrite;
+$wp_rewrite->flush_rules();
+
+function rssLanguage(){
+	update_option('rss_language', 'en');
+}
+add_action('admin_init', 'rssLanguage');
