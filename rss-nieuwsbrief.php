@@ -27,7 +27,7 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?' . '>';
                 <dc:creator><?php the_author(); ?></dc:creator>
                 <guid isPermaLink="false"><?php the_guid(); ?></guid>
                 <description>
-                    <![CDATA[<div class="nws-img" style="background-image:url(<?php echo $postimage;?>");?></div><h2><?php the_title_rss(); ?></h2><?php the_excerpt_rss() ?>]]>
+                    <![CDATA[<div class="nws-img" style="background-image:url(<?php echo $postimage;?>");?></div><h2><?php the_title_rss(); ?></h2><p><?php the_excerpt_rss() ?></p>]]>
                 </description>
                 <content:encoded>
                     <![CDATA[<?php the_excerpt_rss() ?>]]>
