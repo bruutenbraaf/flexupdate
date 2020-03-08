@@ -160,6 +160,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
+                <?php $count++; ?>
                 <?php if ($count == 3) { ?>
                     <?php
                     $first_adv = new WP_Query(array(
