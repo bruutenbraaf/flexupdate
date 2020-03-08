@@ -22,14 +22,12 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?' . '>';
         <?php while (have_posts()) : the_post(); ?>
             <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
             <item>
-                <enclosure url="<?php echo $postimage ?>" length="12345" type="image/jpeg"/>
-                <title><?php the_title_rss(); ?></title>
                 <link><?php the_permalink_rss(); ?></link>
                 <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
                 <dc:creator><?php the_author(); ?></dc:creator>
                 <guid isPermaLink="false"><?php the_guid(); ?></guid>
                 <description>
-                    <![CDATA[<?php the_excerpt_rss() ?>]]>
+                    <![CDATA[<div class="nws-img" style="background-image:url(<?php echo $postimage;?>");?></div><h2><?php the_title_rss(); ?></h2><?php the_excerpt_rss() ?>]]>
                 </description>
                 <content:encoded>
                     <![CDATA[<?php the_excerpt_rss() ?>]]>
