@@ -24,10 +24,11 @@ function flexupdate_scripts()
 add_action('wp_enqueue_scripts', 'flexupdate_scripts');
 
 
-add_action('wp_logout','ps_redirect_after_logout');
-function ps_redirect_after_logout(){
-         wp_redirect( 'https://flexupdate.nl' );
-         exit();
+add_action('wp_logout', 'ps_redirect_after_logout');
+function ps_redirect_after_logout()
+{
+	wp_redirect('https://flexupdate.nl');
+	exit();
 }
 
 // Add option page
@@ -381,3 +382,18 @@ if (!function_exists('pietergoosen_pagination')) :
 	} //  pietergoosen_pagination
 
 endif;
+
+
+
+
+
+
+function fields_in_feed($content)
+{
+	if (is_feed()) {
+		$output .= '<img src=" ' . get_the_post_thumbnail_url('', 'medium') . '">';
+		$content = $output . $content;
+	}
+	return $content;
+}
+add_filter('the_content', 'fields_in_feed');
