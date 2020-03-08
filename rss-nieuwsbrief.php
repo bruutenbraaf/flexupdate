@@ -20,15 +20,16 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?' . '>';
         <sy:updateFrequency><?php echo apply_filters('rss_update_frequency', '1'); ?></sy:updateFrequency>
         <?php do_action('rss2_head'); ?>
         <?php while (have_posts()) : the_post(); ?>
-            <?php $postimage = get_the_post_thumbnail_url('', 'large'); ?>
+            <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
             <item>
+                <figure><img src="<?php echo $postimage ?>"></figure>
                 <title><?php the_title_rss(); ?></title>
                 <link><?php the_permalink_rss(); ?></link>
                 <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
                 <dc:creator><?php the_author(); ?></dc:creator>
                 <guid isPermaLink="false"><?php the_guid(); ?></guid>
                 <description>
-                    <![CDATA[<img src="<?php echo $postimage ?>"><?php the_excerpt_rss() ?>]]>
+                    <![CDATA[<?php the_excerpt_rss() ?>]]>
                 </description>
                 <content:encoded>
                     <![CDATA[<?php the_excerpt_rss() ?>]]>
