@@ -68,12 +68,10 @@ get_header(); ?>
             <div class="col-md-4">
                 <?php
                 $thispost = get_the_ID();
-                $currentdate = date('m / d');
-                $paged = (get_query_var('page')) ? get_query_var('page') : 1;
                 $args = array(
                     'post__not_in' => array($thispost),
                     'post_type' => array('post'),
-                    'orderby' => 'rand',
+                    'order' => 'DESC',
                     'posts_per_page' => 3,
                 );
                 $loop = new WP_Query($args);
@@ -98,25 +96,12 @@ get_header(); ?>
                                                 <div class="post-inner">
                                                     <div class="d-flex">
                                                         <div class="post--info">
-                                                            <h2><?php the_title(); ?>
-                                                            </h2>
+                                                            <h3>
+                                                                <?php the_title(); ?>
+                                                            </h3>
                                                             <p>
                                                                 <?php echo excerpt(10); ?>
                                                             </p>
-                                                            <?php
-                                                            $terms = get_the_terms($post->ID, 'soort_item');
-                                                            if ($terms) {
-                                                                foreach ($terms as $term) {
-                                                                    $term_id = $term->term_id;
-                                                                }
-                                                            } ?>
-                                                            <?php
-                                                            $term_id_prefixed = '_' . $term_id;
-                                                            $bedrijfsicon = get_field('bedrijfsicon', $term_id_prefixed); ?>
-                                                            <?php if ($bedrijfsicon) { ?>
-                                                                <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
-                                                            <?php } else { ?>
-                                                            <?php } ?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -127,6 +112,24 @@ get_header(); ?>
                             </article>
                         <?php } ?>
                     </section>
+                <?php } ?>
+                <?php
+                $adv = array(
+                    'post_type' => array('advertentie_single'),
+                    'orderby' => 'rand',
+                    'posts_per_page' => 1,
+                );
+                $loop = new WP_Query($adv);
+                if ($loop->have_posts()) { ?>
+                    <?php while ($loop->have_posts()) {
+                        $loop->the_post(); ?>
+                        <div class="adv_single">
+                            <?php $afbeelding = get_field('afbeelding_sngl'); ?>
+                            <?php $URL = get_field('URL_sgnl'); ?>
+
+                            <a href="<?php echo $URL['url']; ?>" target="<?php echo $URL['target']; ?>"><img src="<?php echo $afbeelding['url']; ?>" alt="<?php echo $afbeelding['alt']; ?>" /></a>
+                        </div>
+                    <?php } ?>
                 <?php } ?>
             </div>
         </div>

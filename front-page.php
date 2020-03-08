@@ -108,17 +108,6 @@ get_header(); ?>
                                                 <p>
                                                     <?php echo excerpt(40); ?>
                                                 </p>
-                                                <?php
-                                                $terms = get_the_terms($post->ID, 'soort_item');
-                                                if ($terms) {
-                                                    foreach ($terms as $term) {
-                                                        $term_id = $term->term_id;
-                                                    }
-                                                } ?>
-                                                <?php $bedrijfsicon = get_field('bedrijfsicon', '_' . $term_id); ?>
-                                                <?php if ($bedrijfsicon) { ?>
-                                                    <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
-                                                <?php } ?>
                                                 <?php if ('post' == get_post_type()) { ?>
                                                     <?php if ($nickname != 'Gast') { ?>
                                                         <div class="ing">
@@ -141,6 +130,18 @@ get_header(); ?>
                                                             </a>
                                                         </div>
                                                     <?php } ?>
+                                                <?php } else { ?>
+                                                    <?php
+                                                    $terms = get_the_terms($post->ID, 'soort_item');
+                                                    if ($terms) {
+                                                        foreach ($terms as $term) {
+                                                            $term_id = $term->term_id;
+                                                        }
+                                                    } ?>
+                                                    <?php $bedrijfsicon = get_field('bedrijfsicon', '_' . $term_id); ?>
+                                                    <?php if ($bedrijfsicon) { ?>
+                                                        <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </div>
                                             <div class="post--image ml-auto">
@@ -159,9 +160,6 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
-                <?php // advertenties loops 
-                ?>
-                <?php $count++; ?>
                 <?php if ($count == 3) { ?>
                     <?php
                     $first_adv = new WP_Query(array(
