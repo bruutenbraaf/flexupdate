@@ -45,6 +45,7 @@ get_header(); ?>
         'post_type' => array('items', 'post'),
         'order' => 'DESC',
         'paged' => $paged,
+        'fields' => 'ids'
     );
     $loop = new WP_Query($args);
     if ($loop->have_posts()) { ?>
@@ -161,18 +162,20 @@ get_header(); ?>
                     </div>
                 </article>
                 <?php $count++; ?>
-                <?php $mainloop = wp_list_pluck( $loop->posts, 'ID' ); ?>
                 <?php if ($count == 2) { ?>
                     <?php
+                    $mainloop = $loop->posts;
+                    print_r($mainloop);
                     $ingezonden = new WP_Query(array(
-                        'post__not_in' => array($mainloop),
                         'post_type' => 'post',
                         'posts_per_page' => 1,
-                        'order' => 'DESC',
+                        'post__not_in' => $mainloop,
                     )); ?>
+                    <?php print_r($mainloop->ID); ?>
                     <?php if ($ingezonden->have_posts()) : ?>
                         <?php while ($ingezonden->have_posts()) : $ingezonden->the_post(); ?>
-                            <?php $firstadv = get_the_ID(); ?>
+                            <?php $current = get_the_ID(); ?>
+                            <h1><?php echo $current; ?></h1>
                             <article>
                                 <div class="container">
                                     <div class="row">
