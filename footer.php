@@ -10,8 +10,10 @@
                                     <div class="col-lg-12 offset-lg-0 col-md-10 offset-md-1">
                                         <div class="news-block">
                                             <div class="row align-items-center">
-                                                <div class="col-lg-4 col-md-12">
+                                                <div class="col-lg-12">
                                                     <h4><?php the_sub_field('subtitle'); ?></h4>
+                                                </div>
+                                                <div class="col-lg-4 col-md-12">
                                                     <h2><?php the_sub_field('titel'); ?></h2>
                                                 </div>
                                                 <div class="col-lg-8 col-md-12 signup--form">
