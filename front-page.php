@@ -161,6 +161,118 @@ get_header(); ?>
                     </div>
                 </article>
                 <?php $count++; ?>
+                <?php if ($count == 2) { ?>
+                    <?php
+                    $first_adv = new WP_Query(array(
+                        'post__not_in' => $loop,
+                        'post_type' => 'post',
+                        'posts_per_page' => 1,
+                        'order' => 'DESC',
+                    )); ?>
+                    <?php if ($first_adv->have_posts()) : ?>
+                        <?php while ($first_adv->have_posts()) : $first_adv->the_post(); ?>
+                            <?php $firstadv = get_the_ID(); ?>
+                            <article>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-1 offset-lg-0 col-md-10 offset-md-1">
+                                            <span class="post--date text-right">laatste<br> ingezonden</span>
+                                        </div>
+                                        <?php $postlink = get_field('item_link'); ?>
+                                        <div class="col-lg-10 offset-lg-0 col-md-10 offset-md-1 the--post" data-emergence="hidden">
+                                            <div class="wrapper-cell">
+                                                <div class="text">
+                                                    <div class="text-line"> </div>
+                                                    <div class="text-line"></div>
+                                                    <div class="text-line"></div>
+                                                    <div class="text-line"></div>
+                                                </div>
+                                                <div class="image"></div>
+                                            </div>
+                                            <div class="post-inner">
+                                                <?php
+                                                global $post;
+                                                $term_id_prefixed = '_' . $term_id;
+                                                $a_id = $post->post_author;
+                                                $author = get_user_by('slug', get_query_var('author_name'));
+                                                $nickname = get_the_author_meta('nickname', $author->ID); ?>
+                                                <?php if ('post' == get_post_type()) { ?>
+                                                    <div class="submitted--info d-flex justify-content-center">
+                                                        <?php if ($nickname != 'Gast') { ?>
+                                                            <span>
+                                                                <?php _e('Ingezonden door:', 'flexupdate'); ?> <a href="<?php echo get_author_posts_url($a_id); ?>"><?php echo $nickname; ?></a>
+                                                            </span>
+                                                        <?php } else { ?>
+                                                            <span>
+                                                                <?php _e('Ingezonden bericht', 'flexupdate'); ?>
+                                                            </span>
+                                                        <?php } ?>
+                                                    </div>
+                                                <?php } ?>
+                                                <a href="<?php if ($postlink) { ?><?php echo ($postlink); ?><?php } else { ?><?php the_permalink(); ?><?php } ?>" <?php if ($postlink) { ?>target="_blank" <?php } ?>>
+                                                    <div class="d-flex">
+                                                        <div class="post--info">
+                                                            <h2><?php the_title(); ?>
+                                                            </h2>
+                                                            <p>
+                                                                <?php echo excerpt(40); ?>
+                                                            </p>
+                                                            <?php if ('post' == get_post_type()) { ?>
+                                                                <?php if ($nickname != 'Gast') { ?>
+                                                                    <div class="ing">
+                                                                        <a href="<?php echo get_author_posts_url($a_id); ?>">
+                                                                            <?php $profilePic = get_field('user_info_afbeelding', 'user_' . $a_id); ?>
+                                                                            <?php if ($profilePic) { ?>
+                                                                                <img class="profilePic" src="<?php echo $profilePic; ?>">
+                                                                            <?php } ?>
+                                                                            <?php echo $nickname; ?>
+                                                                        </a>
+                                                                    </div>
+                                                                <?php  } else { ?>
+                                                                    <div class="ing">
+                                                                        <a href="<?php the_field('gast_website'); ?>" target="_blank">
+                                                                            <?php $profilePic = get_field('gast_logo') ?>
+                                                                            <?php if ($profilePic) { ?>
+                                                                                <img class="profilePic" src="<?php echo $profilePic; ?>">
+                                                                            <?php } ?>
+                                                                            <?php the_field('gast_bedrijfsnaam'); ?>
+                                                                        </a>
+                                                                    </div>
+                                                                <?php } ?>
+                                                            <?php } else { ?>
+                                                                <?php
+                                                                $terms = get_the_terms($post->ID, 'soort_item');
+                                                                if ($terms) {
+                                                                    foreach ($terms as $term) {
+                                                                        $term_id = $term->term_id;
+                                                                    }
+                                                                } ?>
+                                                                <?php $bedrijfsicon = get_field('bedrijfsicon', '_' . $term_id); ?>
+                                                                <?php if ($bedrijfsicon) { ?>
+                                                                    <img src="<?php echo $bedrijfsicon['url']; ?>" alt="<?php echo $bedrijfsicon['alt']; ?>" />
+                                                                <?php } ?>
+                                                            <?php } ?>
+                                                        </div>
+                                                        <div class="post--image ml-auto">
+                                                            <?php
+                                                            $postimage = get_the_post_thumbnail_url('', 'medium');
+                                                            $placeholder = get_field('upload_placeholder', 'option');
+                                                            $term_id_prefixed = '_' . $term_id;
+                                                            $bedrijfafbeelding = get_field('bedrijfafbeelding', $term_id_prefixed); ?>
+                                                            <div class="the-post--image" style="background-image:url( <?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } ?>);">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
+                <?php } ?>
                 <?php if ($count == 3) { ?>
                     <?php
                     $first_adv = new WP_Query(array(
