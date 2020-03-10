@@ -45,7 +45,6 @@ get_header(); ?>
         'post_type' => array('items', 'post'),
         'order' => 'DESC',
         'paged' => $paged,
-        'fields' => 'ids'
     );
     $loop = new WP_Query($args);
     if ($loop->have_posts()) { ?>
@@ -164,7 +163,7 @@ get_header(); ?>
                 <?php $count++; ?>
                 <?php if ($count == 2) { ?>
                     <?php
-                    $mainloop = $loop->posts;
+                    $mainloop = wp_list_pluck( $loop->posts, 'ID' );
                     $ingezonden = new WP_Query(array(
                         'post_type' => 'post',
                         'posts_per_page' => 1,
