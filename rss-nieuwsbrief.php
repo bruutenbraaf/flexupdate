@@ -19,22 +19,38 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?' . '>';
         <sy:updatePeriod><?php echo apply_filters('rss_update_period', 'hourly'); ?></sy:updatePeriod>
         <sy:updateFrequency><?php echo apply_filters('rss_update_frequency', '1'); ?></sy:updateFrequency>
         <?php do_action('rss2_head'); ?>
-        <?php while (have_posts()) : the_post(); ?>
-            <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
-            <item>
-                <link><?php the_permalink_rss(); ?></link>
-                <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
-                <dc:creator><?php the_author(); ?></dc:creator>
-                <guid isPermaLink="false"><?php the_guid(); ?></guid>
-                <description>
-                    <![CDATA[<div class="nws-img" style="background-image:url(<?php echo $postimage;?>");?></div><h2><?php the_title_rss(); ?></h2><p><?php the_excerpt_rss() ?></p>]]>
-                </description>
-                <content:encoded>
-                    <![CDATA[<?php the_excerpt_rss() ?>]]>
-                </content:encoded>
-                <?php rss_enclosure(); ?>
-                <?php do_action('rss2_item'); ?>
-            </item>
-        <?php endwhile; ?>
+        <?php
+        $args = array(
+            'post_type' => array('items'),
+            'order' => 'DESC',
+            'taxonomy' => 'abu',
+            'posts_per_page' => 1,
+        );
+        $loop = new WP_Query($args);
+        if ($loop->have_posts()) { ?>
+            <?php while ($loop->have_posts()) {
+                $loop->the_post(); ?>
+                <?php $postimage = get_the_post_thumbnail_url('', 'medium'); ?>
+                <item>
+                    <link><?php the_permalink_rss(); ?></link>
+                    <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
+                    <dc:creator><?php the_author(); ?></dc:creator>
+                    <guid isPermaLink="false"><?php the_guid(); ?></guid>
+                    <description>
+                        <![CDATA[
+                            
+                            <?php
+                            global $post;
+                            $term_id_prefixed = '_' . $term_id;
+                            $bedrijfafbeelding = get_field('bedrijfafbeelding', $term_id_prefixed); ?>
+                                                <div class="the-post--image" style="background-image:url(<?php echo $bedrijfafbeelding['url']; ?>);">
+                                                </div>
+                            <h2><?php the_title_rss(); ?></h2><p><?php echo excerpt(40) ?></p>]]>
+                    </description>
+                    <?php rss_enclosure(); ?>
+                    <?php do_action('rss2_item'); ?>
+                </item>
+            <?php } ?>
+        <?php } ?>
     </channel>
 </rss>

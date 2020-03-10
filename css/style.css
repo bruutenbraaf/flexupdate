@@ -2401,4 +2401,10 @@ p.description[data-readmore] {
 .adv_single img {
   max-width: 100%; }
 
+.current_page_item a,
+.current-menu-item,
+.home .branding a {
+  pointer-events: none;
+  cursor: default; }
+
 /*# sourceMappingURL=style.css.map */
