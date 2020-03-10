@@ -172,8 +172,6 @@ get_header(); ?>
                     )); ?>
                     <?php if ($ingezonden->have_posts()) : ?>
                         <?php while ($ingezonden->have_posts()) : $ingezonden->the_post(); ?>
-                            <?php $current = get_the_ID(); ?>
-                            <h1><?php echo $current; ?></h1>
                             <article>
                                 <div class="container">
                                     <div class="row">
