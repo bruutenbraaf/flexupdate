@@ -25,7 +25,7 @@ get_header(); ?>
                                 <?php $postdate = get_the_time('m / d'); ?>
                                 <?php if ($currentdate == $postdate) { ?>
                                     <div class="st">
-                                        <span class="post--date"><?php _e('Vandaag', 'flexupdate'); ?></span>
+                                        <span class="post--date"><?php _e('vandaag', 'flexupdate'); ?></span>
                                         <span class="post--date"><?php the_time('d / m'); ?></span>
                                     </div>
                                 <?php } else { ?>
