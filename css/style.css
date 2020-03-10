@@ -658,6 +658,8 @@ nav {
         color: #ffffff;
         text-decoration: none; }
   .tabs-nav .current-menu-item a {
+    pointer-events: none;
+    cursor: default;
     color: #ffffff;
     background: #403f92;
     box-shadow: 0px 0px 25px rgba(76, 35, 193, 0.25);
@@ -2402,7 +2404,7 @@ p.description[data-readmore] {
   max-width: 100%; }
 
 .current_page_item a,
-.current-menu-item,
+.current-menu-item a,
 .home .branding a {
   pointer-events: none;
   cursor: default; }
