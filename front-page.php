@@ -165,13 +165,11 @@ get_header(); ?>
                 <?php if ($count == 2) { ?>
                     <?php
                     $mainloop = $loop->posts;
-                    print_r($mainloop);
                     $ingezonden = new WP_Query(array(
                         'post_type' => 'post',
                         'posts_per_page' => 1,
                         'post__not_in' => $mainloop,
                     )); ?>
-                    <?php print_r($mainloop->ID); ?>
                     <?php if ($ingezonden->have_posts()) : ?>
                         <?php while ($ingezonden->have_posts()) : $ingezonden->the_post(); ?>
                             <?php $current = get_the_ID(); ?>
