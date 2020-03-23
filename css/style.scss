@@ -578,7 +578,7 @@ nav {
     background-position: 100% bottom;
     background-size: contain;
     background-repeat: no-repeat;
-    box-shadow: 0 0 25px rgba(69,93,199,.05);
+    box-shadow: 0 0 25px rgba(69, 93, 199, 0.05);
     h2 {
       font-family: $roboto;
       font-style: normal;
@@ -2982,4 +2982,12 @@ p.description[data-readmore] {
 .home .branding a {
   pointer-events: none;
   cursor: default;
+}
+
+// Iphone plus
+
+@media screen and (max-width: 420px) {
+  .news-block {
+    background-image: none !important;
+  }
 }

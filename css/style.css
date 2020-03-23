@@ -2415,4 +2415,8 @@ p.description[data-readmore] {
   pointer-events: none;
   cursor: default; }
 
+@media screen and (max-width: 420px) {
+  .news-block {
+    background-image: none !important; } }
+
 /*# sourceMappingURL=style.css.map */
