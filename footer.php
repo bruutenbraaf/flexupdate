@@ -11,7 +11,7 @@
                                     <div class="col-lg-12 offset-lg-0 col-md-10 offset-md-1">
                                         <div class="news-block" style="background-image:url(<?php echo $nieuwsbrief_persoon_afbeelding['url']; ?>);">
                                             <div class="row align-items-center">
-                                                <div class="col-lg-12">
+                                                <div class="col-lg-12 col-md-12">
                                                     <h4><?php the_sub_field('subtitle'); ?></h4>
                                                 </div>
                                                 <div class="col-lg-4 col-md-12">
