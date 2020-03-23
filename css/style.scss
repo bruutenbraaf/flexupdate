@@ -2591,6 +2591,27 @@ p.description[data-readmore] {
   display: none;
 }
 
+.news-btn,
+.nav-btn {
+  white-space: nowrap;
+}
+
+.btnsnav {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .btnsnav {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btnsnav {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #posts article .post--date {
     font-size: 16px;
@@ -2889,6 +2910,11 @@ p.description[data-readmore] {
 }
 
 @media screen and (max-width: 767px) {
+  nav {
+    .btnsnav {
+      display: none;
+    }
+  }
   #newsletter button {
     padding: 0px 15px;
   }

@@ -30,6 +30,7 @@ jQuery("body").on('click', '.src-toggle', function () {
   jQuery('.mx').fadeToggle();
   jQuery(this).toggleClass('src-toggle');
   jQuery('.hamb').toggleClass('hmb-toggle');
+  jQuery('.btnsnav').toggleClass('hidden');
   jQuery('nav .search form').animate({
     width: "toggle"
   });
