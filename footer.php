@@ -1,6 +1,7 @@
 <footer>
     <?php if (have_rows('footer', 'option')) : ?>
         <?php while (have_rows('footer', 'option')) : the_row(); ?>
+            <?php $nieuwsbrief_persoon_afbeelding = get_sub_field('nieuwsbrief_persoon_afbeelding'); ?>
             <?php if (get_sub_field('toon_nieuwsbrief') == 1) { ?>
                 <?php if (have_rows('nieuwsbrief')) : ?>
                     <?php while (have_rows('nieuwsbrief')) : the_row(); ?>
@@ -8,7 +9,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 offset-lg-0 col-md-10 offset-md-1">
-                                        <div class="news-block">
+                                        <div class="news-block" style="background-image:url(<?php echo $nieuwsbrief_persoon_afbeelding['url']; ?>);">
                                             <div class="row align-items-center">
                                                 <div class="col-lg-12">
                                                     <h4><?php the_sub_field('subtitle'); ?></h4>
