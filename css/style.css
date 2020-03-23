@@ -2259,7 +2259,8 @@ p.description[data-readmore] {
     width: 100vw;
     background: #403f92;
     z-index: 11;
-    padding: 100px 0px; }
+    padding: 100px 0px;
+    overflow: scroll; }
     .mobile-nav .container {
       max-width: 100vw;
       padding: 15px; }
@@ -2282,7 +2283,8 @@ p.description[data-readmore] {
     .mobile-nav .socials {
       display: flex;
       justify-content: center;
-      position: absolute;
+      position: relative;
+      top: 40px;
       left: 50%;
       transform: translateX(-50%);
       bottom: 50px; }
