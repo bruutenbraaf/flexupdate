@@ -267,26 +267,31 @@
 </head>
 
 <body>
-    <div class="main"><img class="branding" src="http://flexupdate9668.img-us3.com/admin/logo_flexupdate.jpg"> <!-- Intro tekst -->
-        <div class="intro-nieuwsbrief">
-            <div class="tekst">
-                <h1>Hey %FIRSTNAME%,</h1>
-                <p style="text-align: left;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-            </div>
-        </div>
-        <!-- Nieuwsberichten -->
+    <div class="main"><img class="branding" src="http://flexupdate9668.img-us3.com/admin/logo_flexupdate.jpg">
+        <!-- Intro tekst -->
+        <?php if (have_rows('header')) : ?>
+            <?php while (have_rows('header')) : the_row(); ?>
+                <div class="intro-nieuwsbrief">
+                    <div class="tekst">
+                        <h1>Hey %FIRSTNAME%,</h1>
+                        <p style="text-align: left;"><?php the_sub_field('intro_tekst'); ?></p>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
 
+        <!-- Nieuwsberichten -->
         <?php $selecteer_updates = get_field('selecteer_updates'); ?>
         <?php if ($selecteer_updates) : ?>
             <div class="nieuwsberichten">
                 <?php foreach ($selecteer_updates as $post) :  ?>
                     <?php setup_postdata($post); ?>
                     <?php
-                    $terms = get_the_terms( $post->ID, 'soort_item' );
+                    $terms = get_the_terms($post->ID, 'soort_item');
                     $termIDs = '_' . $terms[0]->term_id;
                     $postimage = get_the_post_thumbnail_url('', 'medium');
                     $bedrijfafbeelding = get_field('bedrijfafbeelding', '_' . $terms[0]->term_id); ?>
-                    <?php print_r($bedrijfsafbeelding);?>
+                    <?php print_r($bedrijfsafbeelding); ?>
                     <div class="nieuwsbericht"><img src="<?php if ($postimage) { ?> <?php echo $postimage; ?> <?php } else { ?> <?php echo $bedrijfafbeelding['url']; ?> <?php } ?>" width="268" height="168">
                         <?php $postlink = get_field('item_link'); ?>
                         <a href="<?php if ($postlink) { ?><?php echo ($postlink); ?><?php } else { ?><?php the_permalink(); ?><?php } ?>" <?php if ($postlink) { ?>target="_blank" <?php } ?>>
@@ -303,66 +308,106 @@
         <?php endif; ?>
 
         <!-- Laatste vacatures -->
-        <div class="vacatures-intro">
-            <h2>De nieuwste vacatures</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-        </div>
-        <div class="vacatures"><a href="#">Zonnenpanelen monteur 24 uur</a>
-            <hr><a href="#">Zonnenpanelen monteur 24 uur</a>
-            <hr><a href="#">Zonnenpanelen monteur 24 uur</a>
-            <hr><a href="#">Zonnenpanelen monteur 24 uur</a></div>
-        <div class="alle-vacatures">
-            <p>Staat die van jou er niet tussen? Bekijk al onze vacatures.</p>
-        </div>
+        <?php if (have_rows('vacatures')) : ?>
+            <?php while (have_rows('vacatures')) : the_row(); ?>
+                <div class="vacatures-intro">
+                    <h2><?php the_sub_field('titel'); ?></h2>
+                    <p><?php the_sub_field('intro_tekst_vacatures'); ?></p>
+                </div>
+                <?php if (have_rows('maak_vacatures')) : ?>
+                    <div class="vacatures">
+                        <?php while (have_rows('maak_vacatures')) : the_row(); ?>
+                            <?php $link = get_sub_field('link'); ?>
+                            <?php if ($link) { ?>
+                                <hr><a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"> <?php the_sub_field('titel'); ?></a>
+                            <?php } ?>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+                <div class="alle-vacatures">
+                    <p><?php the_sub_field('outro_tekst'); ?></p>
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
         <!-- Nu bij Flexupdate -->
-        <div class="nubijflexupdate">
-            <h2>Nu bij Flexupdate ...</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-            <a href="#" class="btn">Call - to -action</a> <a href="#" class="btn-second">Call - to -action</a>
-        </div>
+        <?php if (have_rows('call_to_action')) : ?>
+            <?php while (have_rows('call_to_action')) : the_row(); ?>
+                <div class="nubijflexupdate">
+                    <h2><?php the_sub_field('titel'); ?></h2>
+                    <p><?php the_sub_field('intro_tekst'); ?></p>
+                    <?php if (have_rows('knoppen')) : ?>
+                        <?php while (have_rows('knoppen')) : the_row(); ?>
+                            <?php $knop = get_sub_field('knop'); ?>
+                            <?php if ($knop) { ?>
+                                <a class="btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                            <?php } ?>
+                            <?php $knop_secondair = get_sub_field('knop_secondair'); ?>
+                            <?php if ($knop_secondair) { ?>
+                                <a class="btn-second" href="<?php echo $knop_secondair['url']; ?>" target="<?php echo $knop_secondair['target']; ?>"><?php echo $knop_secondair['title']; ?></a>
+                            <?php } ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
         <!-- CAO Updates -->
-        <div class="cao">
-            <div class="intro">
-                <h2>Nu bij Flexupdate ...</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-            </div>
-            <div class="update"><img src="https://assets.zoom.nl/thumbnails/748x748/e/6/e68140149f92a686df805f2e8c814d12.jpg">
-                <div class="inner">
-                    <h2><a href="#">Persoonlijk ontwikkelbudget voor iedereen</a></h2>
+        <?php if (have_rows('updates')) : ?>
+            <?php while (have_rows('updates')) : the_row(); ?>
+                <div class="cao">
+                    <div class="intro">
+                        <h2><?php the_sub_field('titel'); ?></h2>
+                        <p><?php the_sub_field('intro_tekst'); ?></p>
+                    </div>
+                    <?php $items = get_sub_field('items'); ?>
+                    <?php if ($items) : ?>
+                        <?php foreach ($items as $post) :  ?>
+                            <?php setup_postdata($post); ?>
+                            <div class="update"><img src="https://assets.zoom.nl/thumbnails/748x748/e/6/e68140149f92a686df805f2e8c814d12.jpg">
+                                <div class="inner">
+                                    <h2><a href="<?php the_field('link_update'); ?>"><?php the_title(); ?></a></h2>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
                 </div>
-            </div>
-            <div class="update"><img src="https://assets.zoom.nl/thumbnails/748x748/e/6/e68140149f92a686df805f2e8c814d12.jpg">
-                <div class="inner">
-                    <h2><a href="#">Persoonlijk ontwikkelbudget voor iedereen</a></h2>
+            <?php endwhile; ?>
+        <?php endif; ?>
+        <?php if (have_rows('footer')) : ?>
+            <?php while (have_rows('footer')) : the_row(); ?>
+                <div class="afsluiting">
+                    <div class="tekst">
+                        <h2><?php the_sub_field('titel'); ?></h2>
+                        <p><?php the_sub_field('tekst'); ?></p>
+                        <?php $call_to_action = get_sub_field('call_to_action'); ?>
+                        <?php if ($call_to_action) { ?>
+                            <a class="btn" href="<?php echo $call_to_action['url']; ?>" target="<?php echo $call_to_action['target']; ?>"><?php echo $call_to_action['title']; ?></a>
+                        <?php } ?>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="update"><img src="https://assets.zoom.nl/thumbnails/748x748/e/6/e68140149f92a686df805f2e8c814d12.jpg">
-                <div class="inner">
-                    <h2>Persoonlijk ontwikkelbudget voor iedereen</h2>
-                </div>
-            </div>
-            <div class="update"><img src="https://assets.zoom.nl/thumbnails/748x748/e/6/e68140149f92a686df805f2e8c814d12.jpg">
-                <div class="inner">
-                    <h2>Persoonlijk ontwikkelbudget voor iedereen</h2>
-                </div>
-            </div>
-        </div>
-        <div class="afsluiting">
-            <div class="tekst">
-                <h2>Hey %FIRSTNAME%,</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-                <a href="#" class="btn">Call to action</a>
-            </div>
-        </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
         <!-- Socials -->
-        <div class="socials">
-            <ul class="social">
-                <li><a><img src="http://flexupdate9668.img-us3.com/admin/facebook.png"></a></li>
-                <li><a><img src="http://flexupdate9668.img-us3.com/admin/linkedin.png"></a></li>
-                <li><a><img src="http://flexupdate9668.img-us3.com/admin/twitter.png"></a></li>
-            </ul>
-        </div>
+        <?php if (have_rows('socials_nieuwsbrief')) : ?>
+            <div class="socials">
+                <ul class="social">
+                    <?php while (have_rows('socials_nieuwsbrief')) : the_row(); ?>
+                        <?php $facebook = get_sub_field('facebook'); ?>
+                        <?php if ($facebook) { ?>
+                            <li><a href="<?php echo $facebook['url']; ?>" target="<?php echo $facebook['target']; ?>"><?php echo $facebook['title']; ?><img src="http://flexupdate9668.img-us3.com/admin/facebook.png"></a></li>
+                        <?php } ?>
+                        <?php $linkedin = get_sub_field('linkedin'); ?>
+                        <?php if ($linkedin) { ?>
+                            <li><a href="<?php echo $linkedin['url']; ?>" target="<?php echo $linkedin['target']; ?>"><?php echo $linkedin['title']; ?><img src="http://flexupdate9668.img-us3.com/admin/linkedin.png"></a></li>
+                        <?php } ?>
+                        <?php $twitter = get_sub_field('twitter'); ?>
+                        <?php if ($twitter) { ?>
+                            <li><a href="<?php echo $twitter['url']; ?>" target="<?php echo $twitter['target']; ?>"><?php echo $twitter['title']; ?><img src="http://flexupdate9668.img-us3.com/admin/twitter.png"></a></li>
+                        <?php } ?>
+                    <?php endwhile; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
     </div>
 </body>
 
