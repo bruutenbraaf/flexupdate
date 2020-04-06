@@ -9,6 +9,18 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
     <title><?php wp_title('&raquo;', 'true', 'right'); ?><?php bloginfo('name'); ?></title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162900085-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162900085-1');
+    </script>
     <?php wp_head(); ?>
 </head>
 
