@@ -386,7 +386,6 @@ endif;
 
 
 
-
 add_action('init', 'customRSS');
 function customRSS(){
         add_feed('nieuwsbrief', 'customRSSFunc');
@@ -404,3 +403,15 @@ function rssLanguage(){
 	update_option('rss_language', 'en');
 }
 add_action('admin_init', 'rssLanguage');
+
+
+function flexupdate_wpseo_canonical( $canonical ) {
+	if ( is_front_page() ) {
+	global $wp;
+	$current_url = trailingslashit(home_url( add_query_arg( array(), $wp->request ) ) );
+	return $current_url;
+	} else {
+	return $canonical;
+	}
+	}
+	add_filter( 'wpseo_canonical', 'flexupdate_wpseo_canonical', 10, 1 );
