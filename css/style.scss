@@ -2600,6 +2600,18 @@ p.description[data-readmore] {
   overflow: hidden;
 }
 
+.p-title {
+  h1 {
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    color: $brandcolor;
+    margin-top: 30px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .btnsnav {
     display: flex;
