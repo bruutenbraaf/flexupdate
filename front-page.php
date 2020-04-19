@@ -37,6 +37,19 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <?php
+                    $title = get_post_meta(get_the_ID(), '_yoast_wpseo_title', true);
+                    if ($paged > 1) {
+                        $title .= ' - Pagina ' . $paged . ' van ' . $loop->max_num_pages;
+                    }
+                    ?>
+                    <h1><?php echo $title ?></h1>
+                </div>
+            </div>
+        </div>
     <?php endif; ?>
     <?php
     $currentdate = date('m / d');
@@ -163,7 +176,7 @@ get_header(); ?>
                 <?php $count++; ?>
                 <?php if ($count == 2) { ?>
                     <?php
-                    $mainloop = wp_list_pluck( $loop->posts, 'ID' );
+                    $mainloop = wp_list_pluck($loop->posts, 'ID');
                     $ingezonden = new WP_Query(array(
                         'post_type' => 'post',
                         'posts_per_page' => 1,

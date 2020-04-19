@@ -387,11 +387,13 @@ endif;
 
 
 add_action('init', 'customRSS');
-function customRSS(){
-        add_feed('nieuwsbrief', 'customRSSFunc');
+function customRSS()
+{
+	add_feed('nieuwsbrief', 'customRSSFunc');
 }
 
-function customRSSFunc(){
+function customRSSFunc()
+{
 	get_template_part('rss', 'nieuwsbrief');
 }
 
@@ -399,19 +401,55 @@ function customRSSFunc(){
 global $wp_rewrite;
 $wp_rewrite->flush_rules();
 
-function rssLanguage(){
+function rssLanguage()
+{
 	update_option('rss_language', 'en');
 }
 add_action('admin_init', 'rssLanguage');
 
 
-function flexupdate_wpseo_canonical( $canonical ) {
-	if ( is_front_page() ) {
-	global $wp;
-	$current_url = trailingslashit(home_url( add_query_arg( array(), $wp->request ) ) );
-	return $current_url;
+function flexupdate_wpseo_canonical($canonical)
+{
+	if (is_front_page()) {
+		global $wp;
+		$current_url = trailingslashit(home_url(add_query_arg(array(), $wp->request)));
+		return $current_url;
 	} else {
-	return $canonical;
+		return $canonical;
 	}
+}
+add_filter('wpseo_canonical', 'flexupdate_wpseo_canonical', 10, 1);
+
+
+function flexupdate_wpseo_title($title)
+{
+	if (is_front_page()) {
+		$paged = (get_query_var('page')) ? get_query_var('page') : 1;
+		if ($paged > 1) {
+			$args = array(
+				'post_type' => array('items', 'post'),
+				'paged' => $paged,
+			);
+			$loop = new WP_Query($args);
+			$title .= ' - Pagina ' . $paged . ' van ' . $loop->max_num_pages;
+		}
 	}
-	add_filter( 'wpseo_canonical', 'flexupdate_wpseo_canonical', 10, 1 );
+
+	return $title;
+}
+
+add_filter('wpseo_title', 'flexupdate_wpseo_title');
+
+
+function flexupdate_wpseo_robots($robots)
+{
+	if (is_singular('items') || is_singular('updates')) {
+
+		return 'noindex,nofollow';
+	} else {
+
+		return $robots;
+	}
+}
+
+add_filter('wpseo_robots', 'flexupdate_wpseo_robots');
