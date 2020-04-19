@@ -2073,13 +2073,20 @@ p.description[data-readmore] {
   overflow: hidden; }
 
 .p-title h1 {
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 42px;
   color: #403f92;
   margin-top: 30px; }
+
+.p-t h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  color: #18132e; }
 
 @media screen and (min-width: 992px) {
   .btnsnav {

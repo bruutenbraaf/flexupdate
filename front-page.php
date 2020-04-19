@@ -39,7 +39,7 @@ get_header(); ?>
         </section>
         <div class="container">
             <div class="row">
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-10 offset-md-1 p-t">
                     <?php
                     $title = get_post_meta(get_the_ID(), '_yoast_wpseo_title', true);
                     if ($paged > 1) {
