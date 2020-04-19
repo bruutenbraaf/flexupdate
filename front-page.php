@@ -37,6 +37,17 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+    <?php endif; ?>
+    <?php
+    $currentdate = date('m / d');
+    $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+    $args = array(
+        'post_type' => array('items', 'post'),
+        'order' => 'DESC',
+        'paged' => $paged,
+    );
+    $loop = new WP_Query($args);
+    if ($loop->have_posts()) { ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 offset-md-1 p-t">
@@ -50,17 +61,6 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    <?php endif; ?>
-    <?php
-    $currentdate = date('m / d');
-    $paged = (get_query_var('page')) ? get_query_var('page') : 1;
-    $args = array(
-        'post_type' => array('items', 'post'),
-        'order' => 'DESC',
-        'paged' => $paged,
-    );
-    $loop = new WP_Query($args);
-    if ($loop->have_posts()) { ?>
         <section id="posts">
             <?php $count = 0; ?>
             <?php while ($loop->have_posts()) {
