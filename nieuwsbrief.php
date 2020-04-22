@@ -92,17 +92,12 @@
             max-width: 182px;
         }
 
-        .intro-nieuwsbrief {
-            padding: 40px 0px 20px 0px;
-            box-sizing: border-box;
-            background-image: url(http://flexupdate9668.img-us3.com/admin/marian-heek.png);
-            background-repeat: no-repeat;
-            background-position: 95% bottom;
-            background-size: 200px;
-        }
-
         .intro-nieuwsbrief .tekst {
             max-width: 338px;
+        }
+
+        .intro-nieuwsbrief {
+            padding: 30px 0px;
         }
 
         .nieuwsberichten {
