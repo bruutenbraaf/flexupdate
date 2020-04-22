@@ -2618,8 +2618,21 @@ p.description[data-readmore] {
     font-family: $roboto;
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    color: #18132e;
+    font-size: 32px;
+    line-height: 42px;
+    color: $brandcolor;
+    margin-top: 30px;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    span {
+      margin-left: auto;
+      font-size: 16px;
+      opacity: 0.6;
+      color: $paragraph;
+      font-weight: normal;
+      line-height: initial;
+    }
   }
 }
 
@@ -2933,6 +2946,13 @@ p.description[data-readmore] {
 }
 
 @media screen and (max-width: 767px) {
+  .p-t {
+    h1 {
+      span {
+        margin-left: 0px;
+      }
+    }
+  }
   nav {
     .btnsnav {
       display: none;

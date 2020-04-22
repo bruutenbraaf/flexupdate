@@ -54,7 +54,7 @@ get_header(); ?>
                     <?php
                     $title = get_post_meta(get_the_ID(), '_yoast_wpseo_title', true);
                     if ($paged > 1) {
-                        $title .= ' - Pagina ' . $paged . ' van ' . $loop->max_num_pages;
+                        $title .= 'Flexupdate nieuws <span>Pagina ' . $paged . ' van ' . $loop->max_num_pages . '</span>';
                     }
                     ?>
                     <h1><?php echo $title ?></h1>
