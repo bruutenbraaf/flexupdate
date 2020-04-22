@@ -48,19 +48,6 @@ get_header(); ?>
     );
     $loop = new WP_Query($args);
     if ($loop->have_posts()) { ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1 p-t">
-                    <?php
-                    $title = get_post_meta(get_the_ID(), '_yoast_wpseo_title', true);
-                    if ($paged > 1) {
-                        $title .= '<span>Pagina ' . $paged . ' van ' . $loop->max_num_pages . '</span>';
-                    }
-                    ?>
-                    <h1><?php echo $title ?></h1>
-                </div>
-            </div>
-        </div>
         <section id="posts">
             <?php $count = 0; ?>
             <?php while ($loop->have_posts()) {
