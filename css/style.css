@@ -2073,15 +2073,6 @@ p.description[data-readmore] {
 .btnsnav {
   overflow: hidden; }
 
-.p-title h1 {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 42px;
-  color: #403f92;
-  margin-top: 30px; }
-
 .p-t h1 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -2100,6 +2091,15 @@ p.description[data-readmore] {
     color: #828282;
     font-weight: normal;
     line-height: initial; }
+
+.p-title h1 {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: #403f92;
+  margin-top: 30px; }
 
 @media screen and (min-width: 992px) {
   .btnsnav {
