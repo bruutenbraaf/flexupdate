@@ -431,7 +431,7 @@ function flexupdate_wpseo_title($title)
 				'paged' => $paged,
 			);
 			$loop = new WP_Query($args);
-			$title .= ' - Pagina ' . $paged . ' van ' . $loop->max_num_pages;
+			$title .= '<span>Pagina ' . $paged . ' van ' . $loop->max_num_pages . '</span>';
 		}
 	}
 
