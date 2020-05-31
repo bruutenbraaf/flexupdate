@@ -8,7 +8,7 @@ get_header(); ?>
                 <p><?php the_field("updates_archive_intro", "option"); ?></p>
             </div>
             <?php $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-            $args = array('post_type' => 'updates', 'posts_per_page' => 8, 'paged' => $paged);
+            $args = array('post_type' => 'updates', 'posts_per_page' => 15, 'paged' => $paged);
             $loop = new WP_Query($args);
             while ($loop->have_posts()) : $loop->the_post(); ?>
                 <div class="offset-md-1 col-md-10">
