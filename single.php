@@ -135,4 +135,10 @@ get_header(); ?>
         </div>
     </div>
 </main>
+<?php if ($post->post_author == $current_user->ID) { ?>
+    <div class="delete-post">
+        <p><a onclick="return confirm('Are you SURE you want to delete this post?') window.location.href='cancel'" href="<?php echo get_delete_post_link($post->ID) ?>">Delete post</a></p>
+    </div>
+<?php } ?>
+
 <?php get_footer(); ?>
