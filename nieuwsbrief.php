@@ -213,7 +213,7 @@
             border-radius: 24px;
             padding: 40px 0px 20px 0px;
             box-sizing: border-box;
-            background-image: url(http://flexupdate9668.img-us3.com/admin/marian-heek.png);
+            background-image: url(https://ac-image.s3.amazonaws.com/1/0/0/0/4/5/0/home/admin/footer/woman.png);
             background-repeat: no-repeat;
             background-position: 95% bottom;
             background-size: 200px;
